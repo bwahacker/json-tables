@@ -1,7 +1,34 @@
-# JSON Tables Proposal
+# JSON-Tables (JSON-T) Proposal
 
 ## 🧩 Overview
-This proposal introduces a minimal, backward-compatible structure to represent tabular data in JSON, designed to support easier rendering, interoperability, and integration with tabular tools like Pandas, spreadsheets, and analytics pipelines.
+**JSON-Tables (aka JSON-T)** is a minimal, backward-compatible standard to represent tabular data in JSON. It supports easier rendering, tool interoperability, and direct integration with tabular tools like Pandas, spreadsheets, and data pipelines.
+
+> **“Finally, a standard for representing tables in JSON—simple to render, easy to parse, and designed for humans and tools alike.”**
+
+---
+
+## 🔥 Before & After: Why This Matters
+
+### 😩 The Problem Today
+```json
+[
+  {"name": "Mary", "age": 8, "score": 92},
+  {"name": "John", "age": 9, "score": 88}
+]
+```
+- Unstructured visually
+- Hard to skim or diff in logs
+- Requires external tools to view as a table
+
+### ✅ JSON-Tables Solution
+```json
+[
+  { name: "Mary" , age:  8 , score: 92 },
+  { name: "John" , age:  9 , score: 88 }
+]
+```
+- Cleaner, column-aligned, diffable
+- Perfect for monospaced logs, tools, terminals
 
 ---
 
@@ -34,7 +61,7 @@ This rendering allows quick inspection of tabular JSON data in monospaced termin
 
 ---
 
-## 3. Canonical Table Object Format
+## 3. Canonical Table Object Format (JSON-T)
 
 ```json
 {
@@ -103,14 +130,24 @@ This rendering allows quick inspection of tabular JSON data in monospaced termin
 
 ---
 
-## 7. Status
+## 7. Real-World Use Cases
+- Web APIs returning tabular data with pagination and schema
+- AI tools generating charts or summaries from `JSON-T`
+- CLI tools or loggers pretty-printing structured rows
+- Pandas `.to_json(table_format="json-t")`
+- Low-code platforms or spreadsheet import/export
+
+---
+
+## 8. Status
 This is an open proposal for discussion and implementation by developers, formatter authors, data tool creators, and the broader JSON tooling community.
 
 Feedback, improvements, and adoption interest are welcome.
 
 ---
 
-**Author**: [Your Name or Org Here]  
+**Name**: JSON-T / JSON-Tables  
+**Author**: Mitch Haile / Featrix.ai  
 **License**: Public Domain / CC0
 
 ---
