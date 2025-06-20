@@ -1,5 +1,10 @@
 # JSON‑Tables (JSON‑T) Proposal
 
+[![Spec](https://img.shields.io/badge/spec-draft-yellow)](https://github.com/featrix/json-tables)
+[![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![Python](https://img.shields.io/badge/python-CLI-blue)](https://github.com/featrix/json-tables)
+[![Install](https://img.shields.io/badge/pip-jsontables-orange)](https://pypi.org/project/jsontables/)
+
 ## 🧩 Overview
 **JSON‑Tables (aka JSON‑T)** is a minimal, backward‑compatible specification for representing tabular data in JSON. It enables easy human‑readable rendering, clear table semantics for tooling, and seamless loading into analytics libraries like **pandas**, spreadsheet apps, and data pipelines.
 
@@ -148,7 +153,34 @@ The same repository contains unit tests, documentation, and a VS Code preview e
 
 ---
 
-## 6. Packaging Quick‑Start
+## 6. Example Rendering
+
+Here’s an example of what `jsontables` can do in the wild:
+
+📄 `example.json`:
+```json
+[
+  {"name": "Alessandra", "age": 3, "score": 812},
+  {"name": "Bo", "age": 14, "score": 5},
+  {"name": "Christine", "age": 103, "score": 1000}
+]
+```
+
+💻 Terminal:
+```bash
+$ cat example.json | jsontables
+[
+  { name: "Alessandra" , age:   3 , score:  812 },
+  { name: "Bo"         , age:  14 , score:    5 },
+  { name: "Christine"  , age: 103 , score: 1000 }
+]
+```
+
+Clean, readable, and aligned — just like a table should be.
+
+---
+
+## 7. Packaging Quick‑Start
 ```bash
 # Clone & install in editable mode
 $ git clone https://github.com/featrix/json-tables.git
@@ -183,6 +215,34 @@ $ jsontables --max-width 120 file.json # narrow terminals
 Open proposal — feedback, issues, and PRs welcome!
 
 ---
+
+## 🙋 FAQ / Objections
+
+**Why not just use CSV?**  
+CSV is great for simple flat data, but JSON supports nesting, typing, nulls, and inline metadata. JSON-T fits the rest of the JSON ecosystem.
+
+**Why not just render my list of dicts?**  
+Sure—but how does a tool *know* it’s a table? `__dict_type: "table"` makes the intent explicit and unlocks paging, schema, column ordering, and more.
+
+**Why not just use a JSON Schema?**  
+JSON Schema is too heavyweight and verbose for inline use. JSON-T is designed for lightweight, idiomatic scenarios.
+
+**Why not just use Arrow or Parquet?**  
+Those are great—but they’re binary formats. JSON-T works anywhere JSON works (logs, APIs, GitHub diffs, chatbots, etc).
+
+---
+
+## 🏢 Adoption
+Used by:
+- [Featrix.ai](https://www.featrix.ai)
+- [runAlphaLoop.com](https://www.runalphaloop.com)
+- [Data Culpa](https://www.dataculpa.com)
+
+---
+
+## 💬 Quote
+> *“Finally I can look at a JSON table without cursing.”*  
+> — You, probably
 
 **Name**: JSON‑T / JSON‑Tables  
 **Author**: Mitch Haile, Featrix.ai  
