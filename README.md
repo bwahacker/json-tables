@@ -1,76 +1,109 @@
-# JSON-Tables (JSON-T) Proposal
+# JSON‑Tables (JSON‑T) Proposal
 
 ## 🧩 Overview
-**JSON-Tables (aka JSON-T)** is a minimal, backward-compatible standard to represent tabular data in JSON. It supports easier rendering, tool interoperability, and direct integration with tabular tools like Pandas, spreadsheets, and data pipelines.
+**JSON‑Tables (aka JSON‑T)** is a minimal, backward‑compatible specification for representing tabular data in JSON. It enables easy human‑readable rendering, clear table semantics for tooling, and seamless loading into analytics libraries like **pandas**, spreadsheet apps, and data pipelines.
 
 > **“Finally, a standard for representing tables in JSON—simple to render, easy to parse, and designed for humans and tools alike.”**
 
 ---
 
-## 🔥 Before & After: Why This Matters
+## 🔥 Before & After: Why This Matters
 
 ### 😩 The Problem Today
 ```json
 [
-  {"name": "Mary", "age": 8, "score": 92},
-  {"name": "John", "age": 9, "score": 88}
+  {
+    "name": "Alessandra",
+    "age": 3,
+    "score": 812
+  },
+  {
+    "name": "Bo",
+    "age": 14,
+    "score": 5
+  },
+  {
+    "name": "Christine",
+    "age": 103,
+    "score": 1000
+  }
 ]
 ```
-- Unstructured visually
-- Hard to skim or diff in logs
-- Requires external tools to view as a table
+- This is how JSON is typically rendered by pretty-printers.
+- It’s verbose and vertically fragmented, despite clearly being a table.
+- Hard to visually compare rows or spot column-level anomalies.
+- Hard to skim or diff in logs.
+- Requires external tooling to view as a table.
+- This is how JSON is typically rendered by pretty-printers.
+- It’s verbose and vertically fragmented, despite clearly being a table.
+- Hard to visually compare rows or spot column-level anomalies.
+- Hard to skim or diff in logs.
+- Requires external tooling to view as a table.
 
-### ✅ JSON-Tables Solution
+### ✅ JSON‑Tables Solution (auto‑render)
 ```json
 [
-  { name: "Mary" , age:  8 , score: 92 },
-  { name: "John" , age:  9 , score: 88 }
+  { name: "Alessandra" , age:   3 , score:  812 },
+  { name: "Bo"         , age:  14 , score:    5 },
+  { name: "Christine"  , age: 103 , score: 1000 }
 ]
 ```
-- Cleaner, column-aligned, diffable
-- Perfect for monospaced logs, tools, terminals
+- Column‑aligned, readable, diff‑friendly.
+- Shows structure without visual clutter.
+- Perfect for log files, CLIs, and notebooks.
+- Column‑aligned, readable, diff‑friendly.
+- Perfect for log files, CLIs, and notebooks.
 
 ---
 
 ## 1. Motivation
-JSON lacks ergonomic support for tabular (row-column) data, making it cumbersome for tools and humans alike to parse or visualize. Current workarounds vary widely and lack standard semantics or structure.
+If you're the kind of person who deals with structured data all day—API responses, pipeline outputs, analytics logs, git diffs, or large datasets—you already live in JSON. You use `jq`, you open logs in `vim`, you paste objects into chat windows, and you pass data between services, scripts, and notebooks.
 
-This proposal introduces:
-- A rendering convention for debuggers and formatters
-- A standardized JSON table object with metadata and extensibility
+You're someone who notices when something is off by a single space. You think in columns even when you're reading trees. You want to see your data—not decode it.
+
+And yet: default JSON pretty-printers explode tabular data vertically. Tables become forests. Alignment disappears. Visual structure vanishes.
+
+Let’s put it this way:
+
+If you're:
+- Skimming logs or scanning API outputs,
+- Wrangling data frames or debugging pipelines,
+- Building devtools or inspecting traces in `jq`,
+- Sharing samples with teammates or dropping JSON into ChatGPT...
+
+You’re already reading tables. You just don’t get to *see* them as tables.
+
+JSON-Tables fixes that.
+
+Instead of pretty-printed forests of curly braces, you get aligned, readable, diffable rows.
+You stop wasting vertical space and cognitive energy.
+You stop re-parsing column structures in your head.
+You stop reimplementing the same table renderers or naming hacks.
+
+You just say one thing: `"__dict_type": "table"`.
+
+To be blunt: if you regularly work with tabular JSON and this doesn’t seem useful to you—*that’s weird*.
+
+We built the modern data world on JSON, and yet there's never been a common way to say "this is a table." This proposal fixes that.
 
 ---
 
-## 2. Human-Friendly Rendering: ASCII Table Style
+## 2. Human‑Friendly Rendering: ASCII Table Style
+A renderer **SHOULD** align flat row objects if:
+- Rows share identical keys.
+- Values are primitives (string, number, boolean, null).
+- Total rendered width ≤ **300 characters** (configurable).
 
-When a list of flat dicts with consistent keys and short primitive values is detected, formatters SHOULD render it as an aligned ASCII table-style array:
-
-```json
-[
-  { name: "Mary" , age:  8 , score: 92 },
-  { name: "John" , age:  9 , score: 88 }
-]
-```
-
-### Constraints:
-- All items must be flat dicts (no nesting)
-- Keys must be consistent across all items
-- Values must be short strings/numbers/booleans
-
-This rendering allows quick inspection of tabular JSON data in monospaced terminals, logs, and editors.
+Example shown above.
 
 ---
 
-## 3. Canonical Table Object Format (JSON-T)
-
+## 3. Canonical Table Object (row‑oriented)
 ```json
 {
   "__dict_type": "table",
-  "cols": ["name", "age", "score"],
-  "row_data": [
-    ["Mary", 8, 92],
-    ["John", 9, 88]
-  ],
+  "cols":     ["name", "age", "score"],
+  "row_data": [["Mary", 8, 92], ["John", 9, 88]],
   "current_page": 0,
   "total_pages": 1,
   "page_rows": 2
@@ -78,82 +111,89 @@ This rendering allows quick inspection of tabular JSON data in monospaced termin
 ```
 
 ### Required Fields
-| Field           | Type       | Description                                  |
-|----------------|------------|----------------------------------------------|
-| `__dict_type`  | `"table"`  | Identifier for tooling                        |
-| `cols`         | `string[]` | Column names in order                        |
-| `row_data`     | `any[][]`  | Rows of data, each row is an array of values |
+| Field | Type | Description |
+|-------|------|-------------|
+| `__dict_type` | `"table"` | Signals table object |
+| `cols` | `string[]` | Ordered column names |
+| `row_data` | `any[][]` | Row‑major values |
 
-### Optional Fields
-| Field           | Type   | Default | Description                                |
-|----------------|--------|---------|--------------------------------------------|
-| `current_page` | int    | 0       | For paginated tables                        |
-| `total_pages`  | int    | 1       | Total number of pages                       |
-| `page_rows`    | int    | n/a     | Number of rows on this page                |
+### Optional
+`current_page`, `total_pages`, `page_rows` allow paging.
 
 ---
 
-## 4. Columnar Format (Optional Alternative)
-
+## 4. Columnar Variant
 ```json
 {
   "__dict_type": "table",
-  "cols": ["name", "age", "score"],
+  "cols": ["name","age","score"],
   "column_data": {
-    "name": ["Mary", "John"],
-    "age": [8, 9],
-    "score": [92, 88]
+    "name":  ["Mary","John"],
+    "age":   [8,9],
+    "score": [92,88]
   },
   "row_data": null
 }
 ```
-
-### Benefits
-- Efficient for memory and disk
-- Compatible with columnar storage systems like Apache Arrow
-- Easier to transform for analytical queries
+Compatible with columnar storage systems (e.g., Apache Arrow).
 
 ---
 
-## 5. Compatibility
-- Non-table-aware tools treat this as a normal JSON dict
-- `row_data` and `column_data` are interchangeable via transposition
-- Schema inference is possible using `cols` and value inspection
+## 5. Reference Implementation
+A full, MIT‑licensed reference implementation (including CLI) lives in **`jsontables.py`** on GitHub:
+
+👉 **[featrix/json‑tables/jsontables.py](https://github.com/featrix/json-tables/blob/main/jsontables.py)**
+
+The same repository contains unit tests, documentation, and a VS Code preview extension prototype.
 
 ---
 
-## 6. Future Extensions
-- `col_types`: Explicit type hints (e.g., `"string"`, `"int"`, `"date"`)
-- `col_nullable`: Boolean/nullability flags
-- `col_meta`: Per-column metadata (units, labels, formats)
-- `meta`: Global metadata (source, timestamp, license, etc.)
+## 6. Packaging Quick‑Start
+```bash
+# Clone & install in editable mode
+$ git clone https://github.com/featrix/json-tables.git
+$ cd json-tables
+$ pip install -e .
+
+# CLI usage: pretty‑print tables in any JSON file
+$ cat data.json | jsontables           # autodetect & render
+$ jsontables --max-width 120 file.json # narrow terminals
+```
 
 ---
 
-## 7. Real-World Use Cases
-- Web APIs returning tabular data with pagination and schema
-- AI tools generating charts or summaries from `JSON-T`
-- CLI tools or loggers pretty-printing structured rows
-- Pandas `.to_json(table_format="json-t")`
-- Low-code platforms or spreadsheet import/export
+## 7. Future Extensions (Roadmap)
+- `col_types`, `col_nullable`, `col_meta`, dataset‑level `meta`.
+- Binary/Arrow encoding.
+- VS Code / Jupyter syntax‑aware renderers.
+- Streaming & chunked table support.
 
 ---
 
-## 8. Status
-This is an open proposal for discussion and implementation by developers, formatter authors, data tool creators, and the broader JSON tooling community.
-
-Feedback, improvements, and adoption interest are welcome.
+## 8. Real‑World Use Cases
+- Web APIs returning paged tables with schema.
+- AI agents auto‑charting JSON‑T responses.
+- Logger/CLI debug dumps.
+- Pandas: `df.to_json(table_format="json-t")`.
+- Low‑code & spreadsheet import/export.
 
 ---
 
-**Name**: JSON-T / JSON-Tables  
-**Author**: Mitch Haile / Featrix.ai  
-**License**: Public Domain / CC0
+## 9. Status
+Open proposal — feedback, issues, and PRs welcome!
+
+---
+
+**Name**: JSON‑T / JSON‑Tables  
+**Author**: Mitch Haile, Featrix.ai  
+**License**: Public Domain / CC0
 
 ---
 
 ## 🔗 Related Work
-- [W3C CSV on the Web / JSON Table Schema](https://specs.frictionlessdata.io/table-schema/)
-- [Apache Arrow JSON Format](https://arrow.apache.org/)
-- [Google Visualization API Table Format](https://developers.google.com/chart/interactive/docs/reference#datatable-object)
+- [W3C “CSV on the Web” / JSON Table Schema](https://specs.frictionlessdata.io/table-schema/)
+- [Apache Arrow JSON Format](https://arrow.apache.org/docs/format/Columnar.html#json)
+- [Google Visualization API Table Format](https://developers.google.com/chart/interactive/docs/reference#DataTable)
 - [JSON-stat](https://json-stat.org/)
+- [OpenRefine Export Format](https://docs.openrefine.org/manual/exporting#json)
+- [CKAN JSON Table Schema usage](https://docs.ckan.org/en/latest/maintaining/datastore.html#the-json-table-schema)
