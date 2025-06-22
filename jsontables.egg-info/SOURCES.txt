@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+jsontables/__init__.py
+jsontables/cli.py
+jsontables/core.py
+jsontables.egg-info/PKG-INFO
+jsontables.egg-info/SOURCES.txt
+jsontables.egg-info/dependency_links.txt
+jsontables.egg-info/entry_points.txt
+jsontables.egg-info/requires.txt
+jsontables.egg-info/top_level.txt
