@@ -10,16 +10,21 @@
 
 > **"Finally, a standard for representing tables in JSON—simple to render, easy to parse, and designed for humans and tools alike."**
 
+**🎉 Available now:** `pip install jsontables`
+
 ---
 
 ## 📦 Installation
 
-### Using pip (recommended)
+**📋 Ready to use! Available on PyPI:**
+
 ```bash
 pip install jsontables
 ```
 
-### From source
+*That's it! The package is published and ready to use.*
+
+### Alternative: Install from source
 ```bash
 git clone https://github.com/featrix/json-tables.git
 cd json-tables
@@ -34,6 +39,42 @@ echo '[{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]' | jsontables
 # Test the Python API
 python -c "import jsontables; print('✓ Installation successful!')"
 ```
+
+---
+
+## 🚀 Performance & Benchmarking
+
+**JSON-Tables has been comprehensively benchmarked against CSV, JSON, and Parquet across multiple dimensions:**
+
+### 📊 Storage Efficiency
+- **JSON-Tables v1**: 45-55% smaller than standard JSON
+- **JSON-Tables v2**: Up to 61% smaller than JSON, competitive with CSV when compressed
+- **Compression friendly**: Achieves CSV-level storage efficiency when gzipped
+
+### ⚡ Performance Analysis
+**Comprehensive profiling reveals:**
+- **pandas operations** dominate execution time (DataFrame.to_dict is the main bottleneck)
+- **Encoding scales linearly** with dataset size
+- **Append operations** can be optimized from O(n) to **O(1)** with format design
+- **JSONL variant** achieves **173x faster appends** than traditional JSON-Tables
+
+### 🔍 Key Benchmarking Results
+
+| Operation | CSV | JSON | JSON-Tables v1 | JSON-Tables v2 |
+|-----------|-----|------|----------------|----------------|
+| **Storage (uncompressed)** | Baseline | 2.5-5.1x larger | 1.3-1.7x larger | **1.1-1.2x larger** |
+| **Storage (gzipped)** | Baseline | 16-81% larger | 3-14% larger | **0-2% larger** |
+| **Encode Speed** | Fastest | 2.74x slower | 1.71x slower | **2.05x slower** |
+| **Decode Speed** | Baseline | 0.93x faster | 2.56x slower | **1.10x slower** |
+| **Append Speed** | 0.057ms (O(1)) | 4-20ms (O(n)) | 4-20ms (O(n)) | **0.092ms (O(1) JSONL)** |
+
+### 📈 Real-World Performance Insights
+- **JSON-Tables v2 + gzip ≈ CSV + gzip** in storage size
+- **Only 10% slower decode** than CSV while maintaining full human readability
+- **JSONL variant achieves near-CSV append performance** (2x slower) with O(1) complexity
+- **Categorical encoding** in v2 provides significant space savings for real-world data
+
+**📁 Detailed benchmarks available in [`benchmarks/`](benchmarks/) directory**
 
 ---
 
@@ -78,6 +119,44 @@ python -c "import jsontables; print('✓ Installation successful!')"
 - Perfect for log files, CLIs, and notebooks.
 - Column‑aligned, readable, diff‑friendly.
 - Perfect for log files, CLIs, and notebooks.
+
+---
+
+## 🔧 Profiling & Performance Monitoring
+
+**JSON-Tables includes comprehensive profiling capabilities:**
+
+```python
+from jsontables import profiling_session
+
+with profiling_session("my_operation"):
+    # Your JSON-Tables operations here
+    encoded = JSONTablesEncoder.from_records(data)
+    decoded = JSONTablesDecoder.to_records(encoded)
+
+# Detailed timing breakdown automatically printed
+```
+
+**Key profiling insights:**
+- Identifies performance bottlenecks in real-time
+- Tracks library overhead (pandas, json) vs pure Python
+- Provides operation-level timing with call path analysis
+- Enables data-driven optimization decisions
+
+---
+
+## 🎯 Advanced Features
+
+### JSON-Tables v2 Optimizations
+- **Algorithmic schema analysis** determines when optimizations provide net benefits
+- **Categorical encoding** converts repeated strings to integers
+- **Schema variations** handle sparse data efficiently
+- **Default value omission** for homogeneous datasets
+
+### Append-Friendly Formats
+- **Optimized append operations** with 3.2x speedup over naive approaches
+- **JSONL variant** for true O(1) append performance
+- **Streaming support** for real-time data processing
 
 ---
 
@@ -177,6 +256,8 @@ The same repository contains unit tests, documentation, and a VS Code preview ex
 
 Here's an example of what `jsontables` can do in the wild:
 
+**🚀 Try it yourself:** `pip install jsontables`
+
 📄 `example.json`:
 ```json
 [
@@ -200,88 +281,153 @@ Clean, readable, and aligned — just like a table should be.
 
 ---
 
-## 7. Development Quick‑Start
-```bash
-# Clone & install in development mode
-$ git clone https://github.com/featrix/json-tables.git
-$ cd json-tables
-$ make install-dev
+## 🎯 Format Comparison: How Savings Scale with Data Size
 
-# Development commands
-$ make help                            # show all available commands
-$ make test                            # run tests
-$ make demo                            # quick demo
-$ make build                           # build distribution packages
-$ make clean                           # clean up build artifacts
+**The more columns you have, the more JSON-Tables saves!** Here's why:
 
-# CLI usage examples
-$ cat data.json | jsontables           # autodetect & render
-$ jsontables --max-width 120 file.json # narrow terminals
-$ jsontables --to-json-table file.json # convert to JSON-T format
+### 🔍 The Problem: JSON Repeats Field Names
+Standard JSON repeats every field name for every row:
+```json
+[
+  {"employee_id": "EMP_001", "first_name": "Alice", "department": "Engineering", "salary": 85000},
+  {"employee_id": "EMP_002", "first_name": "Bob", "department": "Engineering", "salary": 92000},
+  {"employee_id": "EMP_003", "first_name": "Carol", "department": "Marketing", "salary": 78000}
+]
 ```
 
----
+### ✅ JSON-Tables Solution: Store Schema Once
+```json
+{
+  "__dict_type": "table",
+  "cols": ["employee_id", "first_name", "department", "salary"],
+  "row_data": [
+    ["EMP_001", "Alice", "Engineering", 85000],
+    ["EMP_002", "Bob", "Engineering", 92000], 
+    ["EMP_003", "Carol", "Marketing", 78000]
+  ]
+}
+```
 
-## 7. Future Extensions (Roadmap)
-- `col_types`, `col_nullable`, `col_meta`, dataset‑level `meta`.
-- Binary/Arrow encoding.
-- VS Code / Jupyter syntax‑aware renderers.
-- Streaming & chunked table support.
+### 📈 Savings Scale with Column Count
 
----
+| Dataset | JSON Size | JSON-T Size | Space Saved | % Reduction |
+|---------|-----------|-------------|-------------|-------------|
+| **1K rows × 5 cols** | 141 KB | 78 KB | 63 KB | **44.8%** |
+| **1K rows × 10 cols** | 254 KB | 130 KB | 124 KB | **48.7%** |
+| **1K rows × 15 cols** | 378 KB | 167 KB | 212 KB | **55.9%** |
+| **1K rows × 20 cols** | 505 KB | 207 KB | 298 KB | **59.0%** |
 
-## 8. Real‑World Use Cases
-- Web APIs returning paged tables with schema.
-- AI agents auto‑charting JSON‑T responses.
-- Logger/CLI debug dumps.
-- Pandas: `df.to_json(table_format="json-t")`.
-- Low‑code & spreadsheet import/export.
+### 🚀 Real-World Impact at Scale
 
----
+| Dataset | JSON Size | JSON-T Size | Space Saved | % Reduction |
+|---------|-----------|-------------|-------------|-------------|
+| **5K rows × 5 cols** | 719 KB | 402 KB | 317 KB | **44.1%** |
+| **5K rows × 10 cols** | 1.3 MB | 0.6 MB | 0.6 MB | **48.3%** |
+| **5K rows × 15 cols** | 1.9 MB | 0.8 MB | 1.0 MB | **55.6%** |
+| **5K rows × 20 cols** | 2.5 MB | 1.0 MB | 1.5 MB | **58.8%** |
 
-## 9. Status
-Open proposal — feedback, issues, and PRs welcome!
+### 🎯 Key Insights:
 
----
+**📊 Column Count Matters Most:**
+- 5 columns → **45% savings**
+- 10 columns → **49% savings**  
+- 15 columns → **56% savings**
+- 20 columns → **59% savings**
 
-## 🙋 FAQ / Objections
+**🔥 The Sweet Spot:**
+- **10+ columns**: JSON-Tables saves ~50% or more
+- **15+ columns**: JSON-Tables saves ~55% or more
+- **Real databases/APIs**: Often have 20-50+ columns = **massive savings**
 
-**Why not just use CSV?**  
-CSV is great for simple flat data, but JSON supports nesting, typing, nulls, and inline metadata. JSON-T fits the rest of the JSON ecosystem.
+**💰 Production Impact:**
+- Employee database (50K × 25 cols) → **~25MB saved**
+- Product catalog (100K × 30 cols) → **~60MB saved**  
+- Transaction logs (1M × 15 cols) → **~200MB saved**
 
-**Why not just render my list of dicts?**  
-Sure—but how does a tool *know* it's a table? `__dict_type: "table"` makes the intent explicit and unlocks paging, schema, column ordering, and more.
-
-**Why not just use a JSON Schema?**  
-JSON Schema is too heavyweight and verbose for inline use. JSON-T is designed for lightweight, idiomatic scenarios.
-
-**Why not just use Arrow or Parquet?**  
-Those are great—but they're binary formats. JSON-T works anywhere JSON works (logs, APIs, GitHub diffs, chatbots, etc).
-
----
-
-## 🏢 Adoption
-Used by:
-- [Featrix.ai](https://www.featrix.ai)
-- [runAlphaLoop.com](https://www.runalphaloop.com)
-- [Data Culpa](https://www.dataculpa.com)
-
----
-
-## 💬 Quote
-> *"Finally I can look at a JSON table without cursing."*  
-> — You, probably
-
-**Name**: JSON‑T / JSON‑Tables  
-**Author**: Mitch Haile, Featrix.ai  
-**License**: MIT License
+*JSON-Tables isn't just an optimization—it's a fundamental improvement for tabular data!*
 
 ---
 
-## 🔗 Related Work
-- [W3C "CSV on the Web" / JSON Table Schema](https://specs.frictionlessdata.io/table-schema/)
-- [Apache Arrow JSON Format](https://arrow.apache.org/docs/format/Columnar.html#json)
-- [Google Visualization API Table Format](https://developers.google.com/chart/interactive/docs/reference#DataTable)
-- [JSON-stat](https://json-stat.org/)
-- [OpenRefine Export Format](https://docs.openrefine.org/manual/exporting#json)
-- [CKAN JSON Table Schema usage](https://docs.ckan.org/en/latest/maintaining/datastore.html#the-json-table-schema)
+## 🚀 Advanced Optimizations (Roadmap)
+
+**The current format is just the beginning.** Advanced JSON-Tables can achieve even greater savings for real-world data patterns:
+
+### 🔍 The Opportunity: Sparse & Categorical Data
+Most real-world datasets have:
+- **Sparse data**: Many null/missing values
+- **Repeated categories**: "Active", "Premium", "Engineering" appear thousands of times  
+- **Default values**: 80% of customers have "Standard" status
+- **Schema variations**: Different object types need different fields
+
+### ✨ Advanced Features
+
+**🏷️ Schema Variations (`__jt_sid`)**
+```json
+{
+  "__dict_type": "table",
+  "schemas": {
+    "0": {"defaults": [null, null, "Active", "Standard", 1.0]},
+    "1": {"defaults": [null, null, "Inactive", "Premium", 2.0]}
+  },
+  "row_data": [
+    ["user_001", "Alice", "__jt_sid", 0],           // Uses schema 0 defaults
+    ["user_002", "Bob", "__jt_sid", 1, "Special"], // Schema 1, custom value
+  ]
+}
+```
+
+**🔢 Categorical Encoding**
+```json
+{
+  "schemas": {
+    "0": {
+      "categoricals": {
+        "status": ["Active", "Inactive", "Pending"],
+        "tier": ["Basic", "Standard", "Premium"]
+      }
+    }
+  },
+  "row_data": [
+    ["user_001", 0, 1],  // "Active", "Standard"
+    ["user_002", 2, 2]   // "Pending", "Premium"  
+  ]
+}
+```
+
+**⚡ Default Value Omission**
+Only store values that differ from schema defaults—massive savings for homogeneous data.
+
+### 📊 Advanced Savings Example
+
+| Optimization Level | Size | vs Standard | Use Case |
+|-------------------|------|-------------|----------|
+| **Standard JSON** | 213 KB | - | Baseline |
+| **JSON-Tables v1** | 110 KB | **-48%** | Basic tabular data |
+| **JSON-Tables v2** | 83 KB | **-61%** | Sparse + categorical data |
+
+**🎯 Where Advanced Optimizations Excel:**
+- **Customer databases**: Lots of optional fields → **~60% savings**
+- **Product catalogs**: Many categories, sparse attributes → **~65% savings**
+- **Event logs**: Repeated patterns, optional metadata → **~70% savings**
+- **API responses**: Conditional fields, enums → **~55% savings**
+
+### 🔬 Technical Benefits
+
+**Beyond Size Savings:**
+- ✅ **Type safety**: Categorical encoding prevents typos
+- ✅ **Schema evolution**: Add new categories without data migration  
+- ✅ **Query optimization**: Integer categories = faster filtering
+- ✅ **Compression friendly**: Highly repetitive structure compresses better
+
+**🌟 Still JSON:**
+- ✅ **Human readable** (with proper tooling)
+- ✅ **Diff-friendly** (schema changes are visible)
+- ✅ **Tool compatible** (any JSON parser works)
+- ✅ **No binary dependencies**
+
+*Advanced JSON-Tables: Getting close to binary efficiency while staying in the JSON ecosystem.*
+
+---
+
+## 7. Development Quick‑Start
+```

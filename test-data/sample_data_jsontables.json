@@ -1,0 +1,152 @@
+{
+  "__dict_type": "table",
+  "cols": [
+    "name",
+    "age",
+    "city",
+    "salary",
+    "department",
+    "years_experience",
+    "remote"
+  ],
+  "current_page": 0,
+  "total_pages": 1,
+  "page_rows": 15,
+  "row_data": [
+    [
+      "Alice Johnson",
+      28,
+      "Seattle",
+      85000,
+      "Engineering",
+      5,
+      true
+    ],
+    [
+      "Bob Chen",
+      35,
+      "San Francisco",
+      120000,
+      "Engineering",
+      8,
+      false
+    ],
+    [
+      "Carol Martinez",
+      42,
+      "Austin",
+      95000,
+      "Marketing",
+      12,
+      true
+    ],
+    [
+      "David Kim",
+      29,
+      "New York",
+      110000,
+      "Engineering",
+      6,
+      false
+    ],
+    [
+      "Elena Rodriguez",
+      31,
+      "Chicago",
+      78000,
+      "Sales",
+      7,
+      true
+    ],
+    [
+      "Frank Thompson",
+      45,
+      "Boston",
+      105000,
+      "Engineering",
+      15,
+      false
+    ],
+    [
+      "Grace Liu",
+      26,
+      "Portland",
+      72000,
+      "Design",
+      3,
+      true
+    ],
+    [
+      "Henry Williams",
+      38,
+      "Denver",
+      88000,
+      "Marketing",
+      10,
+      false
+    ],
+    [
+      "Irene Davis",
+      33,
+      "Miami",
+      92000,
+      "Sales",
+      9,
+      true
+    ],
+    [
+      "Jack Wilson",
+      27,
+      "Phoenix",
+      76000,
+      "Design",
+      4,
+      false
+    ],
+    [
+      "Karen Brown",
+      41,
+      "Dallas",
+      98000,
+      "Engineering",
+      13,
+      true
+    ],
+    [
+      "Luis Garcia",
+      30,
+      "Los Angeles",
+      115000,
+      "Engineering",
+      7,
+      false
+    ],
+    [
+      "Maria Petrov",
+      36,
+      "Washington",
+      87000,
+      "Marketing",
+      11,
+      true
+    ],
+    [
+      "Nathan Taylor",
+      25,
+      "Nashville",
+      68000,
+      "Design",
+      2,
+      false
+    ],
+    [
+      "Olivia Anderson",
+      39,
+      "Atlanta",
+      101000,
+      "Sales",
+      12,
+      false
+    ]
+  ]
+}

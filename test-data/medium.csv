@@ -1,0 +1,1001 @@
+name,age,city,salary,department,years_experience,remote,skills,previous_company,education_level
+David Brown,50,Nashville,122680,Design,3,False,Docker,StartupXYZ,High School
+Rachel Taylor,48,Dallas,70757,HR,0,True,Python,CloudSoft,High School
+Paul Martinez,58,Portland,153740,Legal,11,False,Kubernetes,DevTools,Bachelor
+Jack Thompson,62,New York,95801,Marketing,3,True,Machine Learning,CloudSoft,High School
+Luis Martinez,38,Washington,140253,Design,2,True,React,InnovateLab,Master
+Karen Thompson,26,Dallas,55018,Legal,3,True,Python,CodeFactory,Bachelor
+Karen Johnson,29,Austin,144607,Marketing,8,False,Kubernetes,CloudSoft,Master
+Nathan Davis,25,Dallas,142059,Marketing,4,False,Docker,InnovateLab,High School
+Frank Garcia,51,Austin,73795,Support,5,True,SQL,DataInc,Master
+Irene Thompson,33,Atlanta,120232,Marketing,17,True,Machine Learning,InnovateLab,Bachelor
+Frank Rodriguez,23,Nashville,95922,Design,6,True,Project Management,TechCorp,Bachelor
+Grace Davis,59,Houston,148321,Operations,10,False,Machine Learning,TechCorp,PhD
+Carol Miller,59,Nashville,154991,Finance,4,True,Project Management,CodeFactory,Bachelor
+Karen Rodriguez,45,Los Angeles,55925,Engineering,19,True,Docker,CodeFactory,Bachelor
+Karen Miller,44,Nashville,108358,HR,11,False,Machine Learning,DataInc,PhD
+Paul Anderson,64,Miami,100779,Operations,7,True,AWS,DataInc,High School
+Maria Martinez,40,Miami,130070,Support,2,True,React,BigTech,PhD
+David Johnson,60,San Francisco,98780,Finance,7,False,Project Management,CloudSoft,PhD
+Olivia Anderson,29,Houston,130158,Design,7,False,React,CloudSoft,PhD
+Rachel Brown,64,Austin,147454,Sales,13,True,Data Science,DataInc,PhD
+Paul Rodriguez,39,Boston,174197,Legal,1,True,Machine Learning,DevTools,Master
+Maria Rodriguez,42,Miami,130957,HR,11,True,AWS,DevTools,Master
+Quinn Chen,36,Chicago,65199,Sales,20,False,SQL,BigTech,Master
+Maria Johnson,50,Phoenix,160381,Finance,2,True,AWS,InnovateLab,High School
+Henry Martinez,61,Dallas,115275,Operations,5,True,React,BigTech,PhD
+Maria Rodriguez,45,Atlanta,100948,Product,19,True,JavaScript,DataInc,Master
+Maria Thompson,27,Portland,76420,Product,7,False,React,StartupXYZ,Master
+Bob Kim,54,Seattle,179578,Product,16,True,AWS,BigTech,Bachelor
+Henry Petrov,35,New York,86875,Finance,17,True,Python,StartupXYZ,Master
+Quinn Chen,40,Boston,59388,Sales,11,False,AWS,InnovateLab,Bachelor
+Irene Anderson,45,Atlanta,80654,Legal,16,True,Data Science,BigTech,Master
+Luis Davis,43,Houston,81787,Marketing,12,False,AWS,TechCorp,Master
+Rachel Davis,59,San Francisco,70706,Finance,4,True,Python,BigTech,Bachelor
+Alice Rodriguez,24,San Francisco,62202,Operations,1,True,Docker,StartupXYZ,Bachelor
+Paul Smith,60,San Francisco,74995,Product,1,False,Machine Learning,TechCorp,High School
+Elena Liu,26,New York,145997,Design,5,True,React,TechCorp,PhD
+Henry Wilson,41,Chicago,123794,Sales,20,False,Project Management,StartupXYZ,Master
+Rachel Davis,60,Los Angeles,55281,Engineering,13,False,SQL,BigTech,High School
+Rachel Miller,31,Miami,149717,Marketing,15,True,Project Management,CodeFactory,PhD
+Henry Chen,42,Los Angeles,53806,Marketing,20,False,Project Management,StartupXYZ,Bachelor
+Quinn Martinez,36,New York,53459,Support,6,False,Machine Learning,DataInc,PhD
+Grace Smith,40,Seattle,178912,Operations,18,False,Machine Learning,StartupXYZ,High School
+Quinn Miller,27,Nashville,118868,Finance,13,False,Machine Learning,TechCorp,Master
+Steve Kim,63,Dallas,152731,Finance,1,True,JavaScript,InnovateLab,Bachelor
+Luis Jones,42,Seattle,79969,Legal,14,True,SQL,StartupXYZ,PhD
+Grace Wilson,58,Boston,75040,Support,16,False,Machine Learning,BigTech,Master
+Carol Jones,60,Miami,84268,Finance,5,True,AWS,CodeFactory,Master
+Rachel Kim,38,Portland,175199,HR,2,False,Data Science,InnovateLab,Master
+Irene Williams,63,Houston,163734,Legal,10,False,Kubernetes,StartupXYZ,PhD
+Bob Thompson,32,Houston,87356,Legal,19,False,AWS,DataInc,Bachelor
+Grace Kim,60,Boston,67172,Operations,9,False,Python,InnovateLab,PhD
+Luis Taylor,46,Phoenix,55373,Design,9,False,Data Science,DataInc,Bachelor
+Frank Anderson,43,San Francisco,166614,HR,4,True,Project Management,DevTools,Master
+Elena Wilson,54,Denver,148816,Marketing,5,False,React,BigTech,Master
+Quinn Smith,30,Houston,76862,Design,18,False,Python,DataInc,Master
+Alice Kim,55,New York,173067,Finance,20,True,Kubernetes,StartupXYZ,Bachelor
+Rachel Brown,60,Chicago,178515,Support,12,True,AWS,CloudSoft,PhD
+Paul Garcia,47,Portland,172151,Support,15,True,SQL,CodeFactory,Master
+Frank Anderson,38,Portland,169451,Marketing,13,False,Machine Learning,DevTools,High School
+Rachel Smith,64,Houston,117612,Support,4,True,Docker,StartupXYZ,Master
+Rachel Brown,42,Atlanta,112623,Operations,13,False,Project Management,StartupXYZ,Bachelor
+Steve Thompson,51,Portland,98456,HR,18,True,Project Management,StartupXYZ,Master
+Alice Rodriguez,65,Phoenix,161203,Design,0,True,Machine Learning,InnovateLab,PhD
+Elena Anderson,34,Dallas,112626,Legal,16,True,Project Management,CloudSoft,Master
+Paul Rodriguez,38,San Francisco,102783,Design,12,True,JavaScript,DevTools,High School
+Henry Miller,60,Phoenix,45736,Engineering,8,False,AWS,CodeFactory,Bachelor
+Olivia Williams,23,Washington,50752,Sales,14,False,Machine Learning,CloudSoft,Bachelor
+Grace Garcia,55,Nashville,74719,Engineering,1,True,JavaScript,CloudSoft,PhD
+Grace Miller,57,Austin,121832,Engineering,3,True,Machine Learning,DataInc,Bachelor
+David Petrov,58,New York,106314,Design,13,False,JavaScript,DevTools,PhD
+Elena Garcia,65,Austin,70923,Product,9,True,Python,CloudSoft,PhD
+Grace Chen,45,Chicago,107623,HR,15,False,AWS,DevTools,Master
+Elena Garcia,65,Houston,56236,HR,6,False,Kubernetes,CodeFactory,PhD
+David Davis,45,San Francisco,138435,Product,16,False,Machine Learning,InnovateLab,PhD
+Irene Miller,63,Seattle,124484,Legal,14,False,Kubernetes,BigTech,PhD
+Paul Miller,40,Washington,82828,HR,13,True,Data Science,DataInc,PhD
+Maria Davis,32,Chicago,111761,Operations,2,True,Docker,TechCorp,Bachelor
+Carol Johnson,48,Phoenix,131418,Engineering,2,True,Machine Learning,InnovateLab,High School
+Elena Davis,52,Miami,126757,HR,1,False,Project Management,TechCorp,Bachelor
+Paul Kim,43,Washington,111899,Finance,16,True,Data Science,CodeFactory,Master
+Luis Smith,54,Miami,101569,Design,3,True,JavaScript,InnovateLab,PhD
+David Taylor,64,Los Angeles,132467,Marketing,7,True,SQL,BigTech,Master
+Olivia Chen,39,New York,130641,Support,4,True,JavaScript,StartupXYZ,Master
+Karen Wilson,41,Miami,91301,Product,9,True,Docker,StartupXYZ,Master
+Bob Petrov,38,Washington,105275,Engineering,12,False,Kubernetes,TechCorp,Bachelor
+Henry Liu,50,Denver,57863,Product,16,False,Python,CodeFactory,Master
+Elena Garcia,56,New York,177710,Marketing,9,False,Kubernetes,DevTools,Master
+Quinn Kim,45,Austin,98588,Product,3,False,JavaScript,TechCorp,PhD
+Grace Miller,29,Miami,121298,Engineering,11,True,React,CodeFactory,High School
+Jack Rodriguez,48,Chicago,177404,Finance,1,True,Kubernetes,BigTech,PhD
+Irene Petrov,50,Houston,131127,Support,19,False,AWS,BigTech,PhD
+Tina Petrov,53,Austin,119042,Product,3,False,SQL,InnovateLab,High School
+Carol Anderson,45,Austin,172189,Sales,10,False,Docker,DevTools,High School
+Carol Anderson,24,Chicago,100065,Product,10,True,Kubernetes,TechCorp,Master
+Steve Taylor,51,Austin,83238,Sales,18,True,Project Management,TechCorp,High School
+Irene Williams,45,Miami,68331,Design,17,False,AWS,CodeFactory,Master
+Quinn Smith,57,Dallas,75923,Support,4,True,JavaScript,TechCorp,High School
+Olivia Williams,65,Portland,117694,Marketing,1,True,Docker,BigTech,Bachelor
+Luis Brown,31,Portland,97759,Engineering,12,False,React,InnovateLab,PhD
+Carol Garcia,63,Portland,109545,Legal,17,True,JavaScript,DataInc,PhD
+Quinn Taylor,50,Phoenix,77662,Product,13,False,Python,StartupXYZ,PhD
+Karen Smith,26,Seattle,161306,Support,7,False,AWS,CloudSoft,PhD
+Quinn Garcia,59,Nashville,115961,Legal,9,True,JavaScript,CodeFactory,PhD
+Alice Petrov,43,Houston,88603,Sales,10,True,Python,TechCorp,Bachelor
+Bob Anderson,39,Austin,132798,Legal,16,False,Python,StartupXYZ,PhD
+David Brown,29,New York,169452,Sales,16,True,Project Management,CodeFactory,Master
+Nathan Anderson,52,Denver,59133,Support,10,True,JavaScript,DataInc,Bachelor
+Irene Garcia,35,Phoenix,55108,Product,7,True,Project Management,CodeFactory,Master
+Jack Taylor,27,Houston,106196,Support,12,False,Python,InnovateLab,Master
+Jack Petrov,51,Nashville,153678,Support,6,True,React,InnovateLab,Master
+Rachel Miller,43,San Francisco,115980,Sales,0,False,Kubernetes,CodeFactory,Bachelor
+Olivia Anderson,59,Denver,109913,Marketing,8,True,Data Science,DataInc,High School
+Carol Rodriguez,27,Washington,124306,Engineering,1,True,SQL,InnovateLab,Bachelor
+Alice Smith,65,Boston,97754,Legal,9,True,React,DevTools,Bachelor
+Quinn Wilson,37,Houston,126641,Design,0,True,Project Management,StartupXYZ,High School
+Jack Taylor,34,Nashville,172750,HR,14,True,Python,CodeFactory,Bachelor
+Karen Martinez,54,Phoenix,97824,Marketing,3,True,Machine Learning,CloudSoft,PhD
+Maria Johnson,44,Miami,66034,Legal,12,True,Data Science,BigTech,PhD
+Steve Garcia,65,Miami,79479,Finance,19,False,Python,DevTools,High School
+Paul Kim,36,Chicago,172292,Operations,17,False,Data Science,BigTech,High School
+Maria Martinez,49,Portland,118913,Product,8,True,Project Management,TechCorp,Bachelor
+Karen Thompson,33,Dallas,67210,Operations,13,False,SQL,InnovateLab,Master
+Quinn Thompson,36,Denver,57138,Support,12,True,Docker,DevTools,High School
+Elena Chen,52,Seattle,162147,Design,4,True,Machine Learning,CloudSoft,High School
+Olivia Taylor,43,Los Angeles,71542,HR,18,True,Project Management,DevTools,High School
+Paul Davis,39,Miami,126090,Support,20,True,Docker,DataInc,PhD
+Jack Martinez,38,Phoenix,82726,Product,7,False,JavaScript,TechCorp,PhD
+Grace Jones,59,San Francisco,116713,Legal,12,True,JavaScript,CloudSoft,High School
+Luis Williams,41,Denver,119660,HR,9,False,React,InnovateLab,High School
+Tina Garcia,60,Seattle,106492,Finance,8,False,React,InnovateLab,High School
+Frank Martinez,39,Miami,123224,Marketing,10,False,React,CodeFactory,Bachelor
+Quinn Wilson,27,Boston,82862,HR,19,False,Docker,CodeFactory,High School
+Carol Garcia,57,Portland,102654,Design,14,True,Data Science,BigTech,Bachelor
+Rachel Smith,26,Los Angeles,158144,Sales,20,False,Data Science,StartupXYZ,PhD
+Jack Thompson,43,Chicago,52015,Marketing,8,True,Python,DataInc,PhD
+Olivia Taylor,34,Nashville,74702,Finance,2,True,Machine Learning,BigTech,High School
+Steve Liu,62,Miami,179780,HR,8,True,Data Science,CloudSoft,Master
+Irene Chen,52,Los Angeles,87967,Sales,15,False,React,CloudSoft,High School
+Elena Martinez,51,Austin,179294,Finance,15,True,Python,DevTools,High School
+David Chen,54,Los Angeles,89567,Engineering,15,True,Project Management,CodeFactory,High School
+Alice Jones,28,Washington,136663,Support,12,False,Machine Learning,CloudSoft,PhD
+Olivia Jones,39,Portland,150190,Sales,11,False,Data Science,StartupXYZ,High School
+Henry Martinez,65,Washington,71613,Engineering,17,False,AWS,CodeFactory,High School
+Karen Davis,45,Phoenix,93670,Operations,10,False,Project Management,InnovateLab,Master
+Karen Johnson,24,Miami,115310,Legal,9,True,Machine Learning,CloudSoft,PhD
+Frank Jones,32,Miami,89813,Engineering,18,False,JavaScript,CodeFactory,Bachelor
+Quinn Petrov,52,Atlanta,133427,HR,19,False,React,DataInc,PhD
+Steve Rodriguez,45,Los Angeles,166418,HR,13,True,Project Management,DataInc,PhD
+Luis Wilson,53,San Francisco,149682,Marketing,10,False,Data Science,CodeFactory,High School
+Olivia Anderson,26,Los Angeles,45769,Finance,0,False,Project Management,DevTools,PhD
+Frank Miller,24,Portland,145779,Legal,1,True,React,StartupXYZ,PhD
+Maria Taylor,53,New York,156853,HR,6,False,Project Management,CodeFactory,PhD
+Carol Liu,55,Portland,110788,Finance,2,True,Project Management,DataInc,Bachelor
+Tina Jones,53,Miami,119539,Legal,13,True,Data Science,DataInc,PhD
+Olivia Taylor,46,Atlanta,151593,Engineering,6,False,Machine Learning,CodeFactory,High School
+David Anderson,54,Los Angeles,110132,Legal,14,False,Kubernetes,StartupXYZ,PhD
+Elena Rodriguez,62,Miami,48941,Product,7,False,SQL,InnovateLab,Master
+Luis Johnson,61,Denver,61621,Product,4,True,Machine Learning,TechCorp,PhD
+Steve Davis,54,Seattle,128953,Operations,5,False,Docker,StartupXYZ,Bachelor
+Rachel Taylor,62,Boston,134895,Support,13,True,JavaScript,TechCorp,Bachelor
+Irene Davis,39,New York,123998,Design,11,False,Project Management,DataInc,Master
+Jack Smith,64,Washington,101810,Support,8,False,AWS,InnovateLab,High School
+Bob Chen,38,Nashville,84234,Design,5,True,SQL,CodeFactory,High School
+Olivia Petrov,26,New York,65973,Operations,2,False,Data Science,InnovateLab,PhD
+Grace Smith,65,Boston,102975,HR,19,False,Kubernetes,TechCorp,High School
+David Anderson,63,Chicago,165569,Support,13,True,Machine Learning,StartupXYZ,Master
+Maria Garcia,30,Boston,107242,Product,3,True,Kubernetes,StartupXYZ,Bachelor
+Rachel Jones,50,Seattle,93962,Design,8,True,Data Science,InnovateLab,Master
+Grace Davis,29,Dallas,78633,HR,18,True,Python,DevTools,PhD
+David Liu,61,New York,174443,Product,16,True,Docker,CodeFactory,PhD
+Nathan Petrov,31,Washington,177771,Marketing,12,True,SQL,DevTools,Master
+Karen Martinez,65,Phoenix,106551,Legal,13,True,SQL,DevTools,Master
+Alice Williams,36,Miami,75188,Operations,6,True,Python,DataInc,PhD
+Elena Williams,45,Denver,70522,Sales,11,True,AWS,TechCorp,Bachelor
+Bob Davis,22,Portland,156118,Support,0,True,JavaScript,DataInc,Master
+David Williams,60,Boston,52961,Finance,16,False,React,CloudSoft,Bachelor
+Alice Jones,38,New York,102395,Finance,14,True,SQL,DevTools,Bachelor
+Carol Liu,23,Austin,152034,Marketing,20,True,Python,CloudSoft,High School
+Henry Anderson,64,Boston,175691,Product,11,True,React,TechCorp,Master
+Olivia Miller,42,Seattle,179394,Sales,0,True,Docker,DevTools,PhD
+Quinn Brown,24,Los Angeles,155694,Marketing,15,False,Machine Learning,DevTools,PhD
+Jack Martinez,36,Phoenix,153124,Sales,2,True,Data Science,CodeFactory,Master
+Grace Martinez,42,Denver,83115,Design,10,True,Machine Learning,StartupXYZ,Bachelor
+Jack Petrov,41,New York,157940,Engineering,8,True,Project Management,CodeFactory,PhD
+Henry Miller,47,San Francisco,111155,Sales,2,True,Data Science,DataInc,High School
+Quinn Liu,64,Boston,84910,Finance,5,True,AWS,TechCorp,Master
+Steve Martinez,26,Dallas,169786,Product,8,False,Project Management,StartupXYZ,PhD
+Frank Anderson,32,New York,69613,Sales,18,False,Python,StartupXYZ,PhD
+Tina Thompson,63,Nashville,152833,Sales,0,False,Kubernetes,DevTools,High School
+Carol Smith,58,Portland,52722,Marketing,9,False,Docker,DevTools,Bachelor
+Olivia Liu,50,Chicago,97792,Marketing,2,False,Docker,DevTools,Bachelor
+Olivia Smith,64,Seattle,74287,Marketing,5,False,Data Science,StartupXYZ,Bachelor
+Rachel Smith,39,New York,149669,Finance,18,False,SQL,DataInc,High School
+Rachel Smith,30,New York,147702,Product,4,True,Kubernetes,TechCorp,Master
+Karen Thompson,32,Miami,51025,Support,14,True,Data Science,TechCorp,Bachelor
+Carol Jones,31,New York,169216,Product,4,True,Kubernetes,StartupXYZ,High School
+Bob Anderson,62,New York,151371,Support,4,False,Python,CodeFactory,PhD
+Tina Martinez,54,Miami,62182,Sales,10,False,React,TechCorp,Bachelor
+Olivia Chen,60,Austin,119182,Operations,15,True,Python,BigTech,Master
+Olivia Rodriguez,27,Austin,46537,HR,0,True,JavaScript,DataInc,PhD
+Maria Anderson,64,Phoenix,142944,HR,4,False,JavaScript,StartupXYZ,Bachelor
+Bob Anderson,56,Chicago,64168,Sales,6,False,Machine Learning,InnovateLab,High School
+Grace Miller,29,Dallas,114561,Design,10,False,SQL,InnovateLab,PhD
+Elena Petrov,39,Boston,83464,Marketing,5,True,JavaScript,InnovateLab,Bachelor
+Luis Miller,33,San Francisco,87577,HR,14,False,Project Management,BigTech,PhD
+Frank Thompson,46,Boston,47153,Support,4,False,Project Management,BigTech,High School
+Henry Thompson,47,Chicago,153668,Finance,19,False,Project Management,BigTech,High School
+Grace Miller,34,Chicago,95409,Legal,17,True,Data Science,InnovateLab,High School
+David Johnson,53,Chicago,112617,Operations,10,False,Project Management,CodeFactory,PhD
+Tina Johnson,58,Washington,49580,Sales,20,False,Python,InnovateLab,Bachelor
+Henry Jones,55,Boston,68548,Product,1,True,React,StartupXYZ,Master
+Henry Petrov,31,New York,178420,HR,2,False,JavaScript,InnovateLab,Master
+Carol Thompson,49,New York,115224,Marketing,7,False,Python,DevTools,High School
+Irene Kim,28,Houston,70588,Finance,9,False,Data Science,StartupXYZ,Master
+Paul Garcia,38,Los Angeles,99356,HR,18,False,SQL,TechCorp,PhD
+Tina Taylor,41,Atlanta,124012,Legal,15,False,Data Science,CloudSoft,Master
+Bob Jones,53,Denver,75590,Sales,17,False,Python,TechCorp,Bachelor
+Henry Williams,49,Chicago,144552,HR,20,True,React,DevTools,PhD
+Quinn Kim,57,Chicago,87680,HR,15,True,Kubernetes,TechCorp,Bachelor
+Maria Jones,32,Dallas,124338,Finance,9,False,Project Management,DataInc,High School
+Carol Thompson,65,Dallas,132079,Legal,4,False,Project Management,StartupXYZ,PhD
+Luis Anderson,31,Chicago,75526,Operations,11,True,Data Science,BigTech,Bachelor
+Maria Martinez,25,Seattle,140686,Support,2,False,JavaScript,DataInc,PhD
+Maria Wilson,25,Portland,128962,Engineering,17,False,SQL,CodeFactory,PhD
+Bob Martinez,59,Miami,84674,Sales,6,False,Data Science,CloudSoft,Master
+Maria Chen,59,New York,120959,Engineering,18,True,Project Management,BigTech,PhD
+Steve Anderson,62,Houston,92957,Finance,0,False,Kubernetes,DataInc,Master
+Olivia Rodriguez,24,Chicago,78713,Support,11,True,Project Management,BigTech,High School
+Tina Taylor,30,Phoenix,101636,Product,17,False,JavaScript,BigTech,PhD
+Jack Smith,56,Portland,99477,Design,18,True,Machine Learning,BigTech,High School
+Tina Martinez,44,Phoenix,148556,Finance,18,True,SQL,CodeFactory,Master
+David Chen,52,Washington,178233,Product,17,True,Project Management,DataInc,Master
+Steve Brown,40,Chicago,147578,Design,4,False,SQL,DevTools,High School
+Karen Jones,47,Miami,152473,HR,16,True,AWS,TechCorp,Master
+David Chen,33,Nashville,82045,Finance,9,False,AWS,StartupXYZ,High School
+Olivia Garcia,61,Nashville,147235,Engineering,7,False,JavaScript,CloudSoft,PhD
+Elena Liu,56,Houston,76529,Product,12,False,Project Management,DataInc,Master
+Olivia Johnson,31,Seattle,72811,Legal,5,False,AWS,DataInc,High School
+Maria Martinez,46,Portland,115141,Engineering,5,False,SQL,InnovateLab,High School
+Steve Brown,50,Miami,85859,Marketing,10,False,Project Management,InnovateLab,Bachelor
+Alice Davis,48,Los Angeles,85019,Support,18,True,JavaScript,DevTools,Master
+Luis Jones,22,San Francisco,52169,HR,8,True,Python,CodeFactory,High School
+Henry Petrov,45,Los Angeles,118099,Finance,20,True,Data Science,DevTools,PhD
+Henry Kim,41,San Francisco,138485,Support,7,True,Machine Learning,BigTech,PhD
+Rachel Davis,28,Dallas,80562,HR,1,False,AWS,InnovateLab,Bachelor
+Karen Garcia,57,Boston,104163,Support,15,False,SQL,InnovateLab,Bachelor
+Paul Brown,22,Nashville,110445,Design,4,True,AWS,InnovateLab,High School
+Irene Martinez,59,Washington,80148,Operations,1,False,Python,DataInc,PhD
+Nathan Chen,63,Boston,177798,Design,12,True,Machine Learning,InnovateLab,Master
+Alice Williams,29,Portland,128602,Legal,0,True,SQL,DevTools,Master
+David Johnson,36,Portland,46828,Product,15,True,React,DataInc,Bachelor
+Steve Jones,43,Denver,161949,Design,4,False,JavaScript,DataInc,Master
+Karen Miller,60,Atlanta,47423,Operations,12,False,JavaScript,DevTools,PhD
+Quinn Kim,34,Seattle,124015,Sales,6,False,Machine Learning,TechCorp,High School
+Frank Thompson,44,Miami,109412,Finance,2,False,Data Science,CloudSoft,Bachelor
+Irene Thompson,40,New York,173591,Operations,11,True,SQL,DataInc,Bachelor
+Luis Garcia,33,Atlanta,179598,Finance,13,True,Data Science,CloudSoft,Master
+Carol Anderson,46,Portland,177553,Operations,15,False,JavaScript,TechCorp,Master
+Steve Taylor,41,Boston,74345,Marketing,5,True,React,BigTech,Bachelor
+Jack Wilson,36,Denver,113336,Sales,9,True,Python,CodeFactory,High School
+David Thompson,52,Portland,161520,Operations,3,True,Python,CloudSoft,Master
+Tina Miller,59,Denver,146662,Operations,0,False,Python,DataInc,High School
+Irene Davis,36,Atlanta,66993,HR,6,False,JavaScript,CloudSoft,High School
+Bob Thompson,25,Miami,100075,Marketing,19,False,JavaScript,CodeFactory,Master
+Bob Kim,29,Boston,111838,Support,15,False,Machine Learning,CodeFactory,Bachelor
+Paul Petrov,32,Austin,74149,Design,6,True,Python,TechCorp,Master
+Frank Johnson,42,Seattle,88543,Sales,14,False,Data Science,BigTech,PhD
+Maria Kim,29,Boston,61188,Legal,2,True,AWS,TechCorp,Master
+Elena Petrov,23,Atlanta,146832,Support,17,False,Python,BigTech,PhD
+Olivia Jones,50,Atlanta,89236,Legal,1,False,Kubernetes,TechCorp,PhD
+Quinn Rodriguez,43,Boston,172048,HR,9,True,Project Management,DataInc,Bachelor
+Frank Rodriguez,42,New York,172159,HR,7,False,Project Management,TechCorp,High School
+Carol Williams,33,Los Angeles,86423,Sales,20,True,Docker,DataInc,Bachelor
+Paul Thompson,53,Atlanta,59109,HR,7,False,Kubernetes,StartupXYZ,High School
+Frank Garcia,29,Portland,164215,Legal,16,True,SQL,BigTech,Bachelor
+Paul Garcia,51,Washington,150277,Product,18,True,React,DevTools,High School
+Jack Petrov,26,Washington,125064,Legal,16,True,Machine Learning,CodeFactory,Bachelor
+Elena Rodriguez,64,Atlanta,100884,Product,1,True,React,DataInc,Bachelor
+Carol Petrov,49,Austin,68077,Sales,9,False,Project Management,DevTools,High School
+Henry Miller,24,Miami,96462,Operations,4,True,Python,StartupXYZ,High School
+Alice Smith,40,Denver,81195,Marketing,18,True,AWS,TechCorp,PhD
+Karen Wilson,50,Atlanta,114848,Support,0,False,AWS,CloudSoft,High School
+Bob Brown,30,Miami,63684,Sales,5,False,React,BigTech,Master
+Grace Rodriguez,30,Washington,72898,Marketing,9,False,React,TechCorp,PhD
+Steve Liu,46,Boston,103151,Operations,1,False,Python,InnovateLab,Master
+David Johnson,58,Denver,162772,HR,18,True,Project Management,CodeFactory,PhD
+Nathan Anderson,51,Austin,128070,HR,4,False,Docker,CloudSoft,Bachelor
+Frank Martinez,53,New York,62706,Marketing,6,True,JavaScript,CloudSoft,PhD
+Frank Miller,47,Miami,118790,Product,6,False,Docker,StartupXYZ,PhD
+Carol Jones,46,Chicago,121609,Sales,13,True,JavaScript,TechCorp,Master
+Elena Miller,35,Miami,50250,Product,5,False,Data Science,CloudSoft,PhD
+David Martinez,25,Austin,63309,Legal,15,False,Kubernetes,TechCorp,PhD
+Alice Jones,22,Los Angeles,77828,Marketing,13,True,AWS,DataInc,High School
+Bob Jones,46,San Francisco,172438,Product,3,False,SQL,TechCorp,High School
+Frank Brown,32,Phoenix,136615,Engineering,8,True,Kubernetes,TechCorp,Bachelor
+Irene Anderson,61,Chicago,99413,Legal,13,True,Docker,DataInc,Bachelor
+Alice Kim,45,Atlanta,111009,Support,20,False,React,CodeFactory,Bachelor
+Olivia Garcia,30,New York,131409,Product,3,False,Python,CloudSoft,Bachelor
+Elena Davis,50,Los Angeles,76715,Support,9,False,Data Science,InnovateLab,PhD
+Henry Rodriguez,29,New York,81220,Finance,4,True,Python,DataInc,Master
+Henry Jones,61,Nashville,117260,Support,15,False,JavaScript,StartupXYZ,Bachelor
+Tina Johnson,50,Los Angeles,116553,Support,7,True,Kubernetes,CodeFactory,Master
+Nathan Rodriguez,23,Portland,54291,Legal,7,False,SQL,DataInc,PhD
+Frank Jones,42,Atlanta,102446,Design,0,True,React,TechCorp,High School
+Alice Liu,35,Nashville,76562,Sales,18,True,Docker,TechCorp,Bachelor
+Paul Taylor,62,Houston,121200,Design,18,False,Project Management,StartupXYZ,Master
+Olivia Jones,27,New York,168339,Design,14,False,AWS,CloudSoft,High School
+Grace Williams,31,Austin,129490,HR,13,True,AWS,StartupXYZ,High School
+Henry Jones,63,Phoenix,122958,Finance,14,True,Kubernetes,DataInc,Master
+Quinn Petrov,47,Dallas,169787,HR,14,True,React,TechCorp,High School
+Karen Williams,64,Phoenix,107932,Marketing,2,False,Kubernetes,BigTech,Bachelor
+Olivia Anderson,57,Atlanta,72629,Engineering,20,False,JavaScript,StartupXYZ,Bachelor
+Karen Kim,43,Phoenix,179741,HR,15,True,Kubernetes,StartupXYZ,Master
+Nathan Davis,33,Portland,127570,Finance,2,True,React,StartupXYZ,High School
+Henry Davis,49,Phoenix,84830,Design,19,False,Machine Learning,CloudSoft,Bachelor
+Quinn Brown,31,Boston,146564,Marketing,6,True,Python,BigTech,PhD
+Frank Thompson,49,Phoenix,105209,Engineering,1,False,Python,StartupXYZ,Bachelor
+Frank Taylor,39,Phoenix,66108,Finance,19,True,Machine Learning,CloudSoft,PhD
+Maria Brown,48,Dallas,152114,Legal,4,False,React,BigTech,High School
+Irene Anderson,37,Washington,167226,Legal,2,True,JavaScript,CloudSoft,PhD
+Paul Petrov,57,Portland,131234,Sales,5,False,Machine Learning,InnovateLab,High School
+Nathan Chen,42,Seattle,55582,Engineering,6,False,SQL,CodeFactory,PhD
+Henry Davis,52,Boston,54819,Support,17,False,Python,BigTech,Master
+Grace Rodriguez,45,Portland,91007,Legal,1,True,Python,CodeFactory,Bachelor
+Karen Taylor,49,Dallas,148634,Sales,17,True,Kubernetes,StartupXYZ,Bachelor
+Frank Anderson,46,Miami,65049,Finance,14,False,Python,InnovateLab,High School
+Quinn Kim,43,Denver,163693,Support,6,True,Project Management,TechCorp,PhD
+Karen Petrov,26,Los Angeles,80459,Sales,6,True,Machine Learning,CloudSoft,Master
+Karen Johnson,37,Nashville,58187,Product,11,True,Machine Learning,CloudSoft,High School
+Carol Rodriguez,42,Los Angeles,178373,Finance,1,False,Machine Learning,DataInc,Master
+Henry Taylor,44,Phoenix,174822,Operations,1,False,Data Science,TechCorp,Bachelor
+Tina Garcia,52,Portland,164191,Legal,19,False,JavaScript,DataInc,Bachelor
+Quinn Kim,45,Chicago,66990,Design,4,False,Docker,InnovateLab,Bachelor
+Alice Garcia,64,Portland,168598,Design,19,False,Machine Learning,StartupXYZ,Bachelor
+Bob Petrov,30,Atlanta,51085,Design,3,False,Python,BigTech,Bachelor
+Carol Anderson,23,Portland,85412,Design,11,True,JavaScript,CodeFactory,Bachelor
+Tina Martinez,33,New York,103082,Support,2,False,Project Management,TechCorp,High School
+Quinn Petrov,54,Phoenix,65413,Engineering,2,True,React,CodeFactory,High School
+Karen Miller,41,Boston,178931,Marketing,8,True,Data Science,InnovateLab,High School
+Elena Brown,51,Dallas,79378,Engineering,16,True,AWS,TechCorp,PhD
+Steve Garcia,30,Denver,65915,HR,18,False,JavaScript,StartupXYZ,PhD
+Bob Thompson,27,San Francisco,68799,HR,19,False,SQL,InnovateLab,Bachelor
+Steve Anderson,61,New York,176526,Sales,18,True,Kubernetes,InnovateLab,High School
+David Johnson,22,Miami,111105,Marketing,8,True,Kubernetes,InnovateLab,High School
+David Johnson,61,San Francisco,126160,Sales,11,True,React,BigTech,Master
+Frank Rodriguez,55,Portland,71939,Operations,8,False,SQL,DevTools,PhD
+Elena Liu,39,Portland,108863,HR,15,False,Machine Learning,DevTools,PhD
+Steve Miller,58,Austin,127775,Sales,13,False,Project Management,DataInc,PhD
+Irene Thompson,43,Phoenix,98209,Sales,18,True,JavaScript,CloudSoft,Bachelor
+Frank Kim,34,Nashville,67565,Design,20,False,JavaScript,StartupXYZ,Bachelor
+Rachel Wilson,35,San Francisco,159059,Product,1,False,React,TechCorp,PhD
+Quinn Johnson,41,Seattle,147347,Support,12,False,SQL,TechCorp,PhD
+Tina Davis,38,Dallas,118795,HR,6,False,Data Science,DevTools,Bachelor
+Elena Smith,48,Dallas,103936,Design,13,False,Machine Learning,CodeFactory,Bachelor
+Carol Rodriguez,33,Austin,56983,Operations,12,True,Kubernetes,CodeFactory,Master
+Henry Petrov,64,Boston,150153,HR,19,True,Docker,CloudSoft,Master
+Tina Wilson,42,Austin,143211,Marketing,0,True,Kubernetes,DevTools,Master
+Jack Taylor,45,San Francisco,72109,Product,2,False,SQL,InnovateLab,PhD
+Nathan Kim,42,San Francisco,49696,Marketing,11,False,Kubernetes,TechCorp,Master
+Maria Brown,38,Austin,131634,Operations,0,True,SQL,DataInc,Master
+Luis Liu,41,Denver,122592,Operations,1,False,React,InnovateLab,High School
+Carol Johnson,64,Phoenix,57251,HR,15,True,Data Science,TechCorp,Master
+Luis Petrov,27,Phoenix,176764,Operations,15,False,Python,StartupXYZ,PhD
+Carol Kim,30,Los Angeles,62913,Support,5,False,JavaScript,CodeFactory,PhD
+Irene Williams,58,Austin,142920,Legal,8,False,AWS,CloudSoft,Bachelor
+Steve Liu,31,Dallas,84790,Engineering,7,True,Machine Learning,DevTools,Master
+Tina Petrov,47,Chicago,82193,Sales,11,False,SQL,BigTech,High School
+Maria Anderson,23,Houston,127620,Support,20,True,JavaScript,DevTools,High School
+Elena Smith,31,Boston,158721,Sales,0,False,Kubernetes,TechCorp,Bachelor
+Grace Taylor,46,Denver,95890,Operations,6,True,AWS,DataInc,PhD
+Nathan Kim,34,Portland,137138,Legal,3,True,React,CloudSoft,High School
+Elena Davis,25,New York,136833,HR,7,False,Project Management,CloudSoft,PhD
+Nathan Brown,53,Seattle,162770,Engineering,17,False,React,CodeFactory,Master
+Rachel Williams,64,Austin,58697,Sales,2,False,Kubernetes,DataInc,High School
+Olivia Brown,47,Los Angeles,131275,Support,6,True,Machine Learning,DataInc,Bachelor
+Elena Taylor,42,Boston,50260,Sales,14,False,React,StartupXYZ,High School
+Irene Anderson,46,Nashville,177670,Marketing,18,False,JavaScript,InnovateLab,PhD
+Frank Rodriguez,27,Boston,119850,Finance,2,True,SQL,DevTools,Master
+Irene Taylor,47,Denver,47177,HR,7,True,Project Management,StartupXYZ,PhD
+Steve Jones,55,Houston,99576,Engineering,15,True,Machine Learning,BigTech,High School
+Nathan Davis,62,New York,134172,Finance,19,True,Machine Learning,InnovateLab,High School
+Grace Miller,54,Miami,177991,Legal,19,False,Docker,StartupXYZ,Bachelor
+Tina Garcia,46,Atlanta,178858,Finance,17,False,AWS,TechCorp,High School
+Karen Jones,39,Atlanta,177756,Marketing,14,True,Data Science,DataInc,High School
+Elena Liu,26,Chicago,165594,Design,11,True,Python,DataInc,High School
+Quinn Miller,65,Dallas,165837,Operations,3,False,SQL,TechCorp,PhD
+Henry Rodriguez,49,Seattle,151691,Design,6,True,Python,InnovateLab,Bachelor
+Paul Williams,36,Washington,57095,Marketing,2,True,JavaScript,StartupXYZ,Master
+Karen Chen,44,Atlanta,55873,Finance,13,False,SQL,CodeFactory,High School
+Frank Chen,52,Chicago,70379,Support,11,False,Project Management,CodeFactory,High School
+Rachel Liu,31,Atlanta,125864,Sales,16,False,React,InnovateLab,PhD
+Bob Martinez,51,Houston,80319,Operations,17,True,Docker,CodeFactory,Bachelor
+Olivia Williams,25,Nashville,113566,Legal,7,True,Data Science,StartupXYZ,Bachelor
+Frank Petrov,51,Atlanta,170602,Sales,13,False,JavaScript,CloudSoft,PhD
+Tina Johnson,40,Seattle,88836,Marketing,2,False,React,StartupXYZ,PhD
+Karen Miller,57,Miami,68984,Engineering,15,False,Project Management,CodeFactory,Bachelor
+Steve Anderson,43,Seattle,127027,Finance,2,False,Docker,CloudSoft,PhD
+Quinn Chen,56,Los Angeles,99302,Product,14,True,AWS,DataInc,Bachelor
+Nathan Miller,56,Nashville,98871,Sales,3,True,Data Science,BigTech,Master
+Luis Taylor,51,Chicago,128738,Marketing,16,False,Project Management,StartupXYZ,Bachelor
+Karen Brown,41,Chicago,169400,Design,13,True,React,StartupXYZ,Master
+Steve Martinez,24,Portland,56808,Finance,15,True,JavaScript,TechCorp,Bachelor
+Karen Jones,65,Nashville,75866,Operations,8,False,Docker,CodeFactory,Master
+Karen Miller,41,Phoenix,54502,Product,19,True,JavaScript,CloudSoft,High School
+Irene Jones,24,Dallas,166131,Legal,3,False,Python,TechCorp,Bachelor
+Steve Davis,25,San Francisco,74276,Sales,13,True,Machine Learning,TechCorp,Bachelor
+Olivia Jones,36,Atlanta,63124,Operations,15,True,Project Management,BigTech,High School
+Luis Garcia,26,Denver,138294,Finance,7,False,JavaScript,TechCorp,High School
+Elena Thompson,43,Miami,52736,Sales,3,False,Machine Learning,StartupXYZ,PhD
+Alice Petrov,60,Denver,68538,Product,14,False,Project Management,CodeFactory,Master
+Alice Kim,59,Phoenix,178578,Operations,7,False,Project Management,StartupXYZ,Bachelor
+Nathan Brown,34,Los Angeles,46694,Design,6,True,Machine Learning,TechCorp,PhD
+Alice Johnson,27,Chicago,148960,Finance,16,False,AWS,InnovateLab,Bachelor
+Olivia Chen,58,Nashville,134404,Engineering,15,False,Python,DevTools,PhD
+Jack Martinez,49,Dallas,85711,Engineering,6,False,Kubernetes,TechCorp,Bachelor
+Frank Petrov,55,Seattle,144368,HR,0,False,Docker,StartupXYZ,Master
+Alice Miller,26,Los Angeles,147032,Support,19,False,JavaScript,TechCorp,PhD
+Frank Rodriguez,55,Austin,153670,HR,11,True,Docker,StartupXYZ,High School
+Bob Chen,38,Austin,113743,Support,18,False,React,TechCorp,Bachelor
+Irene Kim,54,Portland,103356,Product,13,False,React,DataInc,High School
+Maria Liu,40,Nashville,74264,Support,13,True,JavaScript,CloudSoft,PhD
+Olivia Chen,47,Phoenix,173966,Sales,13,True,Kubernetes,BigTech,Bachelor
+Jack Martinez,32,Seattle,63731,Legal,2,False,Kubernetes,StartupXYZ,PhD
+Frank Martinez,23,Los Angeles,107194,Design,20,False,Project Management,TechCorp,High School
+Irene Williams,53,Nashville,80592,Marketing,18,True,Kubernetes,TechCorp,Master
+Frank Wilson,52,Los Angeles,162971,Design,12,False,JavaScript,CloudSoft,Master
+Steve Chen,62,Atlanta,155630,Operations,3,True,Python,CloudSoft,High School
+Olivia Wilson,55,Denver,98851,Engineering,2,False,SQL,DevTools,Master
+Carol Anderson,52,Chicago,95216,Legal,19,False,Machine Learning,CodeFactory,Master
+Alice Garcia,62,Chicago,121779,Sales,14,True,SQL,StartupXYZ,PhD
+Grace Rodriguez,35,Nashville,51720,Sales,11,False,Kubernetes,TechCorp,PhD
+Olivia Miller,63,Chicago,105914,Product,6,False,Kubernetes,InnovateLab,High School
+David Smith,37,Houston,154743,Sales,3,True,Docker,BigTech,Master
+Alice Johnson,64,Seattle,85990,Sales,13,True,AWS,DevTools,High School
+Olivia Brown,61,Los Angeles,96898,Finance,6,False,Docker,CodeFactory,Bachelor
+Alice Williams,26,Boston,177193,Marketing,1,False,Data Science,InnovateLab,Master
+Frank Petrov,58,Chicago,131762,Design,20,False,Machine Learning,DevTools,Master
+Jack Chen,48,Portland,82898,Product,14,True,Kubernetes,StartupXYZ,PhD
+Bob Taylor,51,San Francisco,66303,Marketing,2,True,SQL,CloudSoft,Master
+Nathan Chen,56,Portland,91184,Legal,0,True,Project Management,CloudSoft,Master
+Grace Rodriguez,62,Miami,65480,Operations,1,False,Data Science,BigTech,Bachelor
+Henry Kim,58,Atlanta,113708,Engineering,1,True,React,DataInc,Master
+Henry Wilson,23,Dallas,67126,Sales,14,False,JavaScript,BigTech,High School
+Alice Rodriguez,43,Atlanta,67592,Sales,3,True,Data Science,CloudSoft,Bachelor
+Irene Chen,47,San Francisco,132216,Legal,15,False,React,DataInc,High School
+Alice Thompson,26,Los Angeles,80939,Operations,9,False,Data Science,DataInc,Bachelor
+Rachel Smith,37,Seattle,171354,Support,20,False,JavaScript,StartupXYZ,High School
+Grace Miller,48,Phoenix,169215,HR,19,False,Python,BigTech,PhD
+Paul Rodriguez,54,Nashville,69496,Marketing,20,True,Data Science,InnovateLab,Master
+Carol Kim,35,Denver,108379,HR,5,True,Kubernetes,TechCorp,Bachelor
+Karen Petrov,37,Washington,173272,Finance,12,True,SQL,CodeFactory,High School
+Elena Martinez,32,Boston,66150,Legal,19,True,AWS,BigTech,PhD
+Rachel Garcia,57,Washington,46432,Product,10,True,Machine Learning,TechCorp,Master
+Maria Thompson,51,Seattle,58540,Design,10,True,Python,CloudSoft,Master
+Bob Smith,28,Houston,87764,Support,12,True,Machine Learning,InnovateLab,PhD
+Rachel Anderson,27,Los Angeles,167827,Support,14,True,JavaScript,CloudSoft,PhD
+Jack Jones,36,Portland,115005,Sales,17,False,React,CodeFactory,Master
+Steve Brown,22,Dallas,67029,HR,1,True,Docker,CloudSoft,PhD
+Olivia Davis,28,Phoenix,166044,Legal,9,True,Data Science,BigTech,PhD
+Frank Davis,59,Atlanta,81225,Finance,15,True,Project Management,CloudSoft,Bachelor
+Bob Chen,51,Los Angeles,48444,Support,18,False,React,InnovateLab,Bachelor
+Carol Martinez,30,Houston,90983,Finance,4,False,Python,InnovateLab,Bachelor
+Olivia Taylor,62,Chicago,86067,Sales,11,False,JavaScript,DataInc,High School
+Karen Kim,55,Miami,103183,Legal,13,True,Kubernetes,DevTools,PhD
+Maria Williams,45,Phoenix,64894,Finance,9,False,Docker,StartupXYZ,Master
+Luis Rodriguez,62,San Francisco,60428,Design,0,True,Data Science,DevTools,High School
+Olivia Brown,50,Austin,128051,Engineering,4,True,Data Science,DevTools,Master
+Jack Thompson,55,Miami,77540,HR,6,False,Project Management,DevTools,Bachelor
+Olivia Liu,30,Dallas,157439,Engineering,20,True,Project Management,InnovateLab,Bachelor
+Olivia Brown,29,Nashville,83474,Product,11,True,SQL,CloudSoft,Master
+Elena Wilson,50,Nashville,45209,Engineering,2,True,SQL,CodeFactory,High School
+Alice Williams,37,Austin,69880,Legal,14,True,JavaScript,TechCorp,Master
+Jack Davis,60,Dallas,64744,Support,1,False,Docker,CloudSoft,Bachelor
+Nathan Garcia,42,Los Angeles,114505,Sales,0,True,SQL,BigTech,High School
+Irene Anderson,64,Atlanta,64522,Operations,11,False,AWS,DataInc,High School
+Nathan Kim,64,Chicago,70286,Support,1,True,Kubernetes,DevTools,High School
+Jack Davis,39,New York,174475,Support,14,False,Docker,StartupXYZ,High School
+Olivia Anderson,55,Phoenix,135901,Marketing,13,False,SQL,BigTech,Bachelor
+Frank Liu,32,Houston,92863,Product,14,True,Python,StartupXYZ,High School
+Bob Davis,61,Boston,122946,HR,17,True,Kubernetes,DataInc,PhD
+Bob Brown,35,Denver,159254,Sales,14,False,Machine Learning,BigTech,Master
+Karen Johnson,37,San Francisco,62586,Finance,11,False,JavaScript,DataInc,PhD
+Quinn Wilson,29,Denver,58817,Operations,8,False,Kubernetes,InnovateLab,Bachelor
+Frank Garcia,28,Atlanta,135209,Engineering,5,True,Python,BigTech,PhD
+Rachel Anderson,48,Austin,129543,Legal,4,False,Data Science,TechCorp,High School
+Tina Taylor,38,Portland,160809,Operations,5,True,Docker,StartupXYZ,Master
+Alice Taylor,23,San Francisco,126934,Engineering,20,False,Docker,CodeFactory,Master
+Olivia Williams,37,Atlanta,156736,Legal,17,False,Project Management,CloudSoft,High School
+Maria Miller,41,Washington,107506,Legal,4,False,Machine Learning,TechCorp,PhD
+Luis Rodriguez,54,Los Angeles,77361,Finance,2,True,Python,DataInc,Bachelor
+Grace Wilson,46,Washington,118460,HR,4,True,SQL,DevTools,Bachelor
+Elena Smith,55,Denver,129269,Design,15,False,Kubernetes,DataInc,High School
+Steve Anderson,56,Austin,57415,Sales,6,True,Python,StartupXYZ,PhD
+Elena Smith,31,New York,119381,Support,1,True,Docker,CodeFactory,Master
+Nathan Rodriguez,57,Boston,124572,Support,1,False,Machine Learning,BigTech,High School
+Irene Wilson,45,Austin,127276,Design,13,True,Docker,DevTools,Bachelor
+Alice Brown,46,Miami,93934,Sales,0,True,Machine Learning,BigTech,PhD
+Olivia Petrov,24,Austin,61649,Legal,6,True,Docker,InnovateLab,High School
+Bob Williams,40,Washington,158633,Engineering,18,False,AWS,InnovateLab,PhD
+Tina Johnson,47,Miami,147629,Finance,0,False,Docker,CloudSoft,Bachelor
+Bob Thompson,47,Boston,139714,Product,0,False,JavaScript,CodeFactory,Bachelor
+Luis Brown,43,Chicago,61455,Design,7,True,JavaScript,DevTools,PhD
+Maria Liu,30,Portland,157990,Marketing,9,True,SQL,TechCorp,High School
+Carol Garcia,22,New York,89168,Sales,13,True,Kubernetes,BigTech,PhD
+Irene Martinez,62,Nashville,60195,HR,1,False,Docker,DataInc,PhD
+Karen Smith,40,New York,106514,Operations,9,True,AWS,BigTech,PhD
+Rachel Williams,58,Phoenix,155063,HR,5,True,Project Management,TechCorp,Master
+Alice Kim,26,Nashville,150382,Marketing,12,False,Kubernetes,DevTools,PhD
+Bob Petrov,65,Austin,108168,Design,9,False,React,StartupXYZ,Bachelor
+Grace Brown,24,Denver,153563,Legal,7,True,SQL,DataInc,PhD
+Luis Garcia,40,Los Angeles,97047,Support,10,False,AWS,CloudSoft,Bachelor
+Steve Liu,35,Austin,115938,Engineering,3,False,Data Science,DevTools,Bachelor
+Frank Williams,35,Seattle,156676,Finance,6,True,Data Science,DevTools,Bachelor
+Paul Liu,25,Seattle,124116,Legal,4,False,Data Science,DevTools,High School
+Steve Miller,23,Dallas,65786,HR,17,True,SQL,DataInc,Bachelor
+Olivia Taylor,60,Los Angeles,50469,HR,1,True,Python,CodeFactory,PhD
+Irene Smith,56,Austin,100323,HR,17,True,React,DevTools,High School
+Olivia Brown,61,Washington,120654,Operations,16,False,Data Science,BigTech,PhD
+Bob Davis,58,Atlanta,48899,Engineering,19,True,Project Management,StartupXYZ,PhD
+Olivia Jones,59,Nashville,141595,Legal,10,False,SQL,CodeFactory,Master
+Irene Thompson,51,Austin,170711,Sales,0,True,Python,TechCorp,PhD
+Elena Davis,51,San Francisco,102418,Support,3,True,Kubernetes,DevTools,High School
+Luis Petrov,32,Denver,53184,Operations,1,False,Data Science,StartupXYZ,High School
+Jack Davis,22,Washington,101811,Finance,15,True,React,TechCorp,PhD
+Elena Miller,24,Portland,94632,Legal,9,False,AWS,DevTools,High School
+Grace Davis,27,Boston,68970,Product,5,True,Docker,TechCorp,PhD
+Bob Johnson,56,Portland,173452,Support,14,True,Data Science,DevTools,Master
+Paul Johnson,37,Miami,79667,Product,5,False,Docker,DevTools,Bachelor
+Steve Liu,42,Boston,105650,Support,14,True,React,CodeFactory,High School
+Carol Liu,30,Washington,166199,Engineering,5,False,Python,InnovateLab,Bachelor
+Frank Garcia,45,San Francisco,89353,HR,15,False,Project Management,InnovateLab,PhD
+Karen Williams,65,Houston,179513,Finance,2,False,Machine Learning,DataInc,Master
+Carol Johnson,31,Atlanta,170967,Sales,10,True,Machine Learning,CloudSoft,Master
+Carol Jones,27,Nashville,131833,Legal,20,True,Project Management,CloudSoft,Bachelor
+Rachel Jones,39,Austin,84979,Operations,10,False,Kubernetes,DataInc,High School
+Bob Martinez,51,New York,103148,HR,16,False,Data Science,DataInc,Bachelor
+Paul Jones,27,Nashville,102357,Design,7,True,AWS,CodeFactory,Bachelor
+Rachel Thompson,40,Phoenix,128647,Support,1,True,Kubernetes,StartupXYZ,PhD
+Bob Miller,41,Miami,94442,HR,0,False,Python,InnovateLab,Master
+Elena Brown,41,Portland,115750,Support,18,True,JavaScript,CloudSoft,Bachelor
+Irene Petrov,33,San Francisco,63753,Engineering,5,False,Kubernetes,BigTech,Master
+Steve Petrov,40,Chicago,118989,Support,13,False,Docker,DevTools,PhD
+Grace Kim,28,Dallas,62653,Operations,19,False,JavaScript,StartupXYZ,High School
+Tina Davis,34,Chicago,48813,HR,13,False,Python,DataInc,PhD
+Jack Liu,57,Seattle,58422,Finance,8,True,Data Science,BigTech,Bachelor
+Tina Smith,46,Los Angeles,58930,Engineering,9,False,Machine Learning,CloudSoft,PhD
+Alice Williams,34,San Francisco,65133,Legal,3,True,Kubernetes,CloudSoft,High School
+Quinn Liu,28,Austin,169955,Design,17,False,React,CloudSoft,High School
+Quinn Rodriguez,50,Austin,101291,Marketing,11,True,Machine Learning,StartupXYZ,Master
+Nathan Taylor,56,Los Angeles,115625,Legal,8,True,JavaScript,DataInc,High School
+David Liu,63,Phoenix,153510,Engineering,15,True,Kubernetes,StartupXYZ,Bachelor
+Carol Liu,29,New York,83568,Support,15,False,Project Management,CodeFactory,High School
+Frank Petrov,65,Washington,157010,Operations,13,True,Machine Learning,DataInc,High School
+Luis Petrov,23,Nashville,111256,Sales,15,True,Machine Learning,CodeFactory,High School
+Bob Kim,38,Portland,66944,Legal,3,True,Docker,CloudSoft,High School
+Bob Anderson,32,Washington,80636,Legal,11,False,Project Management,TechCorp,Bachelor
+Olivia Jones,26,Miami,169185,Finance,14,True,SQL,TechCorp,Master
+Olivia Williams,35,Miami,66490,Finance,19,False,JavaScript,TechCorp,PhD
+Carol Smith,55,Nashville,66248,HR,17,False,SQL,TechCorp,High School
+Irene Garcia,35,San Francisco,96954,Operations,17,False,Machine Learning,BigTech,High School
+Tina Martinez,22,Austin,72387,Operations,16,False,Kubernetes,DataInc,High School
+Tina Martinez,58,Los Angeles,144845,Sales,15,False,JavaScript,DevTools,PhD
+Nathan Petrov,23,San Francisco,75396,Product,7,True,React,DataInc,Master
+Elena Petrov,45,Washington,148481,Sales,3,True,Kubernetes,StartupXYZ,Master
+Tina Smith,33,Washington,154824,Support,14,True,AWS,InnovateLab,PhD
+Karen Liu,42,Miami,84455,Finance,8,False,React,TechCorp,Master
+Jack Davis,49,New York,82320,Support,14,True,Docker,DevTools,PhD
+Olivia Rodriguez,33,Los Angeles,141067,Legal,11,False,SQL,DataInc,Master
+Quinn Garcia,27,San Francisco,62160,Support,12,False,Project Management,DevTools,PhD
+Grace Davis,65,Washington,169883,Sales,20,True,AWS,BigTech,Bachelor
+Nathan Martinez,50,Houston,168243,Operations,17,True,JavaScript,DevTools,PhD
+Henry Williams,44,New York,108298,Design,2,False,Docker,DataInc,Bachelor
+Olivia Wilson,29,Portland,50555,Operations,10,False,JavaScript,TechCorp,Master
+Henry Rodriguez,22,Los Angeles,171573,Legal,4,True,Project Management,DataInc,PhD
+Tina Martinez,31,Seattle,129334,Product,17,False,AWS,DevTools,Bachelor
+Paul Petrov,27,Chicago,54324,Design,8,True,AWS,DevTools,Master
+Olivia Liu,59,Seattle,165151,HR,17,True,Data Science,DevTools,High School
+Maria Williams,44,New York,119493,Marketing,0,True,Python,DevTools,Bachelor
+Olivia Chen,32,Denver,69582,Finance,7,True,Python,CloudSoft,High School
+Karen Wilson,43,Houston,138373,Legal,17,True,Project Management,DataInc,PhD
+Elena Davis,41,Nashville,62854,Product,0,True,Python,TechCorp,High School
+Irene Kim,22,San Francisco,161331,Operations,8,True,Data Science,BigTech,High School
+Olivia Garcia,59,San Francisco,49681,Product,16,True,React,DataInc,High School
+Rachel Williams,34,Miami,57788,Product,18,False,Python,CodeFactory,High School
+Karen Wilson,27,New York,100865,Sales,4,False,Docker,InnovateLab,High School
+Karen Kim,44,Chicago,151002,Product,10,True,Python,BigTech,Master
+Paul Garcia,65,Seattle,121061,Design,0,False,Data Science,BigTech,High School
+Frank Chen,63,Washington,126966,Design,13,True,AWS,InnovateLab,High School
+Tina Brown,36,Atlanta,118936,Support,8,False,React,DataInc,High School
+David Williams,57,Boston,174746,Product,20,False,Python,StartupXYZ,Bachelor
+Bob Smith,48,Los Angeles,58101,Product,15,False,AWS,DevTools,PhD
+Olivia Wilson,30,Chicago,133120,Operations,17,False,Docker,BigTech,High School
+Karen Brown,62,Washington,152363,Sales,12,False,JavaScript,DevTools,Master
+Karen Kim,62,Atlanta,129938,Finance,18,True,Machine Learning,StartupXYZ,Bachelor
+Maria Kim,60,Phoenix,50452,Engineering,10,False,React,TechCorp,Bachelor
+Elena Jones,34,Chicago,82522,Design,17,False,React,TechCorp,High School
+Luis Petrov,58,Austin,116470,Operations,6,True,Python,TechCorp,High School
+David Smith,62,Miami,57267,Operations,1,False,Docker,CloudSoft,PhD
+Paul Liu,61,Chicago,64762,Sales,1,True,React,StartupXYZ,PhD
+Karen Miller,22,Houston,97579,Support,16,False,JavaScript,CodeFactory,Bachelor
+Paul Williams,49,Nashville,138691,Operations,18,False,SQL,DataInc,Bachelor
+Olivia Smith,23,Houston,115590,Product,13,False,AWS,CloudSoft,Master
+Paul Liu,36,New York,93250,Legal,3,False,Machine Learning,TechCorp,Bachelor
+Karen Petrov,47,Austin,131431,Marketing,12,False,Project Management,StartupXYZ,High School
+Steve Johnson,61,Nashville,150326,Design,2,True,Docker,InnovateLab,Master
+Grace Williams,61,Austin,119435,Support,4,False,AWS,CloudSoft,Bachelor
+Frank Johnson,30,Denver,173349,Design,3,False,React,TechCorp,High School
+Tina Smith,61,Denver,179658,Support,11,True,Python,StartupXYZ,Master
+Rachel Johnson,42,Chicago,107749,Support,15,False,JavaScript,DataInc,PhD
+Bob Brown,44,Denver,81248,HR,16,True,AWS,BigTech,High School
+Nathan Brown,29,Washington,147060,Marketing,20,True,AWS,CloudSoft,Master
+Paul Rodriguez,22,Dallas,54640,HR,4,False,Data Science,CodeFactory,High School
+Steve Smith,53,New York,61535,Marketing,13,True,Data Science,BigTech,Bachelor
+Carol Anderson,45,Washington,125401,Design,7,False,React,StartupXYZ,PhD
+David Miller,60,Austin,146803,Sales,14,True,Docker,BigTech,High School
+Tina Smith,24,New York,172855,Design,6,True,Machine Learning,TechCorp,Bachelor
+Bob Anderson,41,New York,115943,Sales,5,True,Data Science,CloudSoft,High School
+Bob Brown,51,San Francisco,76660,Legal,0,True,Docker,TechCorp,Bachelor
+Maria Thompson,43,Atlanta,86025,Legal,3,False,Project Management,CodeFactory,Master
+Rachel Petrov,46,Austin,145998,HR,6,True,AWS,DevTools,PhD
+David Thompson,43,Seattle,61718,Marketing,14,True,Machine Learning,CloudSoft,High School
+Luis Liu,28,Washington,177795,Finance,15,False,Python,CodeFactory,High School
+Jack Miller,41,Houston,163853,Design,12,True,Machine Learning,DataInc,Master
+Grace Anderson,38,Austin,114507,Finance,7,False,Data Science,StartupXYZ,High School
+Jack Rodriguez,40,Chicago,169297,Sales,10,True,AWS,InnovateLab,Bachelor
+Irene Williams,51,Washington,48154,Engineering,16,False,JavaScript,InnovateLab,Master
+Quinn Taylor,37,Phoenix,66626,Support,4,False,Machine Learning,BigTech,PhD
+Quinn Davis,42,Miami,102026,Engineering,2,False,React,TechCorp,Bachelor
+Luis Brown,25,Washington,96437,Design,10,True,Docker,InnovateLab,Bachelor
+Quinn Taylor,29,Boston,45691,HR,10,True,SQL,TechCorp,Bachelor
+Quinn Smith,56,Seattle,70418,Sales,15,False,SQL,DevTools,PhD
+Alice Williams,49,Boston,51475,Sales,2,False,Kubernetes,DevTools,High School
+Henry Brown,61,New York,173569,Design,17,False,React,InnovateLab,Master
+David Martinez,57,Chicago,65553,Marketing,11,True,SQL,CloudSoft,Bachelor
+Alice Martinez,65,Atlanta,150029,HR,16,True,Machine Learning,DevTools,Master
+Quinn Wilson,46,Austin,114778,Engineering,19,True,Data Science,DevTools,PhD
+Quinn Williams,40,Phoenix,157679,Operations,9,False,AWS,CloudSoft,PhD
+Quinn Miller,47,Washington,73747,Marketing,20,True,AWS,DevTools,High School
+Quinn Williams,54,Austin,109116,HR,18,False,Python,StartupXYZ,PhD
+Nathan Kim,48,Nashville,77315,Product,3,False,AWS,InnovateLab,Master
+Steve Liu,25,Denver,65182,Marketing,15,True,Python,TechCorp,Master
+Maria Davis,34,Los Angeles,100201,Finance,9,True,React,StartupXYZ,Bachelor
+Nathan Anderson,60,Chicago,91971,Legal,3,True,JavaScript,CodeFactory,High School
+Olivia Miller,51,Dallas,141323,HR,11,False,Kubernetes,CodeFactory,Master
+Maria Thompson,29,Atlanta,115796,HR,6,False,SQL,BigTech,Bachelor
+Irene Smith,61,Austin,63422,HR,18,True,Python,BigTech,Bachelor
+Steve Anderson,25,Phoenix,137235,Design,14,True,Kubernetes,DevTools,Bachelor
+Alice Smith,47,San Francisco,84753,HR,8,True,Machine Learning,BigTech,Bachelor
+Jack Davis,63,Houston,169348,Engineering,2,True,React,DataInc,Bachelor
+Paul Liu,48,Los Angeles,171718,HR,12,False,Python,InnovateLab,Bachelor
+Bob Johnson,24,Chicago,67011,Support,11,True,Kubernetes,InnovateLab,PhD
+Grace Wilson,51,Atlanta,58660,HR,9,False,Project Management,DataInc,Master
+Maria Taylor,36,Chicago,87539,Product,14,True,Data Science,CloudSoft,PhD
+Karen Chen,54,Austin,142033,Operations,9,True,Python,InnovateLab,PhD
+Carol Taylor,31,Boston,90174,Operations,6,True,Python,DataInc,High School
+Steve Miller,38,Portland,83169,Sales,11,True,AWS,InnovateLab,Master
+Rachel Garcia,26,Chicago,98487,Legal,3,False,SQL,BigTech,Master
+Paul Miller,39,Denver,96856,HR,16,False,Python,BigTech,Master
+Jack Rodriguez,34,Chicago,81082,Product,11,True,SQL,TechCorp,Master
+Steve Thompson,64,Los Angeles,97743,Design,19,True,Machine Learning,DevTools,High School
+Tina Wilson,61,Atlanta,134230,Marketing,14,True,Data Science,CodeFactory,Bachelor
+Steve Taylor,54,Portland,105752,Legal,8,False,Data Science,DevTools,PhD
+Luis Johnson,37,Nashville,97958,Operations,15,False,Docker,StartupXYZ,High School
+Nathan Jones,32,Washington,67984,Operations,0,False,Machine Learning,TechCorp,PhD
+Maria Petrov,64,Portland,108857,Support,8,False,React,CloudSoft,High School
+Luis Kim,34,Boston,159317,Support,14,True,JavaScript,BigTech,PhD
+Nathan Anderson,29,Austin,67048,Finance,20,False,SQL,StartupXYZ,Bachelor
+Rachel Brown,57,Los Angeles,80554,Support,1,False,JavaScript,BigTech,High School
+Alice Liu,56,Chicago,82319,Legal,9,True,SQL,BigTech,High School
+Elena Liu,65,San Francisco,85939,Product,18,False,Project Management,BigTech,Master
+Bob Thompson,50,Boston,174027,Legal,19,False,Project Management,CodeFactory,Bachelor
+Jack Wilson,58,Nashville,50611,Marketing,20,False,Machine Learning,InnovateLab,Master
+Tina Kim,49,Washington,51533,Legal,4,False,Machine Learning,CodeFactory,High School
+Quinn Anderson,54,Austin,175049,Design,6,True,Docker,TechCorp,High School
+Frank Brown,34,San Francisco,112089,Design,18,True,Kubernetes,InnovateLab,PhD
+Olivia Davis,64,Phoenix,179241,HR,12,False,JavaScript,TechCorp,High School
+Henry Rodriguez,45,Houston,171246,Product,17,True,React,InnovateLab,High School
+Nathan Taylor,38,Denver,172189,Support,11,True,JavaScript,BigTech,Bachelor
+Paul Thompson,23,Houston,54014,Finance,20,True,Machine Learning,TechCorp,Master
+Steve Brown,35,Chicago,145392,Support,3,True,AWS,StartupXYZ,PhD
+Tina Martinez,50,Washington,176108,Sales,0,True,SQL,BigTech,Bachelor
+Elena Davis,63,Los Angeles,112151,Design,0,False,Python,StartupXYZ,High School
+Rachel Kim,61,Los Angeles,128382,Legal,5,False,Project Management,CodeFactory,Master
+Rachel Martinez,57,Nashville,72452,Finance,20,True,React,StartupXYZ,Bachelor
+Quinn Wilson,23,New York,106483,Design,1,True,React,BigTech,Bachelor
+Rachel Liu,63,Boston,127758,Legal,0,False,Python,DataInc,PhD
+Alice Jones,53,San Francisco,145572,Legal,15,True,Data Science,DataInc,High School
+Carol Petrov,25,New York,88489,HR,15,False,Kubernetes,TechCorp,High School
+Tina Chen,57,Los Angeles,86772,Legal,13,False,Python,InnovateLab,Master
+Bob Anderson,26,Houston,135993,HR,18,False,Project Management,CodeFactory,Bachelor
+Karen Brown,38,New York,73038,Design,20,False,Project Management,DevTools,PhD
+Maria Johnson,61,Miami,61834,Legal,19,True,React,InnovateLab,High School
+Karen Thompson,40,Austin,108783,Sales,8,True,Kubernetes,DataInc,Master
+Karen Johnson,28,Portland,58780,HR,18,False,Python,BigTech,High School
+Frank Brown,29,San Francisco,101581,Finance,6,True,React,TechCorp,High School
+Rachel Chen,51,Chicago,133077,HR,19,True,Python,InnovateLab,Bachelor
+Karen Johnson,53,Nashville,156490,Product,7,False,Machine Learning,CodeFactory,Bachelor
+Grace Anderson,41,Austin,127691,Operations,5,True,Data Science,StartupXYZ,High School
+Quinn Williams,27,Seattle,148294,Product,3,False,Kubernetes,DataInc,PhD
+Alice Garcia,54,Austin,118055,Legal,11,True,AWS,DevTools,Bachelor
+Quinn Wilson,42,Denver,97355,Product,0,True,Project Management,BigTech,PhD
+Henry Wilson,47,Houston,86899,Operations,8,True,Kubernetes,DataInc,High School
+Grace Rodriguez,65,Chicago,162896,Legal,13,True,Data Science,DataInc,Master
+David Williams,42,Nashville,138575,Operations,9,True,Python,DevTools,PhD
+Bob Anderson,45,Dallas,168416,Support,11,True,JavaScript,DataInc,Master
+Quinn Johnson,47,Atlanta,133483,Engineering,7,True,Project Management,CodeFactory,High School
+Tina Davis,40,Seattle,67061,Finance,5,True,SQL,DataInc,High School
+Alice Anderson,31,Houston,142983,Operations,5,False,Kubernetes,DevTools,Bachelor
+David Garcia,32,Dallas,105083,Marketing,0,False,SQL,BigTech,Master
+Frank Garcia,58,Atlanta,88349,Support,16,True,Machine Learning,DevTools,High School
+David Anderson,45,Houston,93316,Design,13,False,SQL,DevTools,Bachelor
+Frank Martinez,35,Dallas,64334,Engineering,8,False,SQL,StartupXYZ,PhD
+David Thompson,45,Houston,75687,Support,18,True,React,DataInc,Bachelor
+Irene Brown,29,Houston,103292,Product,3,True,JavaScript,CodeFactory,High School
+Karen Taylor,25,Washington,147433,Engineering,18,True,Project Management,DevTools,Bachelor
+Henry Liu,53,Denver,57240,Sales,1,True,Data Science,BigTech,Master
+Henry Kim,26,Atlanta,105746,Support,6,False,Project Management,CodeFactory,Master
+Henry Jones,37,Dallas,85636,Product,7,False,Data Science,BigTech,Bachelor
+Henry Wilson,34,Washington,156245,HR,18,True,SQL,CloudSoft,Master
+Rachel Martinez,31,Portland,61135,Design,16,True,Machine Learning,BigTech,Bachelor
+Irene Martinez,43,San Francisco,120096,Sales,18,True,Docker,StartupXYZ,Bachelor
+Rachel Thompson,50,Portland,162877,HR,0,False,React,DataInc,PhD
+Elena Brown,42,Denver,49461,Engineering,16,True,Machine Learning,BigTech,PhD
+Rachel Taylor,32,Houston,138776,Legal,19,False,Project Management,DevTools,Bachelor
+Carol Liu,29,Seattle,98958,Product,14,False,Machine Learning,DataInc,Master
+Jack Chen,22,Boston,81459,Marketing,12,True,Machine Learning,DevTools,High School
+Karen Chen,24,Portland,125800,Design,4,True,Kubernetes,TechCorp,High School
+Henry Kim,45,Nashville,85154,Operations,5,False,SQL,CloudSoft,Master
+Luis Wilson,36,Nashville,152155,Support,14,False,JavaScript,BigTech,PhD
+Luis Williams,25,Miami,49365,Operations,12,False,Kubernetes,DataInc,High School
+Bob Williams,65,Portland,96262,Product,7,True,Docker,DataInc,Bachelor
+Alice Taylor,23,Dallas,109038,Support,19,False,Docker,StartupXYZ,High School
+Grace Anderson,44,Seattle,143926,Engineering,18,True,SQL,DevTools,High School
+Henry Petrov,42,Nashville,70348,Marketing,4,False,Python,DevTools,Bachelor
+Rachel Smith,51,Seattle,64922,Design,20,True,Project Management,DevTools,Master
+Luis Anderson,30,New York,97058,Legal,7,True,Python,CodeFactory,Master
+Alice Kim,48,Dallas,123431,Sales,9,False,Kubernetes,InnovateLab,Bachelor
+Tina Smith,63,Chicago,109551,HR,4,True,JavaScript,DevTools,PhD
+Luis Davis,31,Chicago,153257,Legal,15,False,Project Management,DataInc,Master
+Paul Johnson,61,Portland,51305,Support,8,True,Data Science,CloudSoft,PhD
+Irene Anderson,26,San Francisco,121533,Operations,11,False,Python,CloudSoft,Master
+Paul Garcia,31,Los Angeles,47940,Marketing,17,False,JavaScript,BigTech,Bachelor
+Paul Liu,29,Miami,170977,Finance,19,True,Data Science,CloudSoft,Bachelor
+Jack Davis,22,Dallas,101164,HR,6,False,AWS,DevTools,Master
+Luis Anderson,40,Washington,116533,Marketing,2,True,Docker,DataInc,High School
+Karen Taylor,47,Nashville,95079,Finance,17,True,Machine Learning,InnovateLab,Master
+Irene Garcia,62,Boston,66374,Sales,18,False,React,DevTools,Master
+Irene Smith,39,Los Angeles,53403,Engineering,14,True,SQL,InnovateLab,Master
+Maria Brown,44,Portland,174637,Marketing,15,False,JavaScript,StartupXYZ,High School
+Quinn Wilson,33,Dallas,115446,Finance,7,False,Data Science,CloudSoft,Master
+Elena Taylor,57,Portland,124490,Product,3,False,Machine Learning,CloudSoft,High School
+Maria Davis,37,San Francisco,164057,Finance,2,True,React,BigTech,PhD
+Tina Brown,30,Washington,117863,Design,8,True,Docker,InnovateLab,Master
+Elena Williams,63,Boston,64799,Operations,9,True,Data Science,TechCorp,High School
+Henry Wilson,29,Denver,78087,Design,7,True,JavaScript,InnovateLab,High School
+Quinn Brown,44,Boston,142788,Sales,19,True,Python,TechCorp,Master
+Henry Brown,56,Washington,87119,HR,15,True,SQL,InnovateLab,Bachelor
+Paul Jones,42,Washington,149576,Legal,4,False,Kubernetes,DataInc,Master
+Jack Brown,52,Houston,161366,Support,4,False,SQL,DevTools,High School
+Irene Kim,30,Seattle,81990,Sales,18,False,Project Management,CloudSoft,PhD
+Irene Martinez,60,Atlanta,58931,Support,15,True,AWS,StartupXYZ,High School
+Irene Thompson,33,Austin,146961,Marketing,20,False,Docker,StartupXYZ,Master
+Karen Johnson,42,Houston,70836,Operations,8,True,Data Science,TechCorp,PhD
+Luis Wilson,64,Phoenix,173419,Product,7,True,Project Management,TechCorp,PhD
+David Taylor,59,Chicago,135811,Design,19,True,Machine Learning,DevTools,PhD
+Karen Martinez,40,Los Angeles,157046,Engineering,4,False,Python,InnovateLab,High School
+Henry Liu,41,Atlanta,65917,Legal,6,False,React,StartupXYZ,PhD
+Irene Petrov,43,Atlanta,65913,Support,13,False,SQL,DataInc,High School
+Henry Wilson,52,San Francisco,162741,Sales,11,True,Project Management,CodeFactory,Master
+David Rodriguez,53,Phoenix,157373,Finance,3,True,Python,StartupXYZ,High School
+Steve Jones,50,Washington,75799,Legal,5,False,JavaScript,TechCorp,Bachelor
+Elena Johnson,52,New York,74028,HR,2,False,Python,CodeFactory,High School
+Irene Smith,55,Atlanta,123499,Marketing,12,True,Docker,StartupXYZ,Bachelor
+Elena Taylor,31,Houston,50285,Support,10,True,Data Science,InnovateLab,High School
+Nathan Liu,23,San Francisco,148926,Design,7,True,AWS,DevTools,Master
+Luis Garcia,33,Boston,78701,Finance,8,False,Machine Learning,DevTools,PhD
+Carol Thompson,64,Phoenix,148711,HR,9,False,Machine Learning,StartupXYZ,High School
+Grace Johnson,30,Phoenix,121225,Design,10,True,Kubernetes,TechCorp,PhD
+Maria Liu,25,Nashville,68034,Support,19,True,SQL,BigTech,High School
+Nathan Liu,63,Denver,161695,Finance,17,True,React,BigTech,High School
+David Anderson,46,Los Angeles,75234,Sales,14,False,JavaScript,CodeFactory,High School
+Nathan Brown,60,Portland,104371,HR,7,True,JavaScript,CloudSoft,Bachelor
+Henry Jones,64,Atlanta,138990,Operations,15,True,React,TechCorp,Bachelor
+Maria Rodriguez,29,Washington,74580,HR,14,False,JavaScript,CloudSoft,High School
+Karen Smith,45,Chicago,140890,Legal,0,False,Project Management,TechCorp,Bachelor
+Frank Petrov,60,San Francisco,83669,Finance,17,False,Docker,StartupXYZ,High School
+Tina Smith,28,Houston,161580,Sales,19,False,Machine Learning,InnovateLab,Master
+David Brown,56,Houston,102446,Operations,9,True,React,StartupXYZ,PhD
+Frank Chen,33,Nashville,75916,Engineering,9,False,Kubernetes,DevTools,PhD
+Alice Kim,39,Nashville,80696,Support,7,False,JavaScript,CodeFactory,High School
+Irene Williams,42,Nashville,108972,Design,19,False,SQL,CodeFactory,PhD
+Nathan Williams,57,Miami,90816,Engineering,11,False,Kubernetes,StartupXYZ,Master
+David Johnson,23,Nashville,166742,Product,11,False,Kubernetes,DevTools,High School
+Tina Davis,31,Boston,58887,Engineering,1,True,Machine Learning,DevTools,Bachelor
+Maria Liu,49,Boston,152812,Engineering,15,False,Data Science,StartupXYZ,High School
+Tina Jones,32,Phoenix,149692,Legal,1,True,Machine Learning,StartupXYZ,PhD
+Jack Garcia,27,Chicago,105480,Product,3,True,Kubernetes,DevTools,High School
+Elena Brown,25,Denver,76757,Legal,5,True,Kubernetes,CodeFactory,Bachelor
+Olivia Kim,56,Seattle,114408,Design,14,True,Data Science,DevTools,PhD
+Tina Martinez,38,Houston,123945,Operations,3,False,AWS,CloudSoft,Bachelor
+Steve Williams,27,Miami,169608,Product,13,False,SQL,DataInc,Bachelor
+Jack Brown,36,Denver,148031,Engineering,18,True,Machine Learning,TechCorp,PhD
+David Johnson,64,Seattle,68836,Engineering,0,True,SQL,CloudSoft,Bachelor
+Alice Brown,63,Los Angeles,73424,Sales,4,True,Machine Learning,StartupXYZ,High School
+Irene Anderson,35,New York,117032,Engineering,1,False,React,DataInc,Bachelor
+Olivia Jones,34,Atlanta,178282,Legal,1,True,Project Management,StartupXYZ,PhD
+Tina Kim,64,Phoenix,125353,Marketing,14,False,Machine Learning,DevTools,PhD
+Luis Garcia,60,Phoenix,54131,HR,3,True,Kubernetes,InnovateLab,High School
+Frank Davis,60,Washington,163812,Operations,13,True,SQL,CodeFactory,Bachelor
+Quinn Johnson,52,Atlanta,58703,Product,20,False,Project Management,TechCorp,Bachelor
+Rachel Anderson,47,Denver,94312,Engineering,2,True,Project Management,StartupXYZ,Bachelor
+Rachel Anderson,33,Denver,156224,Engineering,10,False,Project Management,CodeFactory,High School
+Carol Martinez,33,Miami,131987,Design,9,False,Data Science,CloudSoft,Master
+Frank Liu,24,Chicago,126142,Support,11,False,Kubernetes,InnovateLab,Bachelor
+Tina Thompson,35,Houston,80155,Legal,16,True,AWS,StartupXYZ,High School
+Frank Liu,63,Portland,143598,Marketing,19,False,Machine Learning,BigTech,High School
+Quinn Davis,48,Washington,72136,Operations,18,True,Docker,BigTech,PhD
+Maria Williams,29,Nashville,155481,Engineering,15,True,AWS,DevTools,Bachelor
+Grace Smith,27,New York,85595,Operations,3,False,SQL,InnovateLab,PhD
+Maria Thompson,58,Miami,57740,Product,10,False,Data Science,CloudSoft,High School
+Steve Brown,64,Boston,131258,Product,19,True,Data Science,DataInc,High School
+Maria Brown,53,Atlanta,84889,Marketing,1,True,JavaScript,DataInc,Master
+Jack Brown,27,Seattle,175352,Design,0,False,JavaScript,DevTools,Bachelor
+Paul Wilson,58,Atlanta,55525,Operations,12,False,Kubernetes,StartupXYZ,High School
+Jack Rodriguez,42,Chicago,131224,Design,19,True,Kubernetes,InnovateLab,High School
+Karen Johnson,43,Miami,109109,HR,13,False,JavaScript,CodeFactory,Bachelor
+Tina Martinez,46,Seattle,130842,Product,3,True,Docker,BigTech,Bachelor
+Frank Jones,63,Nashville,170933,Finance,6,False,Machine Learning,InnovateLab,PhD
+Luis Liu,45,Boston,160343,HR,8,True,Python,DataInc,PhD
+Jack Johnson,23,Denver,59844,Operations,3,True,Docker,BigTech,Bachelor
+Luis Garcia,57,Los Angeles,155899,HR,19,False,JavaScript,InnovateLab,Master
+Frank Davis,40,Washington,118637,Operations,12,False,JavaScript,InnovateLab,Bachelor
+Quinn Petrov,24,Atlanta,98415,Engineering,8,True,Machine Learning,DataInc,Bachelor
+Tina Brown,65,Portland,158743,Engineering,20,False,Data Science,StartupXYZ,Bachelor
+Maria Liu,37,Los Angeles,110582,Support,17,False,SQL,BigTech,Bachelor
+Nathan Davis,62,Seattle,106167,Finance,18,True,Machine Learning,CloudSoft,High School
+David Rodriguez,43,Boston,77312,Finance,0,True,SQL,CodeFactory,Bachelor
+Elena Brown,54,Miami,81754,Legal,10,False,Kubernetes,TechCorp,Bachelor
+Irene Smith,53,Portland,67287,Marketing,14,True,JavaScript,DataInc,Master
+Nathan Martinez,27,Denver,157081,HR,5,False,Project Management,StartupXYZ,Bachelor
+Luis Petrov,58,Phoenix,172592,HR,4,False,Kubernetes,BigTech,Bachelor
+Jack Smith,49,Seattle,176134,Operations,10,False,Data Science,CloudSoft,Bachelor
+David Chen,44,San Francisco,157438,Operations,2,True,React,CodeFactory,High School
+Bob Liu,30,Denver,152890,Design,19,False,Machine Learning,InnovateLab,Bachelor
+Carol Chen,54,Denver,81268,HR,9,True,Kubernetes,DevTools,Bachelor
+Irene Anderson,23,Atlanta,163697,Finance,3,False,Kubernetes,InnovateLab,Master
+Steve Thompson,52,San Francisco,86950,HR,4,True,Machine Learning,InnovateLab,PhD
+Paul Johnson,41,San Francisco,121292,Legal,13,True,Docker,CodeFactory,Bachelor
+Nathan Thompson,63,Seattle,163857,Sales,14,True,Python,StartupXYZ,Bachelor
+Karen Rodriguez,46,Nashville,170793,Engineering,1,False,React,BigTech,Bachelor
+Luis Davis,39,Phoenix,171182,Operations,12,True,Python,DataInc,High School
+Henry Garcia,46,Austin,49311,Product,3,False,React,CloudSoft,High School
+Rachel Jones,33,Austin,111822,Product,6,True,Project Management,CodeFactory,Master
+Olivia Martinez,38,Portland,130496,Operations,1,True,JavaScript,StartupXYZ,PhD
+Henry Chen,46,Los Angeles,162936,Marketing,9,True,Project Management,DataInc,PhD
+David Petrov,46,Boston,145594,Product,5,True,SQL,BigTech,Bachelor
+Nathan Rodriguez,28,Washington,178122,Support,6,True,Project Management,CodeFactory,PhD
+Paul Garcia,50,Boston,117470,Design,14,True,React,DevTools,Master
+Luis Jones,49,Washington,69182,Legal,19,False,Python,BigTech,Bachelor
+David Williams,24,Nashville,86453,Engineering,7,True,Docker,BigTech,Bachelor
+Nathan Liu,31,New York,94058,Engineering,18,True,Data Science,CloudSoft,PhD
+Maria Anderson,65,Phoenix,171437,Support,6,True,Machine Learning,TechCorp,High School
+Frank Garcia,59,Washington,61715,HR,9,True,Python,CloudSoft,Master
+Tina Anderson,50,Los Angeles,132992,Design,14,False,SQL,BigTech,High School
+Paul Miller,32,Washington,55264,Sales,18,False,Kubernetes,BigTech,PhD
+Tina Smith,27,Washington,72713,Legal,12,False,Data Science,BigTech,Master
+Rachel Anderson,22,Dallas,152031,Support,20,True,Project Management,StartupXYZ,Master
+Alice Johnson,28,San Francisco,122767,Support,3,False,SQL,CloudSoft,High School
+Rachel Martinez,63,Los Angeles,82638,Marketing,14,True,SQL,TechCorp,PhD
+Paul Johnson,47,Austin,99217,Marketing,17,True,AWS,StartupXYZ,Bachelor
+Frank Miller,28,Nashville,118399,Design,17,True,Python,StartupXYZ,Master
+Frank Wilson,52,Portland,131354,Legal,12,False,Docker,TechCorp,Master
+Carol Kim,43,Seattle,89043,Design,16,True,AWS,InnovateLab,Master
+Irene Petrov,60,Seattle,126308,Sales,6,True,Docker,TechCorp,High School
+Karen Brown,38,Dallas,141728,Design,8,True,AWS,CloudSoft,PhD
+Grace Anderson,23,Washington,104280,Legal,6,True,SQL,InnovateLab,High School
+Irene Kim,40,Washington,112216,Operations,18,False,SQL,DataInc,Master
+Elena Smith,64,Los Angeles,138488,Legal,4,True,SQL,CloudSoft,PhD
+Nathan Johnson,47,Dallas,75522,Engineering,18,True,JavaScript,CloudSoft,High School
+David Rodriguez,28,Houston,86241,Legal,10,False,Project Management,DataInc,PhD
+Frank Chen,38,San Francisco,143618,Design,16,False,Docker,TechCorp,Master
+Tina Martinez,62,Denver,56773,Finance,18,False,SQL,DataInc,PhD
+Quinn Williams,29,Boston,156740,Engineering,11,False,Data Science,CodeFactory,High School
+Steve Davis,53,Seattle,130489,Design,9,False,JavaScript,CloudSoft,PhD
+Olivia Taylor,51,Phoenix,110159,Sales,12,True,AWS,CodeFactory,PhD
+Rachel Williams,56,Atlanta,90607,Finance,14,False,Python,InnovateLab,Bachelor
+Karen Liu,60,Denver,172268,Engineering,8,False,AWS,CodeFactory,High School
+Jack Miller,59,Miami,100348,Engineering,10,False,Project Management,CodeFactory,Master
+Henry Anderson,64,Dallas,158919,Product,5,True,Kubernetes,DataInc,Bachelor
+Steve Chen,62,Chicago,172622,Legal,16,True,Machine Learning,InnovateLab,Master
+Frank Martinez,46,Washington,91228,Engineering,10,False,AWS,TechCorp,High School
+Tina Wilson,52,Los Angeles,135459,Sales,14,True,Data Science,BigTech,Master
+Luis Rodriguez,65,Denver,124831,Product,20,True,Docker,CloudSoft,Master
+Frank Jones,47,Chicago,132656,Product,18,True,Data Science,StartupXYZ,Bachelor
+Tina Smith,41,Atlanta,67996,Legal,13,False,Docker,BigTech,Bachelor
+Paul Williams,56,Boston,79215,Sales,19,False,SQL,DevTools,Master
+Steve Smith,23,Houston,131280,Engineering,8,True,Kubernetes,DataInc,Bachelor
+Tina Martinez,31,San Francisco,141308,Marketing,18,False,React,DevTools,Master
+Bob Miller,65,Nashville,126817,Marketing,11,False,React,CodeFactory,PhD
+Steve Liu,36,Atlanta,127816,Product,4,False,Docker,TechCorp,High School
+David Johnson,45,Boston,68393,Legal,13,False,Machine Learning,InnovateLab,Master
+Frank Smith,32,Portland,61694,HR,0,True,Data Science,BigTech,Master
+Bob Jones,35,Houston,89620,Operations,16,False,SQL,CodeFactory,High School
+Alice Thompson,44,Nashville,90525,Support,18,False,JavaScript,InnovateLab,PhD
+Henry Wilson,57,Miami,63228,Sales,13,False,Kubernetes,TechCorp,Master
+Quinn Liu,28,Boston,152315,Operations,12,False,Machine Learning,CodeFactory,PhD
+Grace Garcia,47,Denver,83849,Marketing,5,False,Data Science,InnovateLab,Bachelor
+Henry Miller,39,San Francisco,136203,Sales,9,True,Data Science,CodeFactory,Master
+David Miller,55,Boston,97748,Operations,20,True,Data Science,DataInc,Bachelor
+Henry Garcia,37,Atlanta,115205,Operations,2,False,JavaScript,DataInc,PhD
+Olivia Miller,40,Boston,165295,HR,11,True,AWS,TechCorp,Master
+Alice Thompson,23,Austin,124877,Finance,15,False,React,TechCorp,High School
+Tina Martinez,42,Atlanta,160483,Engineering,1,True,SQL,CodeFactory,Bachelor
+Olivia Anderson,65,Phoenix,57334,Operations,16,False,JavaScript,DevTools,PhD
+Quinn Martinez,55,Los Angeles,161507,Legal,19,True,Project Management,CloudSoft,Master
+Henry Smith,37,San Francisco,74852,Finance,5,False,Machine Learning,TechCorp,PhD
+Bob Martinez,50,Houston,169278,Design,8,True,Project Management,CloudSoft,PhD
+Steve Rodriguez,46,New York,169381,Engineering,14,True,Machine Learning,BigTech,PhD
+David Liu,28,Chicago,137900,Operations,3,False,Project Management,CloudSoft,High School
+Carol Wilson,56,Miami,109252,Design,16,False,AWS,TechCorp,PhD
+Henry Garcia,30,San Francisco,134324,Legal,2,True,SQL,DataInc,Master
+Olivia Jones,42,Washington,111916,Operations,15,False,JavaScript,BigTech,Bachelor
+Irene Brown,23,Boston,162497,Legal,0,True,React,TechCorp,PhD
+Paul Garcia,42,Chicago,97205,Engineering,16,False,Data Science,CodeFactory,Bachelor
+Jack Johnson,64,Austin,52404,Sales,3,False,React,DevTools,High School
+Maria Johnson,46,Nashville,51899,Engineering,10,True,AWS,DevTools,Bachelor
+Irene Wilson,54,Phoenix,160427,Legal,1,True,Machine Learning,InnovateLab,Bachelor
+Frank Wilson,50,Nashville,72107,Design,6,False,Project Management,StartupXYZ,Master
+David Johnson,40,Miami,145663,Engineering,7,False,Python,InnovateLab,Bachelor
+Nathan Martinez,36,Austin,174682,HR,13,False,React,CloudSoft,Master
+Carol Johnson,33,Seattle,90311,Design,1,False,AWS,TechCorp,Bachelor
+Quinn Petrov,37,Portland,152467,Design,14,False,Project Management,DataInc,PhD
+David Martinez,60,Miami,50335,HR,9,True,Docker,StartupXYZ,PhD
+Tina Martinez,26,Los Angeles,138085,Sales,17,True,Python,DevTools,Master
+Henry Kim,57,Miami,73565,HR,5,False,React,DevTools,Bachelor
+Frank Wilson,44,Seattle,145781,HR,8,True,Project Management,DevTools,High School
+Elena Miller,34,Houston,178088,Sales,16,True,React,CloudSoft,Bachelor
+Elena Thompson,59,Houston,80363,Legal,11,True,JavaScript,InnovateLab,High School
+Jack Kim,24,San Francisco,81692,HR,17,True,Python,InnovateLab,High School
+Grace Chen,59,Denver,164855,Legal,1,False,SQL,InnovateLab,Bachelor
+Grace Davis,38,Austin,59637,Legal,4,False,React,BigTech,Bachelor
+Irene Liu,22,Denver,67754,Product,7,False,JavaScript,BigTech,Master
+Maria Smith,64,Austin,164107,Support,4,False,Data Science,DataInc,High School
+Quinn Kim,42,Chicago,54688,Product,8,True,Kubernetes,TechCorp,Bachelor
+Olivia Kim,52,Dallas,51922,Sales,19,False,Kubernetes,CodeFactory,Bachelor
+David Rodriguez,60,Miami,62426,HR,3,True,React,CloudSoft,High School
+Nathan Davis,64,Denver,49590,HR,11,True,JavaScript,TechCorp,PhD
+Henry Wilson,60,Nashville,158704,Product,14,False,Data Science,StartupXYZ,Bachelor
+Henry Wilson,30,Houston,82024,Marketing,14,True,SQL,BigTech,High School
+Rachel Davis,55,Seattle,107935,Marketing,15,False,Python,StartupXYZ,High School
+Quinn Jones,33,Chicago,178022,Support,7,False,Kubernetes,DevTools,High School
+Nathan Miller,28,Miami,152983,Design,1,False,Data Science,BigTech,Master
+Elena Jones,30,Portland,89306,Legal,1,True,Data Science,BigTech,PhD
+Olivia Davis,56,Miami,78231,Support,17,True,Docker,BigTech,Bachelor
+Elena Miller,63,Nashville,120993,Sales,17,True,Data Science,DataInc,Bachelor
+Grace Smith,22,Washington,94819,HR,7,True,React,DevTools,High School
+Nathan Jones,29,Boston,175077,Operations,3,True,Python,CodeFactory,Bachelor
+Frank Brown,35,Houston,114787,Finance,7,False,Kubernetes,DevTools,High School
+Nathan Davis,33,Los Angeles,149483,Design,6,False,Kubernetes,CloudSoft,Master
+Elena Kim,41,Washington,88109,Engineering,12,False,AWS,InnovateLab,Bachelor
+Maria Smith,61,Austin,106541,HR,8,True,AWS,BigTech,Master
+Carol Williams,36,Atlanta,75667,Design,9,False,Project Management,DataInc,Master
+Bob Anderson,32,Dallas,172098,Support,2,True,Project Management,CloudSoft,Bachelor
+Olivia Johnson,53,Atlanta,69309,Marketing,17,False,Machine Learning,TechCorp,High School
+Elena Martinez,61,Los Angeles,72267,Sales,17,False,Project Management,BigTech,High School
+David Thompson,25,Seattle,94901,Design,17,True,React,CodeFactory,Bachelor
+Olivia Kim,26,Nashville,161782,Marketing,8,False,Kubernetes,TechCorp,High School
+Karen Liu,38,Chicago,67860,Marketing,20,True,Kubernetes,BigTech,High School
+Nathan Wilson,60,Austin,52621,Legal,9,False,AWS,DevTools,High School
+Frank Smith,46,Washington,60417,Engineering,10,False,Docker,DevTools,Master
+Carol Garcia,29,Boston,138627,Marketing,17,True,AWS,CloudSoft,High School
+Alice Johnson,54,Los Angeles,138637,Engineering,6,True,AWS,CloudSoft,Bachelor
+Carol Smith,38,Seattle,106095,Support,15,False,React,DevTools,Master
+Frank Petrov,30,New York,98242,Sales,15,False,Kubernetes,StartupXYZ,High School
+Rachel Miller,45,Boston,147193,Product,4,False,AWS,InnovateLab,Master
+Irene Taylor,34,Los Angeles,80931,Marketing,1,True,Kubernetes,InnovateLab,Bachelor
+Steve Garcia,31,Denver,58276,Operations,1,False,Machine Learning,DataInc,PhD
+Karen Kim,60,Nashville,90492,Marketing,1,True,Project Management,StartupXYZ,PhD
+Bob Kim,36,Phoenix,45835,HR,2,False,Data Science,StartupXYZ,Bachelor
+Tina Anderson,23,Austin,143522,Support,9,True,Kubernetes,InnovateLab,PhD
+Henry Chen,45,Miami,144703,Engineering,16,True,Project Management,DevTools,Master
+David Petrov,48,Austin,107929,Sales,14,True,Docker,TechCorp,PhD
+Olivia Smith,31,Houston,84868,Sales,2,False,Docker,BigTech,High School
+Alice Chen,25,Phoenix,98095,Finance,16,True,JavaScript,InnovateLab,PhD
+Bob Chen,27,Los Angeles,115754,Engineering,3,True,SQL,TechCorp,Master
+Tina Liu,46,Denver,114287,Legal,12,False,JavaScript,BigTech,PhD
+Luis Johnson,29,Denver,165965,Product,20,True,Python,DataInc,High School
+Quinn Petrov,50,Chicago,121610,Support,5,False,Python,CodeFactory,PhD
+Frank Petrov,43,Denver,120869,Finance,20,True,AWS,BigTech,PhD
+David Garcia,46,Washington,156853,Finance,2,True,React,InnovateLab,Bachelor
+Frank Kim,54,New York,154626,Product,7,True,React,BigTech,PhD
+David Brown,27,Los Angeles,70288,Marketing,18,False,Project Management,BigTech,High School
+Tina Johnson,63,San Francisco,75790,Support,15,True,Kubernetes,InnovateLab,PhD
+Rachel Liu,24,Phoenix,96955,Finance,14,True,SQL,DataInc,Bachelor
+Jack Chen,50,Dallas,141508,Operations,11,True,Data Science,StartupXYZ,PhD
+Tina Wilson,44,Seattle,138939,Legal,13,True,Machine Learning,CloudSoft,High School
+Tina Smith,45,Portland,76381,Legal,13,True,JavaScript,DevTools,PhD
+Quinn Wilson,39,Los Angeles,57891,Support,1,True,JavaScript,CodeFactory,Bachelor
+Karen Johnson,33,Atlanta,136891,Support,0,True,Data Science,BigTech,PhD
+David Davis,55,Dallas,48570,Sales,12,True,Kubernetes,InnovateLab,Bachelor

@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Alice Johnson",
+    "age": 28,
+    "city": "Seattle",
+    "salary": 85000,
+    "department": "Engineering",
+    "years_experience": 5,
+    "remote": true
+  },
+  {
+    "name": "Bob Chen",
+    "age": 35,
+    "city": "San Francisco",
+    "salary": 120000,
+    "department": "Engineering",
+    "years_experience": 8,
+    "remote": false
+  },
+  {
+    "name": "Carol Martinez",
+    "age": 42,
+    "city": "Austin",
+    "salary": 95000,
+    "department": "Marketing",
+    "years_experience": 12,
+    "remote": true
+  },
+  {
+    "name": "David Kim",
+    "age": 29,
+    "city": "New York",
+    "salary": 110000,
+    "department": "Engineering",
+    "years_experience": 6,
+    "remote": false
+  },
+  {
+    "name": "Elena Rodriguez",
+    "age": 31,
+    "city": "Chicago",
+    "salary": 78000,
+    "department": "Sales",
+    "years_experience": 7,
+    "remote": true
+  },
+  {
+    "name": "Frank Thompson",
+    "age": 45,
+    "city": "Boston",
+    "salary": 105000,
+    "department": "Engineering",
+    "years_experience": 15,
+    "remote": false
+  },
+  {
+    "name": "Grace Liu",
+    "age": 26,
+    "city": "Portland",
+    "salary": 72000,
+    "department": "Design",
+    "years_experience": 3,
+    "remote": true
+  },
+  {
+    "name": "Henry Williams",
+    "age": 38,
+    "city": "Denver",
+    "salary": 88000,
+    "department": "Marketing",
+    "years_experience": 10,
+    "remote": false
+  },
+  {
+    "name": "Irene Davis",
+    "age": 33,
+    "city": "Miami",
+    "salary": 92000,
+    "department": "Sales",
+    "years_experience": 9,
+    "remote": true
+  },
+  {
+    "name": "Jack Wilson",
+    "age": 27,
+    "city": "Phoenix",
+    "salary": 76000,
+    "department": "Design",
+    "years_experience": 4,
+    "remote": false
+  },
+  {
+    "name": "Karen Brown",
+    "age": 41,
+    "city": "Dallas",
+    "salary": 98000,
+    "department": "Engineering",
+    "years_experience": 13,
+    "remote": true
+  },
+  {
+    "name": "Luis Garcia",
+    "age": 30,
+    "city": "Los Angeles",
+    "salary": 115000,
+    "department": "Engineering",
+    "years_experience": 7,
+    "remote": false
+  },
+  {
+    "name": "Maria Petrov",
+    "age": 36,
+    "city": "Washington",
+    "salary": 87000,
+    "department": "Marketing",
+    "years_experience": 11,
+    "remote": true
+  },
+  {
+    "name": "Nathan Taylor",
+    "age": 25,
+    "city": "Nashville",
+    "salary": 68000,
+    "department": "Design",
+    "years_experience": 2,
+    "remote": false
+  },
+  {
+    "name": "Olivia Anderson",
+    "age": 39,
+    "city": "Atlanta",
+    "salary": 101000,
+    "department": "Sales",
+    "years_experience": 12,
+    "remote": false
+  }
+]

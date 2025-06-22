@@ -1,0 +1,939 @@
+{
+  "summary": {
+    "total_time_ms": 349.1359017789364,
+    "total_calls": 386,
+    "avg_time_per_call_ms": 0.9044971548677109
+  },
+  "operations": [
+    {
+      "name": "append_to_json_table_file",
+      "count": 20,
+      "total_time_ms": 96.28557786345482,
+      "avg_time_ms": 4.814278893172741,
+      "min_time_ms": 4.674917086958885,
+      "max_time_ms": 5.013084039092064
+    },
+    {
+      "name": "JSONTablesAppender.append_rows",
+      "count": 10,
+      "total_time_ms": 48.11549745500088,
+      "avg_time_ms": 4.811549745500088,
+      "min_time_ms": 4.67304140329361,
+      "max_time_ms": 5.010582506656647
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows",
+      "count": 10,
+      "total_time_ms": 48.11549745500088,
+      "avg_time_ms": 4.811549745500088,
+      "min_time_ms": 4.67304140329361,
+      "max_time_ms": 5.010582506656647
+    },
+    {
+      "name": "efficient_append_attempt",
+      "count": 10,
+      "total_time_ms": 44.35054026544094,
+      "avg_time_ms": 4.435054026544094,
+      "min_time_ms": 4.326291382312775,
+      "max_time_ms": 4.579333588480949
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt",
+      "count": 10,
+      "total_time_ms": 44.35054026544094,
+      "avg_time_ms": 4.435054026544094,
+      "min_time_ms": 4.326291382312775,
+      "max_time_ms": 4.579333588480949
+    },
+    {
+      "name": "JSONTablesAppender._try_efficient_append",
+      "count": 10,
+      "total_time_ms": 44.330621138215065,
+      "avg_time_ms": 4.4330621138215065,
+      "min_time_ms": 4.324708133935928,
+      "max_time_ms": 4.577083513140678
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append",
+      "count": 10,
+      "total_time_ms": 44.330621138215065,
+      "avg_time_ms": 4.4330621138215065,
+      "min_time_ms": 4.324708133935928,
+      "max_time_ms": 4.577083513140678
+    },
+    {
+      "name": "parse_json_structure",
+      "count": 10,
+      "total_time_ms": 42.6060426980257,
+      "avg_time_ms": 4.26060426980257,
+      "min_time_ms": 4.189791157841682,
+      "max_time_ms": 4.393041133880615
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> parse_json_structure",
+      "count": 10,
+      "total_time_ms": 42.6060426980257,
+      "avg_time_ms": 4.26060426980257,
+      "min_time_ms": 4.189791157841682,
+      "max_time_ms": 4.393041133880615
+    },
+    {
+      "name": "json.load",
+      "count": 80,
+      "total_time_ms": 24.36775527894497,
+      "avg_time_ms": 0.3045969409868121,
+      "min_time_ms": 0.27429312467575073,
+      "max_time_ms": 0.37737563252449036
+    },
+    {
+      "name": "json.loads",
+      "count": 80,
+      "total_time_ms": 21.598752588033676,
+      "avg_time_ms": 0.26998440735042095,
+      "min_time_ms": 0.24008378386497498,
+      "max_time_ms": 0.34904293715953827
+    },
+    {
+      "name": "json.dump",
+      "count": 9,
+      "total_time_ms": 20.7818690687418,
+      "avg_time_ms": 2.309096563193533,
+      "min_time_ms": 2.2997502237558365,
+      "max_time_ms": 2.3162495344877243
+    },
+    {
+      "name": "read_existing_file",
+      "count": 10,
+      "total_time_ms": 3.2860003411769867,
+      "avg_time_ms": 0.32860003411769867,
+      "min_time_ms": 0.30449964106082916,
+      "max_time_ms": 0.39158202707767487
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file",
+      "count": 10,
+      "total_time_ms": 3.2860003411769867,
+      "avg_time_ms": 0.32860003411769867,
+      "min_time_ms": 0.30449964106082916,
+      "max_time_ms": 0.39158202707767487
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load",
+      "count": 10,
+      "total_time_ms": 3.107210621237755,
+      "avg_time_ms": 0.3107210621237755,
+      "min_time_ms": 0.2870000898838043,
+      "max_time_ms": 0.37737563252449036
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.0900854617357254,
+      "avg_time_ms": 0.30900854617357254,
+      "min_time_ms": 0.28525106608867645,
+      "max_time_ms": 0.3758333623409271
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.071622923016548,
+      "avg_time_ms": 0.3071622923016548,
+      "min_time_ms": 0.28341636061668396,
+      "max_time_ms": 0.37412531673908234
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.054751083254814,
+      "avg_time_ms": 0.3054751083254814,
+      "min_time_ms": 0.2817101776599884,
+      "max_time_ms": 0.372542068362236
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.036998212337494,
+      "avg_time_ms": 0.3036998212337494,
+      "min_time_ms": 0.28004124760627747,
+      "max_time_ms": 0.3709588199853897
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.0202530324459076,
+      "avg_time_ms": 0.30202530324459076,
+      "min_time_ms": 0.27808360755443573,
+      "max_time_ms": 0.3694165498018265
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.0025839805603027,
+      "avg_time_ms": 0.3002583980560303,
+      "min_time_ms": 0.27633272111415863,
+      "max_time_ms": 0.3678351640701294
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 2.9842499643564224,
+      "avg_time_ms": 0.29842499643564224,
+      "min_time_ms": 0.27429312467575073,
+      "max_time_ms": 0.36620907485485077
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.777751535177231,
+      "avg_time_ms": 0.2777751535177231,
+      "min_time_ms": 0.2554580569267273,
+      "max_time_ms": 0.34904293715953827
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.755291759967804,
+      "avg_time_ms": 0.2755291759967804,
+      "min_time_ms": 0.2532918006181717,
+      "max_time_ms": 0.3470834344625473
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.734582871198654,
+      "avg_time_ms": 0.2734582871198654,
+      "min_time_ms": 0.2513732761144638,
+      "max_time_ms": 0.3451649099588394
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.7117524296045303,
+      "avg_time_ms": 0.27117524296045303,
+      "min_time_ms": 0.24904310703277588,
+      "max_time_ms": 0.3431662917137146
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.690037712454796,
+      "avg_time_ms": 0.2690037712454796,
+      "min_time_ms": 0.2469569444656372,
+      "max_time_ms": 0.34116581082344055
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.6681236922740936,
+      "avg_time_ms": 0.26681236922740936,
+      "min_time_ms": 0.244874507188797,
+      "max_time_ms": 0.3391243517398834
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.6442911475896835,
+      "avg_time_ms": 0.26442911475896835,
+      "min_time_ms": 0.24271011352539062,
+      "max_time_ms": 0.33679045736789703
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.616921439766884,
+      "avg_time_ms": 0.2616921439766884,
+      "min_time_ms": 0.24008378386497498,
+      "max_time_ms": 0.3343336284160614
+    },
+    {
+      "name": "json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.3136232048273087,
+      "avg_time_ms": 2.3136232048273087,
+      "min_time_ms": 2.3136232048273087,
+      "max_time_ms": 2.3136232048273087
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.311374992132187,
+      "avg_time_ms": 2.311374992132187,
+      "min_time_ms": 2.311374992132187,
+      "max_time_ms": 2.311374992132187
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.309374511241913,
+      "avg_time_ms": 2.309374511241913,
+      "min_time_ms": 2.309374511241913,
+      "max_time_ms": 2.309374511241913
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.3075826466083527,
+      "avg_time_ms": 2.3075826466083527,
+      "min_time_ms": 2.3075826466083527,
+      "max_time_ms": 2.3075826466083527
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.304915338754654,
+      "avg_time_ms": 2.304915338754654,
+      "min_time_ms": 2.304915338754654,
+      "max_time_ms": 2.304915338754654
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.3027490824460983,
+      "avg_time_ms": 2.3027490824460983,
+      "min_time_ms": 2.3027490824460983,
+      "max_time_ms": 2.3027490824460983
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.2997502237558365,
+      "avg_time_ms": 2.2997502237558365,
+      "min_time_ms": 2.2997502237558365,
+      "max_time_ms": 2.2997502237558365
+    },
+    {
+      "name": "json.dumps",
+      "count": 80,
+      "total_time_ms": 0.9777843952178955,
+      "avg_time_ms": 0.012222304940223694,
+      "min_time_ms": 0.002166256308555603,
+      "max_time_ms": 0.02458319067955017
+    },
+    {
+      "name": "write_modified_file",
+      "count": 10,
+      "total_time_ms": 0.8702464401721954,
+      "avg_time_ms": 0.08702464401721954,
+      "min_time_ms": 0.05379132926464081,
+      "max_time_ms": 0.1322086900472641
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> write_modified_file",
+      "count": 10,
+      "total_time_ms": 0.8702464401721954,
+      "avg_time_ms": 0.08702464401721954,
+      "min_time_ms": 0.05379132926464081,
+      "max_time_ms": 0.1322086900472641
+    },
+    {
+      "name": "JSONTablesEncoder.from_records",
+      "count": 2,
+      "total_time_ms": 0.5490817129611969,
+      "avg_time_ms": 0.27454085648059845,
+      "min_time_ms": 0.27454085648059845,
+      "max_time_ms": 0.27454085648059845
+    },
+    {
+      "name": "read_file_as_text",
+      "count": 10,
+      "total_time_ms": 0.26458874344825745,
+      "avg_time_ms": 0.026458874344825745,
+      "min_time_ms": 0.024458393454551697,
+      "max_time_ms": 0.029793009161949158
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> read_file_as_text",
+      "count": 10,
+      "total_time_ms": 0.26458874344825745,
+      "avg_time_ms": 0.026458874344825745,
+      "min_time_ms": 0.024458393454551697,
+      "max_time_ms": 0.029793009161949158
+    },
+    {
+      "name": "records_row_conversion",
+      "count": 1,
+      "total_time_ms": 0.25920942425727844,
+      "avg_time_ms": 0.25920942425727844,
+      "min_time_ms": 0.25920942425727844,
+      "max_time_ms": 0.25920942425727844
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_row_conversion",
+      "count": 1,
+      "total_time_ms": 0.25920942425727844,
+      "avg_time_ms": 0.25920942425727844,
+      "min_time_ms": 0.25920942425727844,
+      "max_time_ms": 0.25920942425727844
+    },
+    {
+      "name": "modify_file_content",
+      "count": 10,
+      "total_time_ms": 0.24970993399620056,
+      "avg_time_ms": 0.024970993399620056,
+      "min_time_ms": 0.009208917617797852,
+      "max_time_ms": 0.08345767855644226
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> modify_file_content",
+      "count": 10,
+      "total_time_ms": 0.24970993399620056,
+      "avg_time_ms": 0.024970993399620056,
+      "min_time_ms": 0.009208917617797852,
+      "max_time_ms": 0.08345767855644226
+    },
+    {
+      "name": "serialize_new_rows",
+      "count": 10,
+      "total_time_ms": 0.2221241593360901,
+      "avg_time_ms": 0.02221241593360901,
+      "min_time_ms": 0.014582648873329163,
+      "max_time_ms": 0.02833455801010132
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows",
+      "count": 10,
+      "total_time_ms": 0.2221241593360901,
+      "avg_time_ms": 0.02221241593360901,
+      "min_time_ms": 0.014582648873329163,
+      "max_time_ms": 0.02833455801010132
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.19366294145584106,
+      "avg_time_ms": 0.019366294145584106,
+      "min_time_ms": 0.012917444109916687,
+      "max_time_ms": 0.02458319067955017
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.17216242849826813,
+      "avg_time_ms": 0.017216242849826813,
+      "min_time_ms": 0.011499971151351929,
+      "max_time_ms": 0.0215824693441391
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.1524202525615692,
+      "avg_time_ms": 0.015242025256156921,
+      "min_time_ms": 0.009918585419654846,
+      "max_time_ms": 0.019375234842300415
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.132756307721138,
+      "avg_time_ms": 0.0132756307721138,
+      "min_time_ms": 0.008460134267807007,
+      "max_time_ms": 0.017043203115463257
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.11108070611953735,
+      "avg_time_ms": 0.011108070611953735,
+      "min_time_ms": 0.006834045052528381,
+      "max_time_ms": 0.014625489711761475
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.09270571172237396,
+      "avg_time_ms": 0.009270571172237396,
+      "min_time_ms": 0.00533275306224823,
+      "max_time_ms": 0.012665987014770508
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.07395446300506592,
+      "avg_time_ms": 0.007395446300506592,
+      "min_time_ms": 0.0037495046854019165,
+      "max_time_ms": 0.010540708899497986
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.04904158413410187,
+      "avg_time_ms": 0.004904158413410187,
+      "min_time_ms": 0.002166256308555603,
+      "max_time_ms": 0.007539987564086914
+    },
+    {
+      "name": "convert_new_rows",
+      "count": 10,
+      "total_time_ms": 0.011786818504333496,
+      "avg_time_ms": 0.0011786818504333496,
+      "min_time_ms": 0.0007897615432739258,
+      "max_time_ms": 0.0016670674085617065
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> convert_new_rows",
+      "count": 10,
+      "total_time_ms": 0.011786818504333496,
+      "avg_time_ms": 0.0011786818504333496,
+      "min_time_ms": 0.0007897615432739258,
+      "max_time_ms": 0.0016670674085617065
+    },
+    {
+      "name": "validate_table_structure",
+      "count": 10,
+      "total_time_ms": 0.006295740604400635,
+      "avg_time_ms": 0.0006295740604400635,
+      "min_time_ms": 0.0004172325134277344,
+      "max_time_ms": 0.0007916241884231567
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> validate_table_structure",
+      "count": 10,
+      "total_time_ms": 0.006295740604400635,
+      "avg_time_ms": 0.0006295740604400635,
+      "min_time_ms": 0.0004172325134277344,
+      "max_time_ms": 0.0007916241884231567
+    },
+    {
+      "name": "extract_column_names",
+      "count": 1,
+      "total_time_ms": 0.0008754432201385498,
+      "avg_time_ms": 0.0008754432201385498,
+      "min_time_ms": 0.0008754432201385498,
+      "max_time_ms": 0.0008754432201385498
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> extract_column_names",
+      "count": 1,
+      "total_time_ms": 0.0008754432201385498,
+      "avg_time_ms": 0.0008754432201385498,
+      "min_time_ms": 0.0008754432201385498,
+      "max_time_ms": 0.0008754432201385498
+    },
+    {
+      "name": "records_validation",
+      "count": 1,
+      "total_time_ms": 0.0005830079317092896,
+      "avg_time_ms": 0.0005830079317092896,
+      "min_time_ms": 0.0005830079317092896,
+      "max_time_ms": 0.0005830079317092896
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_validation",
+      "count": 1,
+      "total_time_ms": 0.0005830079317092896,
+      "avg_time_ms": 0.0005830079317092896,
+      "min_time_ms": 0.0005830079317092896,
+      "max_time_ms": 0.0005830079317092896
+    },
+    {
+      "name": "records_result_structure",
+      "count": 1,
+      "total_time_ms": 0.0005420297384262085,
+      "avg_time_ms": 0.0005420297384262085,
+      "min_time_ms": 0.0005420297384262085,
+      "max_time_ms": 0.0005420297384262085
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_result_structure",
+      "count": 1,
+      "total_time_ms": 0.0005420297384262085,
+      "avg_time_ms": 0.0005420297384262085,
+      "min_time_ms": 0.0005420297384262085,
+      "max_time_ms": 0.0005420297384262085
+    },
+    {
+      "name": "records_pagination",
+      "count": 1,
+      "total_time_ms": 0.0004172325134277344,
+      "avg_time_ms": 0.0004172325134277344,
+      "min_time_ms": 0.0004172325134277344,
+      "max_time_ms": 0.0004172325134277344
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_pagination",
+      "count": 1,
+      "total_time_ms": 0.0004172325134277344,
+      "avg_time_ms": 0.0004172325134277344,
+      "min_time_ms": 0.0004172325134277344,
+      "max_time_ms": 0.0004172325134277344
+    }
+  ],
+  "call_paths": [
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows",
+      "count": 10,
+      "total_time_ms": 48.11549745500088,
+      "avg_time_ms": 4.811549745500088,
+      "min_time_ms": 4.67304140329361,
+      "max_time_ms": 5.010582506656647
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt",
+      "count": 10,
+      "total_time_ms": 44.35054026544094,
+      "avg_time_ms": 4.435054026544094,
+      "min_time_ms": 4.326291382312775,
+      "max_time_ms": 4.579333588480949
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append",
+      "count": 10,
+      "total_time_ms": 44.330621138215065,
+      "avg_time_ms": 4.4330621138215065,
+      "min_time_ms": 4.324708133935928,
+      "max_time_ms": 4.577083513140678
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> parse_json_structure",
+      "count": 10,
+      "total_time_ms": 42.6060426980257,
+      "avg_time_ms": 4.26060426980257,
+      "min_time_ms": 4.189791157841682,
+      "max_time_ms": 4.393041133880615
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file",
+      "count": 10,
+      "total_time_ms": 3.2860003411769867,
+      "avg_time_ms": 0.32860003411769867,
+      "min_time_ms": 0.30449964106082916,
+      "max_time_ms": 0.39158202707767487
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load",
+      "count": 10,
+      "total_time_ms": 3.107210621237755,
+      "avg_time_ms": 0.3107210621237755,
+      "min_time_ms": 0.2870000898838043,
+      "max_time_ms": 0.37737563252449036
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.0900854617357254,
+      "avg_time_ms": 0.30900854617357254,
+      "min_time_ms": 0.28525106608867645,
+      "max_time_ms": 0.3758333623409271
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.071622923016548,
+      "avg_time_ms": 0.3071622923016548,
+      "min_time_ms": 0.28341636061668396,
+      "max_time_ms": 0.37412531673908234
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.054751083254814,
+      "avg_time_ms": 0.3054751083254814,
+      "min_time_ms": 0.2817101776599884,
+      "max_time_ms": 0.372542068362236
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.036998212337494,
+      "avg_time_ms": 0.3036998212337494,
+      "min_time_ms": 0.28004124760627747,
+      "max_time_ms": 0.3709588199853897
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.0202530324459076,
+      "avg_time_ms": 0.30202530324459076,
+      "min_time_ms": 0.27808360755443573,
+      "max_time_ms": 0.3694165498018265
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 3.0025839805603027,
+      "avg_time_ms": 0.3002583980560303,
+      "min_time_ms": 0.27633272111415863,
+      "max_time_ms": 0.3678351640701294
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load",
+      "count": 10,
+      "total_time_ms": 2.9842499643564224,
+      "avg_time_ms": 0.29842499643564224,
+      "min_time_ms": 0.27429312467575073,
+      "max_time_ms": 0.36620907485485077
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.777751535177231,
+      "avg_time_ms": 0.2777751535177231,
+      "min_time_ms": 0.2554580569267273,
+      "max_time_ms": 0.34904293715953827
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.755291759967804,
+      "avg_time_ms": 0.2755291759967804,
+      "min_time_ms": 0.2532918006181717,
+      "max_time_ms": 0.3470834344625473
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.734582871198654,
+      "avg_time_ms": 0.2734582871198654,
+      "min_time_ms": 0.2513732761144638,
+      "max_time_ms": 0.3451649099588394
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.7117524296045303,
+      "avg_time_ms": 0.27117524296045303,
+      "min_time_ms": 0.24904310703277588,
+      "max_time_ms": 0.3431662917137146
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.690037712454796,
+      "avg_time_ms": 0.2690037712454796,
+      "min_time_ms": 0.2469569444656372,
+      "max_time_ms": 0.34116581082344055
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.6681236922740936,
+      "avg_time_ms": 0.26681236922740936,
+      "min_time_ms": 0.244874507188797,
+      "max_time_ms": 0.3391243517398834
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.6442911475896835,
+      "avg_time_ms": 0.26442911475896835,
+      "min_time_ms": 0.24271011352539062,
+      "max_time_ms": 0.33679045736789703
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> read_existing_file -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.load -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads -> json.loads",
+      "count": 10,
+      "total_time_ms": 2.616921439766884,
+      "avg_time_ms": 0.2616921439766884,
+      "min_time_ms": 0.24008378386497498,
+      "max_time_ms": 0.3343336284160614
+    },
+    {
+      "name": "json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.3136232048273087,
+      "avg_time_ms": 2.3136232048273087,
+      "min_time_ms": 2.3136232048273087,
+      "max_time_ms": 2.3136232048273087
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.311374992132187,
+      "avg_time_ms": 2.311374992132187,
+      "min_time_ms": 2.311374992132187,
+      "max_time_ms": 2.311374992132187
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.309374511241913,
+      "avg_time_ms": 2.309374511241913,
+      "min_time_ms": 2.309374511241913,
+      "max_time_ms": 2.309374511241913
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.3075826466083527,
+      "avg_time_ms": 2.3075826466083527,
+      "min_time_ms": 2.3075826466083527,
+      "max_time_ms": 2.3075826466083527
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.304915338754654,
+      "avg_time_ms": 2.304915338754654,
+      "min_time_ms": 2.304915338754654,
+      "max_time_ms": 2.304915338754654
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.3027490824460983,
+      "avg_time_ms": 2.3027490824460983,
+      "min_time_ms": 2.3027490824460983,
+      "max_time_ms": 2.3027490824460983
+    },
+    {
+      "name": "json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump -> json.dump",
+      "count": 1,
+      "total_time_ms": 2.2997502237558365,
+      "avg_time_ms": 2.2997502237558365,
+      "min_time_ms": 2.2997502237558365,
+      "max_time_ms": 2.2997502237558365
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> write_modified_file",
+      "count": 10,
+      "total_time_ms": 0.8702464401721954,
+      "avg_time_ms": 0.08702464401721954,
+      "min_time_ms": 0.05379132926464081,
+      "max_time_ms": 0.1322086900472641
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> read_file_as_text",
+      "count": 10,
+      "total_time_ms": 0.26458874344825745,
+      "avg_time_ms": 0.026458874344825745,
+      "min_time_ms": 0.024458393454551697,
+      "max_time_ms": 0.029793009161949158
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_row_conversion",
+      "count": 1,
+      "total_time_ms": 0.25920942425727844,
+      "avg_time_ms": 0.25920942425727844,
+      "min_time_ms": 0.25920942425727844,
+      "max_time_ms": 0.25920942425727844
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> modify_file_content",
+      "count": 10,
+      "total_time_ms": 0.24970993399620056,
+      "avg_time_ms": 0.024970993399620056,
+      "min_time_ms": 0.009208917617797852,
+      "max_time_ms": 0.08345767855644226
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows",
+      "count": 10,
+      "total_time_ms": 0.2221241593360901,
+      "avg_time_ms": 0.02221241593360901,
+      "min_time_ms": 0.014582648873329163,
+      "max_time_ms": 0.02833455801010132
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.19366294145584106,
+      "avg_time_ms": 0.019366294145584106,
+      "min_time_ms": 0.012917444109916687,
+      "max_time_ms": 0.02458319067955017
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.17216242849826813,
+      "avg_time_ms": 0.017216242849826813,
+      "min_time_ms": 0.011499971151351929,
+      "max_time_ms": 0.0215824693441391
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.1524202525615692,
+      "avg_time_ms": 0.015242025256156921,
+      "min_time_ms": 0.009918585419654846,
+      "max_time_ms": 0.019375234842300415
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.132756307721138,
+      "avg_time_ms": 0.0132756307721138,
+      "min_time_ms": 0.008460134267807007,
+      "max_time_ms": 0.017043203115463257
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.11108070611953735,
+      "avg_time_ms": 0.011108070611953735,
+      "min_time_ms": 0.006834045052528381,
+      "max_time_ms": 0.014625489711761475
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.09270571172237396,
+      "avg_time_ms": 0.009270571172237396,
+      "min_time_ms": 0.00533275306224823,
+      "max_time_ms": 0.012665987014770508
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.07395446300506592,
+      "avg_time_ms": 0.007395446300506592,
+      "min_time_ms": 0.0037495046854019165,
+      "max_time_ms": 0.010540708899497986
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> efficient_append_attempt -> JSONTablesAppender._try_efficient_append -> serialize_new_rows -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps -> json.dumps",
+      "count": 10,
+      "total_time_ms": 0.04904158413410187,
+      "avg_time_ms": 0.004904158413410187,
+      "min_time_ms": 0.002166256308555603,
+      "max_time_ms": 0.007539987564086914
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> convert_new_rows",
+      "count": 10,
+      "total_time_ms": 0.011786818504333496,
+      "avg_time_ms": 0.0011786818504333496,
+      "min_time_ms": 0.0007897615432739258,
+      "max_time_ms": 0.0016670674085617065
+    },
+    {
+      "name": "append_to_json_table_file -> JSONTablesAppender.append_rows -> validate_table_structure",
+      "count": 10,
+      "total_time_ms": 0.006295740604400635,
+      "avg_time_ms": 0.0006295740604400635,
+      "min_time_ms": 0.0004172325134277344,
+      "max_time_ms": 0.0007916241884231567
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> extract_column_names",
+      "count": 1,
+      "total_time_ms": 0.0008754432201385498,
+      "avg_time_ms": 0.0008754432201385498,
+      "min_time_ms": 0.0008754432201385498,
+      "max_time_ms": 0.0008754432201385498
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_validation",
+      "count": 1,
+      "total_time_ms": 0.0005830079317092896,
+      "avg_time_ms": 0.0005830079317092896,
+      "min_time_ms": 0.0005830079317092896,
+      "max_time_ms": 0.0005830079317092896
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_result_structure",
+      "count": 1,
+      "total_time_ms": 0.0005420297384262085,
+      "avg_time_ms": 0.0005420297384262085,
+      "min_time_ms": 0.0005420297384262085,
+      "max_time_ms": 0.0005420297384262085
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_pagination",
+      "count": 1,
+      "total_time_ms": 0.0004172325134277344,
+      "avg_time_ms": 0.0004172325134277344,
+      "min_time_ms": 0.0004172325134277344,
+      "max_time_ms": 0.0004172325134277344
+    }
+  ]
+}
