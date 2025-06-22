@@ -1,0 +1,627 @@
+{
+  "summary": {
+    "total_time_ms": 6.566166877746582,
+    "total_calls": 35,
+    "avg_time_per_call_ms": 0.18760476793561662
+  },
+  "operations": [
+    {
+      "name": "pandas.DataFrame.to_dict",
+      "count": 10,
+      "total_time_ms": 2.8277095407247543,
+      "avg_time_ms": 0.28277095407247543,
+      "min_time_ms": 0.27295947074890137,
+      "max_time_ms": 0.2915412187576294
+    },
+    {
+      "name": "pandas.DataFrame.__init__",
+      "count": 10,
+      "total_time_ms": 1.6224998980760574,
+      "avg_time_ms": 0.16224998980760574,
+      "min_time_ms": 0.15066750347614288,
+      "max_time_ms": 0.17241761088371277
+    },
+    {
+      "name": "JSONTablesDecoder.to_records",
+      "count": 2,
+      "total_time_ms": 0.9754970669746399,
+      "avg_time_ms": 0.48774853348731995,
+      "min_time_ms": 0.48774853348731995,
+      "max_time_ms": 0.48774853348731995
+    },
+    {
+      "name": "decode_to_records",
+      "count": 1,
+      "total_time_ms": 0.4832092672586441,
+      "avg_time_ms": 0.4832092672586441,
+      "min_time_ms": 0.4832092672586441,
+      "max_time_ms": 0.4832092672586441
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records",
+      "count": 1,
+      "total_time_ms": 0.4832092672586441,
+      "avg_time_ms": 0.4832092672586441,
+      "min_time_ms": 0.4832092672586441,
+      "max_time_ms": 0.4832092672586441
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2915412187576294,
+      "avg_time_ms": 0.2915412187576294,
+      "min_time_ms": 0.2915412187576294,
+      "max_time_ms": 0.2915412187576294
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2893339842557907,
+      "avg_time_ms": 0.2893339842557907,
+      "min_time_ms": 0.2893339842557907,
+      "max_time_ms": 0.2893339842557907
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2875830978155136,
+      "avg_time_ms": 0.2875830978155136,
+      "min_time_ms": 0.2875830978155136,
+      "max_time_ms": 0.2875830978155136
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.28562359511852264,
+      "avg_time_ms": 0.28562359511852264,
+      "min_time_ms": 0.28562359511852264,
+      "max_time_ms": 0.28562359511852264
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.28399936854839325,
+      "avg_time_ms": 0.28399936854839325,
+      "min_time_ms": 0.28399936854839325,
+      "max_time_ms": 0.28399936854839325
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.28220750391483307,
+      "avg_time_ms": 0.28220750391483307,
+      "min_time_ms": 0.28220750391483307,
+      "max_time_ms": 0.28220750391483307
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2802107483148575,
+      "avg_time_ms": 0.2802107483148575,
+      "min_time_ms": 0.2802107483148575,
+      "max_time_ms": 0.2802107483148575
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.27812644839286804,
+      "avg_time_ms": 0.27812644839286804,
+      "min_time_ms": 0.27812644839286804,
+      "max_time_ms": 0.27812644839286804
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.27612410485744476,
+      "avg_time_ms": 0.27612410485744476,
+      "min_time_ms": 0.27612410485744476,
+      "max_time_ms": 0.27612410485744476
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.27295947074890137,
+      "avg_time_ms": 0.27295947074890137,
+      "min_time_ms": 0.27295947074890137,
+      "max_time_ms": 0.27295947074890137
+    },
+    {
+      "name": "JSONTablesDecoder.to_dataframe",
+      "count": 1,
+      "total_time_ms": 0.18679164350032806,
+      "avg_time_ms": 0.18679164350032806,
+      "min_time_ms": 0.18679164350032806,
+      "max_time_ms": 0.18679164350032806
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe",
+      "count": 1,
+      "total_time_ms": 0.18679164350032806,
+      "avg_time_ms": 0.18679164350032806,
+      "min_time_ms": 0.18679164350032806,
+      "max_time_ms": 0.18679164350032806
+    },
+    {
+      "name": "decode_row_oriented",
+      "count": 1,
+      "total_time_ms": 0.1826249063014984,
+      "avg_time_ms": 0.1826249063014984,
+      "min_time_ms": 0.1826249063014984,
+      "max_time_ms": 0.1826249063014984
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented",
+      "count": 1,
+      "total_time_ms": 0.1826249063014984,
+      "avg_time_ms": 0.1826249063014984,
+      "min_time_ms": 0.1826249063014984,
+      "max_time_ms": 0.1826249063014984
+    },
+    {
+      "name": "create_dataframe",
+      "count": 1,
+      "total_time_ms": 0.1749582588672638,
+      "avg_time_ms": 0.1749582588672638,
+      "min_time_ms": 0.1749582588672638,
+      "max_time_ms": 0.1749582588672638
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe",
+      "count": 1,
+      "total_time_ms": 0.1749582588672638,
+      "avg_time_ms": 0.1749582588672638,
+      "min_time_ms": 0.1749582588672638,
+      "max_time_ms": 0.1749582588672638
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.17241761088371277,
+      "avg_time_ms": 0.17241761088371277,
+      "min_time_ms": 0.17241761088371277,
+      "max_time_ms": 0.17241761088371277
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.17033331096172333,
+      "avg_time_ms": 0.17033331096172333,
+      "min_time_ms": 0.17033331096172333,
+      "max_time_ms": 0.17033331096172333
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.1681242138147354,
+      "avg_time_ms": 0.1681242138147354,
+      "min_time_ms": 0.1681242138147354,
+      "max_time_ms": 0.1681242138147354
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.16616471111774445,
+      "avg_time_ms": 0.16616471111774445,
+      "min_time_ms": 0.16616471111774445,
+      "max_time_ms": 0.16616471111774445
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.16354210674762726,
+      "avg_time_ms": 0.16354210674762726,
+      "min_time_ms": 0.16354210674762726,
+      "max_time_ms": 0.16354210674762726
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.1615416258573532,
+      "avg_time_ms": 0.1615416258573532,
+      "min_time_ms": 0.1615416258573532,
+      "max_time_ms": 0.1615416258573532
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.15912577509880066,
+      "avg_time_ms": 0.15912577509880066,
+      "min_time_ms": 0.15912577509880066,
+      "max_time_ms": 0.15912577509880066
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.15670806169509888,
+      "avg_time_ms": 0.15670806169509888,
+      "min_time_ms": 0.15670806169509888,
+      "max_time_ms": 0.15670806169509888
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.1538749784231186,
+      "avg_time_ms": 0.1538749784231186,
+      "min_time_ms": 0.1538749784231186,
+      "max_time_ms": 0.1538749784231186
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.15066750347614288,
+      "avg_time_ms": 0.15066750347614288,
+      "min_time_ms": 0.15066750347614288,
+      "max_time_ms": 0.15066750347614288
+    },
+    {
+      "name": "JSONTablesEncoder.from_records",
+      "count": 2,
+      "total_time_ms": 0.07858499884605408,
+      "avg_time_ms": 0.03929249942302704,
+      "min_time_ms": 0.03929249942302704,
+      "max_time_ms": 0.03929249942302704
+    },
+    {
+      "name": "records_row_conversion",
+      "count": 1,
+      "total_time_ms": 0.026458874344825745,
+      "avg_time_ms": 0.026458874344825745,
+      "min_time_ms": 0.026458874344825745,
+      "max_time_ms": 0.026458874344825745
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_row_conversion",
+      "count": 1,
+      "total_time_ms": 0.026458874344825745,
+      "avg_time_ms": 0.026458874344825745,
+      "min_time_ms": 0.026458874344825745,
+      "max_time_ms": 0.026458874344825745
+    },
+    {
+      "name": "validate_row_structure",
+      "count": 1,
+      "total_time_ms": 0.004416331648826599,
+      "avg_time_ms": 0.004416331648826599,
+      "min_time_ms": 0.004416331648826599,
+      "max_time_ms": 0.004416331648826599
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> validate_row_structure",
+      "count": 1,
+      "total_time_ms": 0.004416331648826599,
+      "avg_time_ms": 0.004416331648826599,
+      "min_time_ms": 0.004416331648826599,
+      "max_time_ms": 0.004416331648826599
+    },
+    {
+      "name": "extract_column_names",
+      "count": 1,
+      "total_time_ms": 0.001166015863418579,
+      "avg_time_ms": 0.001166015863418579,
+      "min_time_ms": 0.001166015863418579,
+      "max_time_ms": 0.001166015863418579
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> extract_column_names",
+      "count": 1,
+      "total_time_ms": 0.001166015863418579,
+      "avg_time_ms": 0.001166015863418579,
+      "min_time_ms": 0.001166015863418579,
+      "max_time_ms": 0.001166015863418579
+    },
+    {
+      "name": "records_result_structure",
+      "count": 1,
+      "total_time_ms": 0.0007096678018569946,
+      "avg_time_ms": 0.0007096678018569946,
+      "min_time_ms": 0.0007096678018569946,
+      "max_time_ms": 0.0007096678018569946
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_result_structure",
+      "count": 1,
+      "total_time_ms": 0.0007096678018569946,
+      "avg_time_ms": 0.0007096678018569946,
+      "min_time_ms": 0.0007096678018569946,
+      "max_time_ms": 0.0007096678018569946
+    },
+    {
+      "name": "decode_validation",
+      "count": 1,
+      "total_time_ms": 0.0005401670932769775,
+      "avg_time_ms": 0.0005401670932769775,
+      "min_time_ms": 0.0005401670932769775,
+      "max_time_ms": 0.0005401670932769775
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_validation",
+      "count": 1,
+      "total_time_ms": 0.0005401670932769775,
+      "avg_time_ms": 0.0005401670932769775,
+      "min_time_ms": 0.0005401670932769775,
+      "max_time_ms": 0.0005401670932769775
+    },
+    {
+      "name": "records_pagination",
+      "count": 1,
+      "total_time_ms": 0.0005010515451431274,
+      "avg_time_ms": 0.0005010515451431274,
+      "min_time_ms": 0.0005010515451431274,
+      "max_time_ms": 0.0005010515451431274
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_pagination",
+      "count": 1,
+      "total_time_ms": 0.0005010515451431274,
+      "avg_time_ms": 0.0005010515451431274,
+      "min_time_ms": 0.0005010515451431274,
+      "max_time_ms": 0.0005010515451431274
+    },
+    {
+      "name": "records_validation",
+      "count": 1,
+      "total_time_ms": 0.0004991888999938965,
+      "avg_time_ms": 0.0004991888999938965,
+      "min_time_ms": 0.0004991888999938965,
+      "max_time_ms": 0.0004991888999938965
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_validation",
+      "count": 1,
+      "total_time_ms": 0.0004991888999938965,
+      "avg_time_ms": 0.0004991888999938965,
+      "min_time_ms": 0.0004991888999938965,
+      "max_time_ms": 0.0004991888999938965
+    }
+  ],
+  "call_paths": [
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records",
+      "count": 1,
+      "total_time_ms": 0.4832092672586441,
+      "avg_time_ms": 0.4832092672586441,
+      "min_time_ms": 0.4832092672586441,
+      "max_time_ms": 0.4832092672586441
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2915412187576294,
+      "avg_time_ms": 0.2915412187576294,
+      "min_time_ms": 0.2915412187576294,
+      "max_time_ms": 0.2915412187576294
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2893339842557907,
+      "avg_time_ms": 0.2893339842557907,
+      "min_time_ms": 0.2893339842557907,
+      "max_time_ms": 0.2893339842557907
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2875830978155136,
+      "avg_time_ms": 0.2875830978155136,
+      "min_time_ms": 0.2875830978155136,
+      "max_time_ms": 0.2875830978155136
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.28562359511852264,
+      "avg_time_ms": 0.28562359511852264,
+      "min_time_ms": 0.28562359511852264,
+      "max_time_ms": 0.28562359511852264
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.28399936854839325,
+      "avg_time_ms": 0.28399936854839325,
+      "min_time_ms": 0.28399936854839325,
+      "max_time_ms": 0.28399936854839325
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.28220750391483307,
+      "avg_time_ms": 0.28220750391483307,
+      "min_time_ms": 0.28220750391483307,
+      "max_time_ms": 0.28220750391483307
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.2802107483148575,
+      "avg_time_ms": 0.2802107483148575,
+      "min_time_ms": 0.2802107483148575,
+      "max_time_ms": 0.2802107483148575
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.27812644839286804,
+      "avg_time_ms": 0.27812644839286804,
+      "min_time_ms": 0.27812644839286804,
+      "max_time_ms": 0.27812644839286804
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.27612410485744476,
+      "avg_time_ms": 0.27612410485744476,
+      "min_time_ms": 0.27612410485744476,
+      "max_time_ms": 0.27612410485744476
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict -> pandas.DataFrame.to_dict",
+      "count": 1,
+      "total_time_ms": 0.27295947074890137,
+      "avg_time_ms": 0.27295947074890137,
+      "min_time_ms": 0.27295947074890137,
+      "max_time_ms": 0.27295947074890137
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe",
+      "count": 1,
+      "total_time_ms": 0.18679164350032806,
+      "avg_time_ms": 0.18679164350032806,
+      "min_time_ms": 0.18679164350032806,
+      "max_time_ms": 0.18679164350032806
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented",
+      "count": 1,
+      "total_time_ms": 0.1826249063014984,
+      "avg_time_ms": 0.1826249063014984,
+      "min_time_ms": 0.1826249063014984,
+      "max_time_ms": 0.1826249063014984
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe",
+      "count": 1,
+      "total_time_ms": 0.1749582588672638,
+      "avg_time_ms": 0.1749582588672638,
+      "min_time_ms": 0.1749582588672638,
+      "max_time_ms": 0.1749582588672638
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.17241761088371277,
+      "avg_time_ms": 0.17241761088371277,
+      "min_time_ms": 0.17241761088371277,
+      "max_time_ms": 0.17241761088371277
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.17033331096172333,
+      "avg_time_ms": 0.17033331096172333,
+      "min_time_ms": 0.17033331096172333,
+      "max_time_ms": 0.17033331096172333
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.1681242138147354,
+      "avg_time_ms": 0.1681242138147354,
+      "min_time_ms": 0.1681242138147354,
+      "max_time_ms": 0.1681242138147354
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.16616471111774445,
+      "avg_time_ms": 0.16616471111774445,
+      "min_time_ms": 0.16616471111774445,
+      "max_time_ms": 0.16616471111774445
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.16354210674762726,
+      "avg_time_ms": 0.16354210674762726,
+      "min_time_ms": 0.16354210674762726,
+      "max_time_ms": 0.16354210674762726
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.1615416258573532,
+      "avg_time_ms": 0.1615416258573532,
+      "min_time_ms": 0.1615416258573532,
+      "max_time_ms": 0.1615416258573532
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.15912577509880066,
+      "avg_time_ms": 0.15912577509880066,
+      "min_time_ms": 0.15912577509880066,
+      "max_time_ms": 0.15912577509880066
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.15670806169509888,
+      "avg_time_ms": 0.15670806169509888,
+      "min_time_ms": 0.15670806169509888,
+      "max_time_ms": 0.15670806169509888
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.1538749784231186,
+      "avg_time_ms": 0.1538749784231186,
+      "min_time_ms": 0.1538749784231186,
+      "max_time_ms": 0.1538749784231186
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> create_dataframe -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__ -> pandas.DataFrame.__init__",
+      "count": 1,
+      "total_time_ms": 0.15066750347614288,
+      "avg_time_ms": 0.15066750347614288,
+      "min_time_ms": 0.15066750347614288,
+      "max_time_ms": 0.15066750347614288
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_row_conversion",
+      "count": 1,
+      "total_time_ms": 0.026458874344825745,
+      "avg_time_ms": 0.026458874344825745,
+      "min_time_ms": 0.026458874344825745,
+      "max_time_ms": 0.026458874344825745
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_row_oriented -> validate_row_structure",
+      "count": 1,
+      "total_time_ms": 0.004416331648826599,
+      "avg_time_ms": 0.004416331648826599,
+      "min_time_ms": 0.004416331648826599,
+      "max_time_ms": 0.004416331648826599
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> extract_column_names",
+      "count": 1,
+      "total_time_ms": 0.001166015863418579,
+      "avg_time_ms": 0.001166015863418579,
+      "min_time_ms": 0.001166015863418579,
+      "max_time_ms": 0.001166015863418579
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_result_structure",
+      "count": 1,
+      "total_time_ms": 0.0007096678018569946,
+      "avg_time_ms": 0.0007096678018569946,
+      "min_time_ms": 0.0007096678018569946,
+      "max_time_ms": 0.0007096678018569946
+    },
+    {
+      "name": "JSONTablesDecoder.to_records -> decode_to_records -> JSONTablesDecoder.to_dataframe -> decode_validation",
+      "count": 1,
+      "total_time_ms": 0.0005401670932769775,
+      "avg_time_ms": 0.0005401670932769775,
+      "min_time_ms": 0.0005401670932769775,
+      "max_time_ms": 0.0005401670932769775
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_pagination",
+      "count": 1,
+      "total_time_ms": 0.0005010515451431274,
+      "avg_time_ms": 0.0005010515451431274,
+      "min_time_ms": 0.0005010515451431274,
+      "max_time_ms": 0.0005010515451431274
+    },
+    {
+      "name": "JSONTablesEncoder.from_records -> records_validation",
+      "count": 1,
+      "total_time_ms": 0.0004991888999938965,
+      "avg_time_ms": 0.0004991888999938965,
+      "min_time_ms": 0.0004991888999938965,
+      "max_time_ms": 0.0004991888999938965
+    }
+  ]
+}
