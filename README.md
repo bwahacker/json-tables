@@ -40,17 +40,17 @@
 ## 🧩 Overview
 **JSON‑Tables (aka JSON‑T)** is a minimal, backward‑compatible specification for representing tabular data in JSON. It enables easy human‑readable rendering, clear table semantics for tooling, and seamless loading into analytics libraries like **pandas**, spreadsheet apps, and data pipelines.
 
-**🎯 Perfect for data scientists and engineers:**
-- **🚀 BREAKTHROUGH: 2x faster than CSV!** New high-performance implementation
-- **DataFrame integration**: Simple `df_to_jt_hp(df)` and `df_from_jt(json_table)` functions
-- **Bulletproof numpy support**: Automatic handling of `np.nan`, `±inf`, and all numpy types
-- **Dual storage formats**: Row-oriented (fast reads) vs Columnar (fast writes, up to 7x faster!)
-- **Production ready**: Tested on real datasets (8K+ rows) with perfect data integrity
-- **Zero configuration**: Intelligent optimization with no setup required
+**Key features:**
+- **High-performance implementation**: 2x faster than CSV with `df_to_jt_hp()`
+- **DataFrame integration**: Simple conversion functions for pandas DataFrames
+- **Numpy support**: Automatic handling of `np.nan`, `±inf`, and numpy types
+- **Multiple formats**: Row-oriented and columnar storage options
+- **Production tested**: Validated on large datasets with perfect data integrity
+- **Zero configuration**: Works out of the box with intelligent defaults
 
-> **"2x faster than CSV; 20% bigger; safer while using standard tooling and the data is still human inspectable"**
+> **"Same speed as CSV; 20% bigger; safer while using standard tooling and the data is still human inspectable"**
 
-**🎉 Available now:** `pip install jsontables`
+**Installation:** `pip install jsontables`
 
 ---
 
@@ -110,25 +110,22 @@ print(f'✅ Optimized encoding: {elapsed:.1f}ms (8x faster!)')
 
 **JSON-Tables provides seamless pandas DataFrame integration with bulletproof numpy handling:**
 
-### 🚀 **BREAKTHROUGH PERFORMANCE: 2x Faster Than CSV!**
+### 🚀 **High-Performance Implementation**
 
-**🏆 JSON-Tables High-Performance now delivers game-changing speed:**
+**JSON-Tables high-performance mode delivers significant speed improvements:**
 
 | **Format** | **Speed** | **Size vs CSV** | **Human Readable** | **Structured** |
 |------------|-----------|------------------|-------------------|-----------------|
-| **🥇 JSON-Tables HP** | **1.1M rows/sec** | **+20%** | ✅ **YES** | ✅ **YES** |
-| **🥈 pandas CSV** | **584K rows/sec** | **Baseline** | ❌ No structure | ❌ Raw data |
-| **🥉 pandas JSON** | **1.9M rows/sec** | **+80%** | ❌ Unreadable | ❌ No structure |
+| **JSON-Tables HP** | **1.1M rows/sec** | **+20%** | ✅ **YES** | ✅ **YES** |
+| **pandas CSV** | **584K rows/sec** | **Baseline** | ❌ No structure | ❌ Raw data |
+| **pandas JSON** | **1.9M rows/sec** | **+80%** | ❌ Unreadable | ❌ No structure |
 
-> **"2x faster than CSV; 20% bigger; safer while using standard tooling and the data is still human inspectable"**
-
-### ⚡ **Real-World Performance Validation**
-**Tested on 10,000 × 6 dataset (60,000 cells):**
-- **JSON-Tables HP:** 8.8ms = **1,138K rows/sec** 🚀
+**Performance validation on 10,000 × 6 dataset:**
+- **JSON-Tables HP:** 8.8ms = 1,138K rows/sec
 - **pandas CSV:** 17.1ms = 584K rows/sec  
 - **pandas JSON:** 5.2ms = 1,933K rows/sec
 
-**Result: JSON-Tables delivers the perfect balance of speed, size, and human readability!**
+JSON-Tables provides the optimal balance of speed, size, and human readability.
 
 ### 🔄 Simple DataFrame Conversion
 ```python
