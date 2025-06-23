@@ -1,4 +1,4 @@
-# JSON‑Tables (JSON‑T) Proposal
+# JSON‑Tables (JSON‑T) Proposal & Python Implementation
 
 [![Spec](https://img.shields.io/badge/spec-draft-yellow)](https://github.com/featrix/json-tables)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
