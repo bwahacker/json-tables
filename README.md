@@ -31,7 +31,7 @@
 - [7. Development Quick‑Start](#7-development-quickstart)
 
 **Key Features Highlights:**
-- [⚡ Row vs Columnar Format Performance](#-row-vs-columnar-format-performance) - **Up to 7x faster!**
+- [🏆 PERFORMANCE CHAMPION CHART](#-performance-champion-chart-) - **Up to 7x faster!**
 - [🧠 Automatic Numpy & NaN Handling](#-automatic-numpy--nan-handling) - **Bulletproof edge cases**
 - [🔍 Multi-Schema Intelligence](#-multi-schema-intelligence) - **60%+ size reduction**
 
@@ -158,21 +158,18 @@ df_restored = df_from_jt(json_table)  # ✅ Perfect restoration
 - **Production ready**: Tested on real-world datasets (8K+ rows, 90+ columns)
 
 ### ⚡ Performance on Real Data
-**Tested on Boston housing dataset (7,999 × 90 columns, 20.6 MB):**
+**🏠 Boston Housing Dataset Validation (7,999 × 90 columns, 20.6 MB):**
 
-```python
-# Real-world performance
-df = pd.read_csv('boston-housing.csv')  # 7,999 rows × 90 columns
+| **Operation** | **Performance** | **Throughput** | **Result** |
+|---------------|-----------------|----------------|------------|
+| 🚀 **Encoding** | 430ms | 📊 **18,600 rows/sec** | ✅ Perfect conversion |
+| ⚡ **Decoding** | 51ms | 📊 **156,800 rows/sec** | ✅ Perfect restoration |
 
-json_table = df_to_jt(df)        # 430ms (18,600 rows/sec)
-df_restored = df_from_jt(json_table)  # 51ms (156,800 rows/sec)
-
-# Perfect data integrity:
-# ✅ Shape: (7999, 90) → (7999, 90) 
-# ✅ All 4,907 null values preserved
-# ✅ $6.5B numeric sum exactly maintained
-# ✅ All data types and edge cases handled
-```
+**🔍 Data Integrity Validation:**
+- ✅ **Shape:** (7,999, 90) → (7,999, 90) - Perfect preservation
+- ✅ **Nulls:** All 4,907 null values maintained exactly  
+- ✅ **Precision:** $6.5B numeric sum preserved to the penny
+- ✅ **Types:** All data types and edge cases handled flawlessly
 
 ### 🔍 Bulletproof Edge Case Handling
 **Survives everything you can throw at it:**
@@ -212,37 +209,48 @@ json_table = df_to_jt(df, columnar=False)  # or just df_to_jt(df)
 json_table = df_to_jt(df, columnar=True)
 ```
 
-#### 🔥 Real-World Benchmarks (8000-Boston.csv: 7,999 × 90 columns)
+## 🏆 **PERFORMANCE CHAMPION CHART** 🏆
+*Based on real 8000-Boston.csv dataset (7,999 × 90 columns, 20.6 MB)*
 
-| Format | Encoding | Decoding | JSON Size | Best Use Cases |
-|--------|----------|----------|-----------|----------------|
-| **Row-oriented** | 434 ms | **55 ms** | 5.66 MB | APIs, human reading, row processing |
-| **Columnar** | **331 ms** | 68 ms | 5.64 MB | Analytics, ETL, Apache Arrow |
+| **Metric** | **Row Format** | **Columnar Format** | **Winner** | **Performance Gain** |
+|------------|----------------|---------------------|------------|---------------------|
+| 🚀 **Encoding Speed** | 434 ms | 🏆 **331 ms** | 🟢 **Columnar** | 🔥 **31% FASTER** |
+| ⚡ **Decoding Speed** | 🏆 **55 ms** | 68 ms | 🟢 **Row** | 🔥 **24% FASTER** |
+| 💾 **JSON Size** | 5.66 MB | 5.64 MB | 🟡 **Tie** | Identical |
+| 🔍 **Data Integrity** | ✅ Perfect | ✅ Perfect | 🟡 **Tie** | 100% preserved |
 
-#### 📊 Performance by Data Shape
+### 📊 **SPEEDUP BY DATA SHAPE**
 
-| Data Shape | Columnar Speedup | Optimal Format |
-|------------|------------------|----------------|
-| **Wide data** (1000×90) | **1.29x faster** | Columnar for encoding |
-| **Tall data** (5000×3) | **7.09x faster** | Columnar dominates! |
-| **Square data** (100×90) | **1.13x faster** | Slight columnar edge |
+| **Data Type** | **Shape** | **Columnar Advantage** | **Performance** | **Recommendation** |
+|---------------|-----------|------------------------|-----------------|-------------------|
+| 🏗️ **Wide Data** | 1,000 × 90 | 🟢 **1.29x faster** | +29% encoding | 🏆 Use Columnar |
+| 📈 **Tall Data** | 5,000 × 3 | 🔥 **7.09x faster** | +609% encoding | 🚀 **DOMINATION** |
+| ⚖️ **Square Data** | 100 × 90 | 🟢 **1.13x faster** | +13% encoding | 🎯 Slight edge |
 
-#### 🎯 Format Selection Guide
+### 🎯 **WHEN TO USE EACH FORMAT**
 
-**🏆 Use Columnar (`columnar=True`) for:**
-- ✅ **Analytics pipelines** (25-35% faster encoding)
-- ✅ **ETL workloads** (write-heavy operations)
-- ✅ **Time series data** (up to 7x faster!)
-- ✅ **Apache Arrow integration**
-- ✅ **Wide datasets** (many columns)
+#### 🏆 **Use COLUMNAR** (`columnar=True`) **when you need:**
+| **Use Case** | **Performance Benefit** | **Why It Wins** |
+|--------------|-------------------------|-----------------|
+| 📊 **Analytics Pipelines** | 🔥 **25-35% faster** encoding | Column-wise processing |
+| 🔄 **ETL Workloads** | 🚀 **Write-heavy** optimization | Bulk data ingestion |
+| 📈 **Time Series Data** | 🔥 **Up to 7x faster** | Few columns, many rows |
+| 🏹 **Apache Arrow** | 🎯 **Native compatibility** | Columnar storage format |
 
-**📄 Use Row-oriented (`columnar=False`) for:**
-- ✅ **API responses** (20% faster decoding)
-- ✅ **Human-readable output**
-- ✅ **Row-by-row processing**
-- ✅ **Interactive analysis**
+#### 📄 **Use ROW-ORIENTED** (`columnar=False`) **when you need:**
+| **Use Case** | **Performance Benefit** | **Why It Wins** |
+|--------------|-------------------------|-----------------|
+| 🌐 **API Responses** | 🔥 **24% faster** decoding | Row-by-row access |
+| 👁️ **Human Reading** | 🎯 **Visual clarity** | Natural row structure |
+| 🔧 **Interactive Analysis** | ⚡ **Quick access** | Immediate row processing |
+| 📖 **Documentation** | 🎨 **Readable format** | Self-documenting data |
 
-**💡 Pro tip:** Both formats have identical JSON size and perfect data integrity - choose based on your workload pattern!
+### 💡 **KEY INSIGHTS:**
+- 🟢 **Both formats:** Identical JSON size - no storage penalty!
+- 🔥 **Columnar dominates:** Write-heavy workloads (encoding)
+- ⚡ **Row wins:** Read-heavy workloads (decoding) 
+- 🎯 **Choose based on:** Your primary operation (read vs write)
+- 🚀 **Tall data:** Columnar can be **7x faster** - use it!
 
 ---
 
