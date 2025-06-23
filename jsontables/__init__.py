@@ -79,6 +79,14 @@ try:
 except ImportError:
     HIGH_PERFORMANCE_AVAILABLE = False
 
+# Import data integrity validation
+from .data_integrity import (
+    DataIntegrityValidator,
+    DataIntegrityError,
+    validate_conversion_integrity,
+    create_extreme_test_dataframe
+)
+
 __version__ = "1.0.0"
 __author__ = "Mitch Haile"
 __email__ = "mitch.haile@gmail.com"
@@ -146,6 +154,14 @@ if HIGH_PERFORMANCE_AVAILABLE:
         'HighPerformanceJSONTablesEncoder',
         'df_to_jt_hp'
     ])
+
+# Add data integrity validation functions to public API
+__all__.extend([
+    'DataIntegrityValidator',
+    'DataIntegrityError',
+    'validate_conversion_integrity',
+    'create_extreme_test_dataframe',
+])
 
 def get_version():
     """Get the current version of JSON-Tables."""
