@@ -5,6 +5,38 @@
 [![Python](https://img.shields.io/badge/python-CLI-blue)](https://github.com/featrix/json-tables)
 [![Install](https://img.shields.io/badge/pip-jsontables-orange)](https://pypi.org/project/jsontables/)
 
+## 📑 Table of Contents
+
+**🚀 Quick Start:**
+- [🧩 Overview](#-overview)
+- [📦 Installation](#-installation)
+- [📊 DataFrame Integration & Numpy Support](#-dataframe-integration--numpy-support)
+
+**⚡ Performance & Features:**
+- [🚀 Performance & Benchmarking](#-performance--benchmarking)
+- [🔥 Before & After: Why This Matters](#-before--after-why-this-matters)
+- [🔧 Profiling & Performance Monitoring](#-profiling--performance-monitoring)
+- [🎯 Advanced Features](#-advanced-features)
+
+**📋 Specification:**
+- [1. Motivation](#1-motivation)
+- [2. Human‑Friendly Rendering: ASCII Table Style](#2-humanfriendly-rendering-ascii-table-style)
+- [3. Canonical Table Object (row‑oriented)](#3-canonical-table-object-roworiented)
+- [4. Columnar Variant](#4-columnar-variant)
+- [5. Reference Implementation](#5-reference-implementation)
+- [6. Example Rendering](#6-example-rendering)
+
+**🔧 Development:**
+- [🎯 Intelligent Data Optimization: How It Works](#-intelligent-data-optimization-how-it-works)
+- [7. Development Quick‑Start](#7-development-quickstart)
+
+**Key Features Highlights:**
+- [⚡ Row vs Columnar Format Performance](#-row-vs-columnar-format-performance) - **Up to 7x faster!**
+- [🧠 Automatic Numpy & NaN Handling](#-automatic-numpy--nan-handling) - **Bulletproof edge cases**
+- [🔍 Multi-Schema Intelligence](#-multi-schema-intelligence) - **60%+ size reduction**
+
+---
+
 ## 🧩 Overview
 **JSON‑Tables (aka JSON‑T)** is a minimal, backward‑compatible specification for representing tabular data in JSON. It enables easy human‑readable rendering, clear table semantics for tooling, and seamless loading into analytics libraries like **pandas**, spreadsheet apps, and data pipelines.
 
