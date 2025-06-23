@@ -531,3 +531,248 @@ Standard JSON repeats field names and doesn't optimize for patterns:
 ---
 
 ## 7. Development Quick‑Start
+
+**Get up and running with JSON-Tables development in minutes:**
+
+### 🚀 Environment Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/featrix/json-tables.git
+cd json-tables
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode with all dependencies
+pip install -e ".[dev,test]"
+
+# Verify installation
+python -c "from jsontables import df_to_jt; print('✓ Development setup complete!')"
+```
+
+### 📁 Project Structure
+
+```
+json-tables/
+├── jsontables/                 # Core package
+│   ├── __init__.py            # Public API exports
+│   ├── core.py                # Main encoding/decoding logic
+│   ├── numpy_utils.py         # Automatic numpy type handling
+│   └── profiling.py           # Performance monitoring
+├── tests/                     # Test suite
+│   ├── test_roundtrip.py      # Data integrity tests
+│   ├── test_core.py           # Core functionality tests
+│   └── test_numpy.py          # Numpy integration tests
+├── benchmarks/                # Performance benchmarks
+│   ├── scripts/               # Benchmark scripts
+│   └── data/                  # Test datasets
+├── demo_*.py                  # Usage examples
+└── README.md                  # This file
+```
+
+### 🧪 Running Tests
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test categories
+python -m pytest tests/test_roundtrip.py -v     # Data integrity tests
+python -m pytest tests/test_numpy.py -v        # Numpy edge cases
+
+# Run tests with coverage
+python -m pytest tests/ --cov=jsontables --cov-report=html
+
+# Test DataFrame functionality specifically
+python demo_dataframe_conversion.py
+```
+
+### ⚡ Performance Testing
+
+```bash
+# Run comprehensive benchmarks
+python benchmarks/scripts/profile_json_tables.py
+
+# Test on real datasets
+python -c "
+import pandas as pd
+from jsontables import df_to_jt, df_from_jt
+df = pd.read_csv('benchmarks/data/8000-boston.csv')
+json_table = df_to_jt(df)
+df_restored = df_from_jt(json_table)
+print(f'✓ Real data test: {df.shape} → {df_restored.shape}')
+"
+
+# Profiling with detailed timing
+python -c "
+from jsontables import profiling_session, df_to_jt
+import pandas as pd
+
+with profiling_session('dev_test'):
+    df = pd.DataFrame({'test': range(1000)})
+    json_table = df_to_jt(df)
+"
+```
+
+### 🔧 Development Workflow
+
+**1. Feature Development:**
+```bash
+# Create feature branch
+git checkout -b feature/your-feature-name
+
+# Make changes and test
+python -m pytest tests/ -v
+python demo_dataframe_conversion.py
+
+# Commit with descriptive message
+git commit -m "feat: add awesome new functionality"
+```
+
+**2. Testing Edge Cases:**
+```bash
+# Test numpy edge cases
+python -c "
+import numpy as np
+from jsontables import df_to_jt, df_from_jt
+import pandas as pd
+
+# Test extreme values
+df = pd.DataFrame({
+    'infinities': [np.inf, -np.inf, np.nan],
+    'extreme_vals': [1e-308, 1e+308, 0.0],
+    'numpy_types': [np.int64(42), np.float32(3.14), np.bool_(True)]
+})
+
+json_table = df_to_jt(df)
+df_restored = df_from_jt(json_table)
+print('✓ Edge cases handled successfully')
+"
+```
+
+**3. Performance Testing:**
+```bash
+# Benchmark your changes
+python benchmarks/scripts/profile_json_tables.py > before.txt
+# Make your changes
+python benchmarks/scripts/profile_json_tables.py > after.txt
+diff before.txt after.txt  # Compare performance
+```
+
+### 🛠️ Development Tools
+
+**Code Quality:**
+```bash
+# Format code (if using black)
+black jsontables/ tests/
+
+# Type checking (if using mypy)
+mypy jsontables/
+
+# Lint code (if using flake8)
+flake8 jsontables/ tests/
+```
+
+**Interactive Development:**
+```python
+# Launch Python REPL with JSON-Tables loaded
+python
+>>> import pandas as pd
+>>> from jsontables import df_to_jt, df_from_jt, profiling_session
+>>> 
+>>> # Quick test DataFrame
+>>> df = pd.DataFrame({'name': ['Alice', 'Bob'], 'age': [30, 25]})
+>>> json_table = df_to_jt(df)
+>>> df_restored = df_from_jt(json_table)
+>>> print(f"Works! {df.shape} → {df_restored.shape}")
+```
+
+### 📊 Adding New Features
+
+**Example: Adding a new encoder feature**
+
+1. **Implement in `jsontables/core.py`:**
+```python
+@profile_function("MyNewEncoder.my_feature")
+def my_new_feature(self, data):
+    """Add your feature implementation."""
+    with profile_operation("feature_logic"):
+        # Your logic here
+        return processed_data
+```
+
+2. **Add tests in `tests/test_core.py`:**
+```python
+def test_my_new_feature():
+    """Test the new feature works correctly."""
+    # Test implementation
+    assert expected == actual
+```
+
+3. **Update public API in `jsontables/__init__.py`:**
+```python
+from .core import (
+    # ... existing exports ...
+    my_new_feature,  # Add new export
+)
+
+__all__ = [
+    # ... existing exports ...
+    'my_new_feature',  # Add to public API
+]
+```
+
+4. **Document in README and add demo:**
+```python
+# Create demo_my_feature.py
+def demo_my_feature():
+    """Show how to use the new feature."""
+    # Demo implementation
+```
+
+### 🤝 Contributing Guidelines
+
+**Before submitting a PR:**
+
+1. **✅ All tests pass:** `python -m pytest tests/ -v`
+2. **✅ Real data works:** Test on `benchmarks/data/8000-boston.csv`
+3. **✅ Edge cases handled:** Test numpy edge cases (`np.nan`, `±inf`, etc.)
+4. **✅ Performance maintained:** Run benchmarks before/after
+5. **✅ Documentation updated:** Update README if adding public features
+
+**Commit Message Format:**
+```
+feat: add DataFrame batch processing
+fix: handle edge case in numpy conversion  
+docs: update README with new examples
+perf: optimize large dataset encoding
+test: add comprehensive edge case coverage
+```
+
+### 🚀 Release Workflow
+
+```bash
+# Update version
+# Edit setup.py version number
+
+# Test release build
+python setup.py sdist bdist_wheel
+
+# Test installation from wheel
+pip install dist/jsontables-*.whl
+
+# Final verification
+python -c "from jsontables import df_to_jt; print('✓ Release ready')"
+```
+
+### 💡 Pro Tips
+
+- **Use profiling:** Wrap new features with `@profile_function` decorators
+- **Test real data:** Always test on the Boston dataset for real-world validation
+- **Handle edge cases:** JSON-Tables should never crash on numpy edge cases
+- **Performance first:** Maintain high throughput (>10K rows/sec) for encoding
+- **Zero config:** New features should work automatically without configuration
+
+**🎯 Ready to contribute? The codebase is designed for easy extension and bulletproof reliability!**
