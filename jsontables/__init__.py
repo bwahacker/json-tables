@@ -22,6 +22,10 @@ from .core import (
     is_json_table,
     detect_table_in_json,
     
+    # DataFrame convenience functions
+    df_to_jt,
+    df_from_jt,
+    
     # Exceptions
     JSONTablesError
 )
@@ -65,6 +69,10 @@ __all__ = [
     'append_to_json_table_file',
     'is_json_table',
     'detect_table_in_json',
+    
+    # DataFrame convenience functions
+    'df_to_jt',
+    'df_from_jt',
     
     # Exceptions
     'JSONTablesError',

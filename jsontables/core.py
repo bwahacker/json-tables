@@ -22,6 +22,28 @@ except ImportError:
         def decorator(func): return func
         return decorator
 
+# Import numpy utilities for automatic type handling
+try:
+    from .numpy_utils import (
+        preprocess_for_json_tables, 
+        postprocess_from_json_tables,
+        smart_json_dumps,
+        is_numpy_available,
+        is_pandas_available,
+        convert_numpy_types
+    )
+    NUMPY_SUPPORT = True
+except ImportError:
+    NUMPY_SUPPORT = False
+    def preprocess_for_json_tables(data):
+        return data, {}
+    def postprocess_from_json_tables(data, metadata):
+        return data
+    def smart_json_dumps(data, **kwargs):
+        return json.dumps(data, **kwargs)
+    def convert_numpy_types(data):
+        return data
+
 
 class JSONTablesError(Exception):
     """Base exception for JSON Tables operations."""
@@ -37,7 +59,8 @@ class JSONTablesEncoder:
         df: pd.DataFrame,
         page_size: Optional[int] = None,
         current_page: int = 0,
-        columnar: bool = False
+        columnar: bool = False,
+        auto_numpy: bool = True
     ) -> Dict[str, Any]:
         """
         Convert a pandas DataFrame to JSON Tables format.
@@ -47,6 +70,7 @@ class JSONTablesEncoder:
             page_size: Number of rows per page (None for no pagination)
             current_page: Current page number (0-based)
             columnar: Use columnar format instead of row-oriented
+            auto_numpy: Automatically handle numpy types and NaN values
             
         Returns:
             Dictionary in JSON Tables format
@@ -61,6 +85,17 @@ class JSONTablesEncoder:
                     "total_pages": 1,
                     "page_rows": 0
                 }
+        
+        # Handle numpy types automatically if enabled
+        numpy_metadata = {}
+        if auto_numpy and NUMPY_SUPPORT:
+            with profile_operation("dataframe_numpy_preprocessing"):
+                # Extract numpy metadata before conversion
+                if is_pandas_available():
+                    numpy_metadata = {
+                        'dtypes': {col: str(dtype) for col, dtype in df.dtypes.items()},
+                        'index_name': df.index.name
+                    }
         
         with profile_operation("extract_columns"):
             cols = list(df.columns)
@@ -87,6 +122,10 @@ class JSONTablesEncoder:
                 "total_pages": total_pages,
                 "page_rows": page_rows
             }
+            
+            # Store numpy metadata if available
+            if numpy_metadata:
+                result["_numpy_metadata"] = numpy_metadata
         
         if columnar:
             # Columnar format
@@ -95,8 +134,12 @@ class JSONTablesEncoder:
                 for col in cols:
                     # Convert to native Python types, handle NaN/None
                     values = page_df[col].tolist()
-                    # Replace NaN with None for JSON serialization
-                    values = [None if pd.isna(v) else v for v in values]
+                    if auto_numpy and NUMPY_SUPPORT:
+                        # Handle NaN values and numpy types automatically
+                        values = [convert_numpy_types(v) for v in values]
+                    else:
+                        # Replace NaN with None for JSON serialization
+                        values = [None if pd.isna(v) else v for v in values]
                     column_data[col] = values
                 
                 result["column_data"] = column_data
@@ -106,8 +149,12 @@ class JSONTablesEncoder:
             with profile_operation("row_oriented_conversion"):
                 row_data = []
                 for _, row in page_df.iterrows():
-                    # Convert to native Python types, handle NaN/None
-                    row_values = [None if pd.isna(v) else v for v in row.tolist()]
+                    if auto_numpy and NUMPY_SUPPORT:
+                        # Handle NaN values and numpy types automatically
+                        row_values = [convert_numpy_types(v) for v in row.tolist()]
+                    else:
+                        # Convert to native Python types, handle NaN/None
+                        row_values = [None if pd.isna(v) else v for v in row.tolist()]
                     row_data.append(row_values)
                 
                 result["row_data"] = row_data
@@ -120,7 +167,8 @@ class JSONTablesEncoder:
         records: List[Dict[str, Any]],
         page_size: Optional[int] = None,
         current_page: int = 0,
-        columnar: bool = False
+        columnar: bool = False,
+        auto_numpy: bool = True
     ) -> Dict[str, Any]:
         """
         Convert a list of dictionaries to JSON Tables format.
@@ -130,6 +178,7 @@ class JSONTablesEncoder:
             page_size: Number of rows per page (None for no pagination)
             current_page: Current page number (0-based)
             columnar: Use columnar format instead of row-oriented
+            auto_numpy: Automatically handle numpy types and NaN values
             
         Returns:
             Dictionary in JSON Tables format
@@ -145,9 +194,22 @@ class JSONTablesEncoder:
                     "page_rows": 0
                 }
         
+        # Automatically handle numpy types and NaN values
+        numpy_metadata = {}
+        if auto_numpy and NUMPY_SUPPORT:
+            with profile_operation("numpy_preprocessing"):
+                records, numpy_metadata = preprocess_for_json_tables(records)
+        
         # Extract column names from first record
         with profile_operation("extract_column_names"):
-            cols = list(records[0].keys())
+            # Get all unique column names from all records (handle inconsistent schemas)
+            all_cols = set()
+            for record in records:
+                all_cols.update(record.keys())
+            cols = list(all_cols)
+            
+            # Sort for consistent ordering
+            cols.sort()
         
         # Handle pagination
         with profile_operation("records_pagination"):
@@ -170,6 +232,10 @@ class JSONTablesEncoder:
                 "total_pages": total_pages,
                 "page_rows": page_rows
             }
+            
+            # Store numpy metadata if available
+            if numpy_metadata:
+                result["_numpy_metadata"] = numpy_metadata
         
         if columnar:
             # Columnar format
@@ -177,7 +243,11 @@ class JSONTablesEncoder:
                 column_data = {col: [] for col in cols}
                 for record in page_records:
                     for col in cols:
-                        column_data[col].append(record.get(col))
+                        value = record.get(col)
+                        # Auto-convert numpy types if needed
+                        if auto_numpy and NUMPY_SUPPORT:
+                            value = convert_numpy_types(value)
+                        column_data[col].append(value)
                 
                 result["column_data"] = column_data
                 result["row_data"] = None
@@ -186,7 +256,13 @@ class JSONTablesEncoder:
             with profile_operation("records_row_conversion"):
                 row_data = []
                 for record in page_records:
-                    row_values = [record.get(col) for col in cols]
+                    row_values = []
+                    for col in cols:
+                        value = record.get(col)
+                        # Auto-convert numpy types if needed
+                        if auto_numpy and NUMPY_SUPPORT:
+                            value = convert_numpy_types(value)
+                        row_values.append(value)
                     row_data.append(row_values)
                 
                 result["row_data"] = row_data
@@ -199,12 +275,13 @@ class JSONTablesDecoder:
     
     @staticmethod
     @profile_function("JSONTablesDecoder.to_dataframe")
-    def to_dataframe(json_table: Dict[str, Any]) -> pd.DataFrame:
+    def to_dataframe(json_table: Dict[str, Any], auto_numpy: bool = True) -> pd.DataFrame:
         """
         Convert JSON Tables format to pandas DataFrame.
         
         Args:
             json_table: Dictionary in JSON Tables format
+            auto_numpy: Automatically restore numpy types if metadata available
             
         Returns:
             pandas DataFrame
@@ -223,6 +300,9 @@ class JSONTablesDecoder:
             if not isinstance(cols, list):
                 raise JSONTablesError("cols field must be a list")
         
+        # Extract numpy metadata if available
+        numpy_metadata = json_table.get("_numpy_metadata", {})
+        
         # Handle columnar format
         if "column_data" in json_table and json_table["column_data"] is not None:
             with profile_operation("decode_columnar_format"):
@@ -237,45 +317,81 @@ class JSONTablesDecoder:
                 
                 # Create DataFrame from columnar data
                 df_data = {col: column_data[col] for col in cols}
-                return pd.DataFrame(df_data)
+                df = pd.DataFrame(df_data)
+        else:
+            # Handle row-oriented format
+            with profile_operation("decode_row_oriented"):
+                row_data = json_table.get("row_data")
+                if not isinstance(row_data, list):
+                    raise JSONTablesError("row_data field must be a list")
+                
+                if not row_data:
+                    # Empty table
+                    df = pd.DataFrame(columns=cols)
+                else:
+                    # Validate row data structure
+                    with profile_operation("validate_row_structure"):
+                        for i, row in enumerate(row_data):
+                            if not isinstance(row, list):
+                                raise JSONTablesError(f"Row {i} must be a list")
+                            if len(row) != len(cols):
+                                raise JSONTablesError(f"Row {i} has {len(row)} values but expected {len(cols)}")
+                    
+                    # Create DataFrame
+                    with profile_operation("create_dataframe"):
+                        df = pd.DataFrame(row_data, columns=cols)
         
-        # Handle row-oriented format
-        with profile_operation("decode_row_oriented"):
-            row_data = json_table.get("row_data")
-            if not isinstance(row_data, list):
-                raise JSONTablesError("row_data field must be a list")
-            
-            if not row_data:
-                # Empty table
-                return pd.DataFrame(columns=cols)
-            
-            # Validate row data structure
-            with profile_operation("validate_row_structure"):
-                for i, row in enumerate(row_data):
-                    if not isinstance(row, list):
-                        raise JSONTablesError(f"Row {i} must be a list")
-                    if len(row) != len(cols):
-                        raise JSONTablesError(f"Row {i} has {len(row)} values but expected {len(cols)}")
-            
-            # Create DataFrame
-            with profile_operation("create_dataframe"):
-                return pd.DataFrame(row_data, columns=cols)
+        # Restore numpy dtypes if metadata available and auto_numpy is enabled
+        if auto_numpy and NUMPY_SUPPORT and numpy_metadata:
+            with profile_operation("restore_numpy_types"):
+                dtypes = numpy_metadata.get('dtypes', {})
+                if dtypes:
+                    try:
+                        # Restore dtypes where possible
+                        for col, dtype_str in dtypes.items():
+                            if col in df.columns:
+                                try:
+                                    # Special handling for different dtype families
+                                    if 'int' in dtype_str.lower():
+                                        df[col] = pd.to_numeric(df[col], errors='ignore').astype('Int64')
+                                    elif 'float' in dtype_str.lower():
+                                        df[col] = pd.to_numeric(df[col], errors='ignore')
+                                    elif 'bool' in dtype_str.lower():
+                                        df[col] = df[col].astype('boolean')
+                                    elif 'object' in dtype_str.lower() or 'string' in dtype_str.lower():
+                                        df[col] = df[col].astype('string')
+                                except Exception:
+                                    # If conversion fails, keep original
+                                    pass
+                    except Exception:
+                        # If any restoration fails, keep original DataFrame
+                        pass
+        
+        return df
     
     @staticmethod
     @profile_function("JSONTablesDecoder.to_records")
-    def to_records(json_table: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def to_records(json_table: Dict[str, Any], auto_numpy: bool = True) -> List[Dict[str, Any]]:
         """
         Convert JSON Tables format to list of dictionaries.
         
         Args:
             json_table: Dictionary in JSON Tables format
+            auto_numpy: Automatically restore numpy types if metadata available
             
         Returns:
             List of record dictionaries
         """
         with profile_operation("decode_to_records"):
-            df = JSONTablesDecoder.to_dataframe(json_table)
-            return df.to_dict('records')
+            df = JSONTablesDecoder.to_dataframe(json_table, auto_numpy=auto_numpy)
+            records = df.to_dict('records')
+            
+            # Post-process with numpy restoration if metadata available
+            if auto_numpy and NUMPY_SUPPORT and "_numpy_metadata" in json_table:
+                with profile_operation("numpy_postprocessing"):
+                    records = postprocess_from_json_tables(records, json_table["_numpy_metadata"])
+            
+            return records
 
 
 class JSONTablesRenderer:
@@ -458,9 +574,22 @@ def to_json_table(data: Union[pd.DataFrame, List[Dict[str, Any]]], **kwargs) -> 
         raise JSONTablesError(f"Unsupported data type: {type(data)}")
 
 
-def from_json_table(json_table: Dict[str, Any]) -> pd.DataFrame:
-    """Convert JSON Tables format to DataFrame."""
-    return JSONTablesDecoder.to_dataframe(json_table)
+def from_json_table(json_table: Dict[str, Any], as_dataframe: bool = True) -> Union[pd.DataFrame, List[Dict[str, Any]]]:
+    """Convert JSON Tables format to DataFrame or records."""
+    if as_dataframe:
+        return JSONTablesDecoder.to_dataframe(json_table)
+    else:
+        return JSONTablesDecoder.to_records(json_table)
+
+
+def df_to_jt(df: pd.DataFrame, **kwargs) -> Dict[str, Any]:
+    """Convert DataFrame to JSON-Tables format."""
+    return JSONTablesEncoder.from_dataframe(df, **kwargs)
+
+
+def df_from_jt(json_table: Dict[str, Any], **kwargs) -> pd.DataFrame:
+    """Convert JSON-Tables format to DataFrame."""
+    return JSONTablesDecoder.to_dataframe(json_table, **kwargs)
 
 
 def render_json_table(json_table: Dict[str, Any], **kwargs) -> str:

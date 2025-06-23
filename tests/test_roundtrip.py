@@ -279,6 +279,100 @@ class TestJSONTablesRoundTrip(unittest.TestCase):
         # Verify DataFrame round-trip preserved
         self.assertDataEqual(original_data, converted_data, "DataFrame round-trip")
 
+    def test_numpy_types_round_trip(self):
+        """Test automatic numpy type handling and round-trip preservation."""
+        try:
+            import numpy as np
+        except ImportError:
+            self.skipTest("Numpy not available")
+        
+        original_data = [
+            {
+                "int64_field": np.int64(42),
+                "float64_field": np.float64(3.14159),
+                "bool_field": np.bool_(True),
+                "nan_field": np.nan,
+                "str_field": np.str_("numpy string"),
+                "int32_field": np.int32(100),
+                "normal_field": "regular python string"
+            },
+            {
+                "int64_field": np.int64(99),
+                "float64_field": np.float64(2.71828),
+                "bool_field": np.bool_(False),
+                "nan_field": np.float64(42.0),
+                "str_field": np.str_("another string"),
+                "int32_field": np.int32(200),
+                "normal_field": "another regular string"
+            }
+        ]
+        
+        # Convert to JSON-Tables with automatic numpy handling
+        json_tables = JSONTablesEncoder.from_records(original_data, auto_numpy=True)
+        
+        # Verify numpy metadata was stored
+        self.assertIn("_numpy_metadata", json_tables)
+        self.assertIn("dtypes", json_tables["_numpy_metadata"])
+        
+        # Convert back to records
+        converted_data = JSONTablesDecoder.to_records(json_tables, auto_numpy=True)
+        
+        # Verify data integrity (numpy types converted to Python types)
+        expected_data = [
+            {
+                "int64_field": 42,
+                "float64_field": 3.14159,
+                "bool_field": True,
+                "nan_field": None,  # numpy.nan → None
+                "str_field": "numpy string",
+                "int32_field": 100,
+                "normal_field": "regular python string"
+            },
+            {
+                "int64_field": 99,
+                "float64_field": 2.71828,
+                "bool_field": False,
+                "nan_field": 42.0,
+                "str_field": "another string", 
+                "int32_field": 200,
+                "normal_field": "another regular string"
+            }
+        ]
+        
+        self.assertDataEqual(expected_data, converted_data, "Numpy types with auto-conversion")
+
+    def test_pandas_dataframe_with_numpy_round_trip(self):
+        """Test pandas DataFrame with numpy types round-trip."""
+        try:
+            import pandas as pd
+            import numpy as np
+        except ImportError:
+            self.skipTest("Pandas/Numpy not available")
+        
+        # Create DataFrame with various numpy types
+        df = pd.DataFrame({
+            'int_col': pd.array([1, 2, None], dtype='Int64'),
+            'float_col': [1.1, np.nan, 3.3],
+            'bool_col': pd.array([True, False, None], dtype='boolean'),
+            'str_col': ['a', None, 'c']
+        })
+        
+        # Convert to JSON-Tables
+        json_tables = JSONTablesEncoder.from_dataframe(df, auto_numpy=True)
+        
+        # Verify numpy metadata was stored
+        self.assertIn("_numpy_metadata", json_tables)
+        
+        # Convert back to DataFrame
+        restored_df = JSONTablesDecoder.to_dataframe(json_tables, auto_numpy=True)
+        
+        # Convert to records for comparison
+        original_records = df.to_dict('records')
+        restored_records = restored_df.to_dict('records')
+        
+        # Verify data integrity
+        self.assertDataEqual(original_records, restored_records, "Pandas DataFrame with numpy types")
+
 
 def run_round_trip_tests():
     """Run all round-trip tests and report results."""
