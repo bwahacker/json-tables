@@ -47,6 +47,38 @@ try:
 except ImportError:
     _PROFILING_AVAILABLE = False
 
+# Import multithreaded operations
+try:
+    from .multithreaded_core import (
+        MultithreadedJSONTablesEncoder,
+        MultithreadedJSONTablesDecoder,
+        df_to_jt_mt,
+        df_from_jt_mt
+    )
+    MULTITHREADED_AVAILABLE = True
+except ImportError:
+    MULTITHREADED_AVAILABLE = False
+
+# Import smart parallel operations
+try:
+    from .smart_parallel import (
+        SmartParallelJSONTablesEncoder,
+        df_to_jt_smart
+    )
+    SMART_PARALLEL_AVAILABLE = True
+except ImportError:
+    SMART_PARALLEL_AVAILABLE = False
+
+# Import high-performance operations
+try:
+    from .high_performance_core import (
+        HighPerformanceJSONTablesEncoder,
+        df_to_jt_hp
+    )
+    HIGH_PERFORMANCE_AVAILABLE = True
+except ImportError:
+    HIGH_PERFORMANCE_AVAILABLE = False
+
 __version__ = "1.0.0"
 __author__ = "Mitch Haile"
 __email__ = "mitch.haile@gmail.com"
@@ -90,6 +122,29 @@ if _PROFILING_AVAILABLE:
         'disable_profiling',
         'reset_profiling',
         'get_profiler'
+    ])
+
+# Add multithreaded functions to public API if available
+if MULTITHREADED_AVAILABLE:
+    __all__.extend([
+        'MultithreadedJSONTablesEncoder',
+        'MultithreadedJSONTablesDecoder',
+        'df_to_jt_mt',
+        'df_from_jt_mt'
+    ])
+
+# Add smart parallel functions to public API if available
+if SMART_PARALLEL_AVAILABLE:
+    __all__.extend([
+        'SmartParallelJSONTablesEncoder',
+        'df_to_jt_smart'
+    ])
+
+# Add high-performance functions to public API if available
+if HIGH_PERFORMANCE_AVAILABLE:
+    __all__.extend([
+        'HighPerformanceJSONTablesEncoder',
+        'df_to_jt_hp'
     ])
 
 def get_version():
