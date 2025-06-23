@@ -1,3 +1,0 @@
-[console_scripts]
-json-tables = jsontables.cli:main
-jsontables = jsontables.cli:main
