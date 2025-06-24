@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-Demo: Bulletproof Data Integrity Validation
+Demo: Data Integrity Validation
 
-This demo shows how to use JSON-Tables' comprehensive data integrity validation
+This demo shows how to use JSON-Tables' data integrity validation
 to ensure that EVERY SINGLE CELL is preserved perfectly during conversion.
 """
 
 import pandas as pd
 import numpy as np
 from jsontables import (
-    df_to_jt, df_from_jt, df_to_jt_hp,
+    df_to_jt, df_from_jt,
     DataIntegrityValidator, DataIntegrityError,
-    validate_conversion_integrity, create_extreme_test_dataframe
+    validate_conversion_integrity
 )
 
 def demo_basic_validation():
@@ -58,21 +58,29 @@ def demo_extreme_edge_cases():
     print("=" * 50)
     
     # Create DataFrame with every possible edge case
-    df = create_extreme_test_dataframe()
+    df = pd.DataFrame({
+        'strings': ['hello', 'world', None, '', 'unicode: café 北京'],
+        'integers': [42, -17, 0, None, 999999999],
+        'floats': [3.14159, -2.71828, 0.0, None, 1e-308],
+        'booleans': [True, False, None, True, False],
+        'numpy_nans': [np.nan, 1.0, np.nan, 2.0, np.nan],
+        'infinities': [np.inf, -np.inf, 1.0, np.inf, -np.inf],
+        'mixed': [42, 'text', True, None, 3.14]
+    })
+    
     print(f"📊 Extreme test DataFrame: {df.shape}")
     print(f"   Total cells to validate: {df.shape[0] * df.shape[1]:,}")
     
     # Show some of the extreme values
     print(f"\n🔬 Sample extreme values:")
     print(f"   Infinities: {df['infinities'].tolist()}")
-    print(f"   Tiny numbers: {df['tiny_numbers'].tolist()}")
     print(f"   Mixed types: {df['mixed'].tolist()}")
     
-    # Test high-performance implementation
-    print(f"\n🚀 Testing high-performance conversion...")
+    # Test conversion
+    print(f"\n🚀 Testing conversion...")
     
     try:
-        json_table = df_to_jt_hp(df)
+        json_table = df_to_jt(df)
         df_restored = df_from_jt(json_table)
         
         # Validate every single cell
@@ -158,13 +166,13 @@ def demo_real_world_validation():
     print(f"   Unique customers: {df['customer_id'].nunique()}")
     
     # Test conversion with validation
-    print(f"\n🚀 Converting with high-performance implementation...")
+    print(f"\n🚀 Converting and validating...")
     
     try:
         # Use the convenience validation function
         validate_conversion_integrity(
             original_df=df,
-            conversion_func=df_to_jt_hp,
+            conversion_func=df_to_jt,
             back_conversion_func=df_from_jt,
             operation_name="Real-world customer data"
         )
@@ -179,9 +187,9 @@ def demo_real_world_validation():
     
     return True
 
-def demo_performance_comparison():
-    """Demo validation across different implementations."""
-    print("\n⚡ IMPLEMENTATION COMPARISON")
+def demo_format_comparison():
+    """Demo validation across different formats."""
+    print("\n⚡ FORMAT COMPARISON")
     print("=" * 50)
     
     # Create test data
@@ -194,25 +202,23 @@ def demo_performance_comparison():
     
     print(f"📊 Test data: {df.shape} = {df.shape[0] * df.shape[1]} cells")
     
-    # Test all implementations
-    implementations = [
-        ("Standard JSON-Tables", df_to_jt),
-        ("High-Performance", df_to_jt_hp),
-        ("HP Skip Numpy", lambda d: df_to_jt_hp(d, skip_numpy_conversion=True)),
-        ("Columnar Format", lambda d: df_to_jt(d, columnar=True)),
+    # Test different formats
+    formats = [
+        ("Row format (default)", lambda d: df_to_jt(d)),
+        ("Columnar format", lambda d: df_to_jt(d, columnar=True)),
     ]
     
-    for impl_name, convert_func in implementations:
-        print(f"\n🧪 Testing {impl_name}...")
+    for format_name, convert_func in formats:
+        print(f"\n🧪 Testing {format_name}...")
         
         try:
             # Convert and validate
             json_table = convert_func(df)
             df_restored = df_from_jt(json_table)
             
-            # Bulletproof validation
+            # Validate every cell
             DataIntegrityValidator.validate_dataframe_equality(
-                df, df_restored, operation_name=impl_name
+                df, df_restored, operation_name=format_name
             )
             
             print(f"   ✅ PERFECT: All {df.shape[0] * df.shape[1]} cells preserved")
@@ -221,7 +227,7 @@ def demo_performance_comparison():
             print(f"   ❌ FAILED: {e}")
             return False
     
-    print(f"\n🎉 ALL IMPLEMENTATIONS PRESERVE DATA PERFECTLY!")
+    print(f"\n🎉 ALL FORMATS PRESERVE DATA PERFECTLY!")
     return True
 
 def main():
@@ -237,7 +243,7 @@ def main():
         ("Extreme edge cases", demo_extreme_edge_cases),
         ("Corruption detection", demo_deliberate_corruption_detection),
         ("Real-world data", demo_real_world_validation),
-        ("Implementation comparison", demo_performance_comparison),
+        ("Format comparison", demo_format_comparison),
     ]
     
     passed = 0

@@ -20,7 +20,7 @@ from jsontables.data_integrity import (
     create_extreme_test_dataframe,
     validate_conversion_integrity
 )
-from jsontables import df_to_jt, df_from_jt, df_to_jt_hp
+from jsontables import df_to_jt, df_from_jt
 
 def create_real_world_test_data():
     """Create realistic test data with common edge cases."""
@@ -130,9 +130,6 @@ def test_extreme_edge_cases():
     # Test all implementations
     implementations = [
         ("Standard JSON-Tables", lambda df: df_to_jt(df), df_from_jt),
-        ("High-Performance", lambda df: df_to_jt_hp(df), df_from_jt),
-        ("HP Skip Numpy", lambda df: df_to_jt_hp(df, skip_numpy_conversion=True), df_from_jt),
-        ("HP Chunked", lambda df: df_to_jt_hp(df, max_workers=4, chunk_size=100), df_from_jt),
         ("Columnar Format", lambda df: df_to_jt(df, columnar=True), df_from_jt),
     ]
     
@@ -155,7 +152,7 @@ def test_extreme_edge_cases():
             print(f"   ❌ FAILED: {e}")
             return False
     
-    print(f"\n🎉 ALL EXTREME EDGE CASES PASSED!")
+    print(f"\n🎉 ALL EDGE CASES PASSED!")
     return True
 
 def test_real_world_data():
@@ -173,17 +170,17 @@ def test_real_world_data():
     print(f"   Unique customers: {df_real['customer_id'].nunique():,}")
     print(f"   Categories: {df_real['category'].value_counts().to_dict()}")
     
-    # Test high-performance implementation on realistic data
-    print(f"\n🚀 Testing high-performance implementation...")
+    # Test conversion on realistic data
+    print(f"\n🚀 Testing conversion...")
     
     try:
-        # Convert using high-performance mode
-        json_table = df_to_jt_hp(df_real)
+        # Convert using standard API
+        json_table = df_to_jt(df_real)
         df_restored = df_from_jt(json_table)
         
         # Validate every single cell
         DataIntegrityValidator.validate_dataframe_equality(
-            df_real, df_restored, operation_name="Real-world high-performance"
+            df_real, df_restored, operation_name="Real-world data"
         )
         
         print(f"   ✅ PERFECT: All {df_real.shape[0] * df_real.shape[1]:,} cells preserved exactly")
@@ -218,7 +215,7 @@ def test_floating_point_precision():
     
     try:
         # Convert and restore
-        json_table = df_to_jt_hp(df_precision)
+        json_table = df_to_jt(df_precision)
         df_restored = df_from_jt(json_table)
         
         # Validate with tight precision

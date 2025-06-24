@@ -24,7 +24,7 @@ def read_requirements():
 
 setup(
     name="jsontables",
-    version="0.1.0",
+    version="0.2.0",
     author="Mitch Haile",
     author_email="mitch.haile@gmail.com",
     description="A minimal format for representing tabular data in JSON",

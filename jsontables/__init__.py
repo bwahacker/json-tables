@@ -10,163 +10,177 @@ from .core import (
     JSONTablesEncoder,
     JSONTablesDecoder, 
     JSONTablesRenderer,
-    JSONTablesAppender,
-    JSONTablesV2Encoder,
-    JSONTablesV2Decoder,
+    JSONTablesError,
     
-    # Utility functions
+    # Simple utility functions
     to_json_table,
     from_json_table,
     render_json_table,
-    append_to_json_table_file,
     is_json_table,
     detect_table_in_json,
-    
-    # DataFrame convenience functions
-    df_to_jt,
-    df_from_jt,
-    
-    # Exceptions
-    JSONTablesError
 )
 
-# Profiling functionality (optional import)
-try:
-    from .profiling import (
-        profiling_session,
-        profile_operation,
-        profile_function,
-        print_profile_summary,
-        save_profile_results,
-        enable_profiling,
-        disable_profiling,
-        reset_profiling,
-        get_profiler
-    )
-    _PROFILING_AVAILABLE = True
-except ImportError:
-    _PROFILING_AVAILABLE = False
+# Import the FAST implementations as the default
+from .high_performance_core import HighPerformanceJSONTablesEncoder
 
-# Import multithreaded operations
-try:
-    from .multithreaded_core import (
-        MultithreadedJSONTablesEncoder,
-        MultithreadedJSONTablesDecoder,
-        df_to_jt_mt,
-        df_from_jt_mt
-    )
-    MULTITHREADED_AVAILABLE = True
-except ImportError:
-    MULTITHREADED_AVAILABLE = False
-
-# Import smart parallel operations
-try:
-    from .smart_parallel import (
-        SmartParallelJSONTablesEncoder,
-        df_to_jt_smart
-    )
-    SMART_PARALLEL_AVAILABLE = True
-except ImportError:
-    SMART_PARALLEL_AVAILABLE = False
-
-# Import high-performance operations
-try:
-    from .high_performance_core import (
-        HighPerformanceJSONTablesEncoder,
-        df_to_jt_hp
-    )
-    HIGH_PERFORMANCE_AVAILABLE = True
-except ImportError:
-    HIGH_PERFORMANCE_AVAILABLE = False
-
-# Import data integrity validation
+# Data integrity validation
 from .data_integrity import (
     DataIntegrityValidator,
     DataIntegrityError,
     validate_conversion_integrity,
-    create_extreme_test_dataframe
 )
 
-__version__ = "1.0.0"
+def df_to_jt(df, **kwargs):
+    """
+    Convert pandas DataFrame to JSON-Tables format (high-performance).
+    
+    Args:
+        df: pandas DataFrame
+        **kwargs: Additional options (columnar, page_size, etc.)
+    
+    Returns:
+        Dictionary in JSON-Tables format
+    """
+    return HighPerformanceJSONTablesEncoder.from_dataframe(df, **kwargs)
+
+def df_from_jt(json_table):
+    """
+    Convert JSON-Tables format to pandas DataFrame.
+    
+    Args:
+        json_table: Dictionary in JSON-Tables format
+        
+    Returns:
+        pandas DataFrame
+    """
+    return JSONTablesDecoder.to_dataframe(json_table)
+
+def json_to_jt(json_records, **kwargs):
+    """
+    Convert standard JSON (list of records) to JSON-Tables format.
+    
+    Args:
+        json_records: List of dictionaries (standard JSON records)
+        **kwargs: Additional options (columnar, page_size, etc.)
+    
+    Returns:
+        Dictionary in JSON-Tables format
+    """
+    import pandas as pd
+    df = pd.DataFrame(json_records)
+    return df_to_jt(df, **kwargs)
+
+def jt_to_json(json_table):
+    """
+    Convert JSON-Tables format to standard JSON (list of records).
+    
+    Args:
+        json_table: Dictionary in JSON-Tables format
+        
+    Returns:
+        List of dictionaries (standard JSON records)
+    """
+    df = df_from_jt(json_table)
+    return df.to_dict('records')
+
+def csv_to_jt(csv_path, **kwargs):
+    """
+    Read CSV file and convert to JSON-Tables format.
+    
+    Args:
+        csv_path: Path to CSV file
+        **kwargs: Additional options for pandas.read_csv() and df_to_jt()
+    
+    Returns:
+        Dictionary in JSON-Tables format
+    """
+    import pandas as pd
+    
+    # Separate pandas read_csv args from df_to_jt args
+    jt_kwargs = {}
+    csv_kwargs = {}
+    
+    jt_options = {'columnar', 'page_size'}
+    for key, value in kwargs.items():
+        if key in jt_options:
+            jt_kwargs[key] = value
+        else:
+            csv_kwargs[key] = value
+    
+    df = pd.read_csv(csv_path, **csv_kwargs)
+    return df_to_jt(df, **jt_kwargs)
+
+def jt_to_csv(json_table, csv_path, **kwargs):
+    """
+    Write JSON-Tables format to CSV file.
+    
+    Args:
+        json_table: Dictionary in JSON-Tables format
+        csv_path: Path for output CSV file
+        **kwargs: Additional options for pandas.to_csv()
+    
+    Returns:
+        None (writes file)
+    """
+    df = df_from_jt(json_table)
+    df.to_csv(csv_path, index=False, **kwargs)
+
+def jt_to_sqlite(json_table, db_path, table_name='data', **kwargs):
+    """
+    Export JSON-Tables format to SQLite database.
+    
+    Args:
+        json_table: Dictionary in JSON-Tables format
+        db_path: Path for SQLite database file
+        table_name: Name for database table (default: 'data')
+        **kwargs: Additional options for pandas.to_sql()
+    
+    Returns:
+        None (writes database)
+    """
+    import sqlite3
+    df = df_from_jt(json_table)
+    
+    with sqlite3.connect(db_path) as conn:
+        df.to_sql(table_name, conn, index=False, if_exists='replace', **kwargs)
+
+__version__ = "0.2.0"
 __author__ = "Mitch Haile"
 __email__ = "mitch.haile@gmail.com"
 __license__ = "MIT"
 
-# Public API
+# Simple, clean public API
 __all__ = [
     # Core functionality
     'JSONTablesEncoder',
     'JSONTablesDecoder',
-    'JSONTablesRenderer', 
-    'JSONTablesAppender',
-    'JSONTablesV2Encoder',
-    'JSONTablesV2Decoder',
+    'JSONTablesRenderer',
+    'JSONTablesError',
     
-    # Utility functions
+    # Simple utility functions
     'to_json_table',
-    'from_json_table',
+    'from_json_table', 
     'render_json_table',
-    'append_to_json_table_file',
     'is_json_table',
     'detect_table_in_json',
     
-    # DataFrame convenience functions
-    'df_to_jt',
+    # Main DataFrame API - FAST by default
+    'df_to_jt',  # High-performance by default
     'df_from_jt',
     
-    # Exceptions
-    'JSONTablesError',
-]
-
-# Add profiling to public API if available
-if _PROFILING_AVAILABLE:
-    __all__.extend([
-        'profiling_session',
-        'profile_operation', 
-        'profile_function',
-        'print_profile_summary',
-        'save_profile_results',
-        'enable_profiling',
-        'disable_profiling',
-        'reset_profiling',
-        'get_profiler'
-    ])
-
-# Add multithreaded functions to public API if available
-if MULTITHREADED_AVAILABLE:
-    __all__.extend([
-        'MultithreadedJSONTablesEncoder',
-        'MultithreadedJSONTablesDecoder',
-        'df_to_jt_mt',
-        'df_from_jt_mt'
-    ])
-
-# Add smart parallel functions to public API if available
-if SMART_PARALLEL_AVAILABLE:
-    __all__.extend([
-        'SmartParallelJSONTablesEncoder',
-        'df_to_jt_smart'
-    ])
-
-# Add high-performance functions to public API if available
-if HIGH_PERFORMANCE_AVAILABLE:
-    __all__.extend([
-        'HighPerformanceJSONTablesEncoder',
-        'df_to_jt_hp'
-    ])
-
-# Add data integrity validation functions to public API
-__all__.extend([
+    # Format conversion functions
+    'json_to_jt',
+    'jt_to_json', 
+    'csv_to_jt',
+    'jt_to_csv',
+    'jt_to_sqlite',
+    
+    # Data integrity validation
     'DataIntegrityValidator',
     'DataIntegrityError',
     'validate_conversion_integrity',
-    'create_extreme_test_dataframe',
-])
+]
 
 def get_version():
     """Get the current version of JSON-Tables."""
-    return __version__
-
-def is_profiling_available():
-    """Check if profiling functionality is available."""
-    return _PROFILING_AVAILABLE 
+    return __version__ 
